@@ -1,0 +1,23 @@
+{
+  "name": "physics-study-game",
+  "version": "1.0.0",
+  "description": "Fireboy and Watergirl style physics learning game",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["physics", "game", "education"],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "body-parser": "^2.2.2",
+    "dotenv": "^16.4.5",
+    "ejs": "^4.0.1",
+    "express": "^5.2.1",
+    "multer": "^2.0.2",
+    "openai": "^4.77.0",
+    "sqlite3": "^5.1.7"
+  }
+}
