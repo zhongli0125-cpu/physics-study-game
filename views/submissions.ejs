@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Submissions</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1 class="pixel-title">📝 All Submissions</h1>
+  
+  <div class="submissions-container">
+    <% if (submissions.length === 0) { %>
+      <p>No submissions yet.</p>
+    <% } else { %>
+      <table class="submissions-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Topic</th>
+            <th>Name</th>
+            <th>File</th>
+            <th>Link</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% submissions.forEach(sub => { %>
+            <tr>
+              <td><%= sub.id %></td>
+              <td><%= sub.topic %></td>
+              <td><%= sub.name %></td>
+              <td>
+                <% if (sub.filePath) { %>
+                  <a href="/<%= sub.filePath %>">Download</a>
+                <% } else { %>
+                  -
+                <% } %>
+              </td>
+              <td>
+                <% if (sub.link) { %>
+                  <a href="<%= sub.link %>" target="_blank">Link</a>
+                <% } else { %>
+                  -
+                <% } %>
+              </td>
+              <td><%= sub.created_at %></td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    <% } %>
+  </div>
+
+  <a href="/" class="back-btn">← Back to Game</a>
+</body>
+</html>

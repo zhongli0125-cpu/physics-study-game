@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>🔥💧 Fireboy & Watergirl Physics Adventure</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="game-container">
+  <h1 class="pixel-title">🔥💧 Fireboy & Watergirl Physics Adventure</h1>
+  
+  <div class="game-info">
+    <div class="info-box">Level: <span id="levelDisplay">1</span></div>
+    <div class="info-box">Score: <span id="scoreDisplay">0</span></div>
+    <div class="info-box">
+      <span class="fire-icon">🔥</span> WASD | 
+      <span class="water-icon">💧</span> Arrow Keys
+    </div>
+  </div>
+
+  <canvas id="gameCanvas" width="800" height="500"></canvas>
+
+  <button id="startButton" class="start-game-btn" onclick="startGame()">🎮 START GAME</button>
+
+  <div class="game-status" id="gameStatus"></div>
+</div>
+
+<div class="study-section">
+  <h2>📚 Physics Study Mode</h2>
+  
+  <div class="topic-menu">
+    <button class="topic-btn" onclick="selectTopic('Motion')">⚡ Motion</button>
+    <button class="topic-btn" onclick="selectTopic('Newton Laws')">🎯 Newton's Laws</button>
+    <button class="topic-btn" onclick="selectTopic('Energy')">⚙️ Energy</button>
+    <button class="topic-btn" onclick="selectTopic('Electricity')">🔌 Electricity</button>
+    <button class="topic-btn" onclick="selectTopic('Waves')">🌊 Waves</button>
+    <button class="topic-btn" onclick="selectTopic('Modern Physics')">🚀 Modern Physics</button>
+  </div>
+
+  <div id="aiResult" class="explanation-box"></div>
+
+  <div class="qa-section">
+    <h3>💬 Ask a Question About This Topic</h3>
+    <p class="qa-hint">⚠️ This is for STUDYING physics topics (not the game questions!)</p>
+    <p class="qa-hint">First select a topic above, then ask your question!</p>
+    <div class="qa-input-group">
+      <input type="text" id="questionInput" class="question-input" placeholder="e.g., Can you give me an example?" onkeypress="if(event.key==='Enter') askQuestionStudy()">
+      <button class="topic-btn" onclick="askQuestionStudy()">Ask</button>
+    </div>
+    <div id="qaResult" class="qa-result"></div>
+  </div>
+
+  <div id="flashcardDisplay" class="flashcard-container"></div>
+
+  <div class="upload-section">
+    <h3>📄 Upload PDF for Custom Problems</h3>
+    <input type="file" id="fileInput" accept=".pdf">
+    <button class="upload-btn" onclick="uploadFile()">Upload PDF</button>
+    <p id="problemOutput" class="problem-output"></p>
+  </div>
+
+  <div class="leaderboard-section">
+    <h3>🏆 Leaderboard</h3>
+    <button class="topic-btn" onclick="loadLeaderboard()">Show Top Players</button>
+    <div id="leaderboardDisplay" class="leaderboard-display"></div>
+  </div>
+
+  <div class="review-section">
+    <h3>📝 Review Wrong Answers</h3>
+    <button class="topic-btn" onclick="loadReviewQuestions()">Show Questions to Review</button>
+    <div id="reviewDisplay" class="review-display"></div>
+  </div>
+</div>
+
+<script src="sounds.js"></script>
+<script src="particles.js"></script>
+<script src="questions.js"></script>
+<script src="level-generator.js"></script>
+<script src="game.js"></script>
+<script src="game-fix.js"></script>
+<script src="study.js"></script>
+</body>
+</html>
