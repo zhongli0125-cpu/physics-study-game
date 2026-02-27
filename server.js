@@ -106,7 +106,7 @@ app.post('/ai-explain', async (req, res) => {
       console.log('Using fallback explanations');
       // Simple working explanations
      
-askQuestionStudconst fallbacks = {
+      const fallbacks = {
   'Motion': `## MOTION - The Physics of Movement
 
 Motion is the change in position of an object over time. Everything in the universe is moving - from atoms vibrating to galaxies spinning. Understanding motion is the foundation of all physics!
@@ -2114,3 +2114,4 @@ Where:
 
 **Remember:** Modern physics shows reality is WAY weirder than it seems! Time isn't constant, particles are waves, and observation changes reality!`
 };
+
