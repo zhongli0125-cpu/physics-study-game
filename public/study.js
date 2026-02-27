@@ -1,5 +1,7 @@
 let flashcards = [];
 let currentTopic = '';
+let lessonPages = [];
+let currentPage = 0;
 
 function selectTopic(topic) {
   currentTopic = topic;
@@ -17,7 +19,7 @@ function selectTopic(topic) {
 async function askAI(topic) {
   try {
     const aiResult = document.getElementById("aiResult");
-    aiResult.innerText = "Loading explanation...";
+    aiResult.innerHTML = "Loading explanation...";
     aiResult.style.color = "#00ffcc";
     
     console.log('Fetching explanation for:', topic);
@@ -39,13 +41,82 @@ async function askAI(topic) {
     const data = await res.json();
     console.log('Explanation received, length:', data.explanation.length);
     
-    aiResult.innerText = data.explanation;
-    aiResult.style.color = "#00ffcc";
+    // Split explanation into pages (every 1500 characters or at section breaks)
+    lessonPages = splitIntoPages(data.explanation);
+    currentPage = 0;
+    displayLessonPage();
+    
   } catch (error) {
     console.error('AI explain error:', error);
     const aiResult = document.getElementById("aiResult");
-    aiResult.innerText = "Error loading explanation. Please check console (F12) for details.\n\nError: " + error.message;
+    aiResult.innerHTML = "Error loading explanation. Please check console (F12) for details.<br><br>Error: " + error.message;
     aiResult.style.color = "#ff4500";
+  }
+}
+
+function splitIntoPages(text) {
+  // Split by major sections (##) or every 1500 characters
+  const sections = text.split(/(?=##)/);
+  const pages = [];
+  let currentPageText = '';
+  
+  sections.forEach(section => {
+    if (currentPageText.length + section.length > 1500 && currentPageText.length > 0) {
+      pages.push(currentPageText);
+      currentPageText = section;
+    } else {
+      currentPageText += section;
+    }
+  });
+  
+  if (currentPageText.length > 0) {
+    pages.push(currentPageText);
+  }
+  
+  return pages.length > 0 ? pages : [text];
+}
+
+function displayLessonPage() {
+  const aiResult = document.getElementById("aiResult");
+  const pageContent = lessonPages[currentPage];
+  
+  // Create navigation buttons
+  const navButtons = `
+    <div style="margin-top: 20px; display: flex; justify-content: space-between; align-items: center;">
+      <button onclick="previousPage()" ${currentPage === 0 ? 'disabled' : ''} 
+        style="padding: 10px 20px; background: ${currentPage === 0 ? '#555' : '#00ffcc'}; 
+        color: #000; border: none; cursor: ${currentPage === 0 ? 'not-allowed' : 'pointer'}; 
+        border-radius: 5px; font-weight: bold;">
+        ← Previous
+      </button>
+      <span style="color: #00ffcc;">Page ${currentPage + 1} of ${lessonPages.length}</span>
+      <button onclick="nextPage()" ${currentPage === lessonPages.length - 1 ? 'disabled' : ''} 
+        style="padding: 10px 20px; background: ${currentPage === lessonPages.length - 1 ? '#555' : '#00ffcc'}; 
+        color: #000; border: none; cursor: ${currentPage === lessonPages.length - 1 ? 'not-allowed' : 'pointer'}; 
+        border-radius: 5px; font-weight: bold;">
+        Next →
+      </button>
+    </div>
+  `;
+  
+  aiResult.innerHTML = `<div style="white-space: pre-wrap;">${pageContent}</div>${navButtons}`;
+  aiResult.style.color = "#00ffcc";
+  
+  // Scroll to top of lesson
+  aiResult.scrollTop = 0;
+}
+
+function nextPage() {
+  if (currentPage < lessonPages.length - 1) {
+    currentPage++;
+    displayLessonPage();
+  }
+}
+
+function previousPage() {
+  if (currentPage > 0) {
+    currentPage--;
+    displayLessonPage();
   }
 }
 
