@@ -896,8 +896,189 @@ Two particles become correlated - measuring one instantly affects the other!
   }
 });
 
-// REST OF THE ENDPOINTS... (copy from your current server.js)
+// Generate flashcards endpoint
+app.post('/generate-flashcards', async (req, res) => {
+  try {
+    const { topic } = req.body;
+    if (!topic) return res.status(400).json({ error: 'Topic required' });
+
+    const fallbackCards = {
+      'Motion': [
+        { question: 'What is velocity?', answer: 'Speed with direction (vector quantity)' },
+        { question: 'Formula for acceleration?', answer: 'a = (v_f - v_i) / t' },
+        { question: 'What is displacement?', answer: 'Change in position with direction' }
+      ],
+      'Newton Laws': [
+        { question: 'State Newton\'s 1st Law', answer: 'Object stays at rest/motion unless force acts on it' },
+        { question: 'What is F=ma?', answer: 'Force equals mass times acceleration (2nd Law)' },
+        { question: 'Newton\'s 3rd Law example?', answer: 'Rocket pushes gas down, gas pushes rocket up' }
+      ],
+      'Energy': [
+        { question: 'Kinetic energy formula?', answer: 'KE = ½mv²' },
+        { question: 'Potential energy formula?', answer: 'PE = mgh' },
+        { question: 'Law of conservation?', answer: 'Energy cannot be created or destroyed' }
+      ],
+      'Electricity': [
+        { question: 'What is Ohm\'s Law?', answer: 'V = IR (Voltage = Current × Resistance)' },
+        { question: 'Unit of current?', answer: 'Ampere (A)' },
+        { question: 'What is resistance?', answer: 'Opposition to flow of electric current' }
+      ],
+      'Waves': [
+        { question: 'Wave speed formula?', answer: 'v = fλ (speed = frequency × wavelength)' },
+        { question: 'What is frequency?', answer: 'Number of waves passing per second (Hz)' },
+        { question: 'Transverse vs longitudinal?', answer: 'Transverse: perpendicular motion, Longitudinal: parallel motion' }
+      ],
+      'Modern Physics': [
+        { question: 'What is E=mc²?', answer: 'Mass and energy are equivalent; tiny mass = huge energy' },
+        { question: 'What is time dilation?', answer: 'Time slows down as you approach light speed' },
+        { question: 'Wave-particle duality?', answer: 'Light and matter behave as both waves and particles' }
+      ]
+    };
+    const flashcards = fallbackCards[topic] || [
+      { question: `What is ${topic}?`, answer: 'Study your textbook for details!' }
+    ];
+
+    res.json({ flashcards });
+  } catch (error) {
+    console.error('Flashcard generation error:', error);
+    res.status(500).json({ error: 'Failed to generate flashcards' });
+  }
+});
+
+// Q&A endpoint
+app.post('/ask-question', async (req, res) => {
+  try {
+    const { topic, question } = req.body;
+    if (!topic || !question) return res.status(400).json({ error: 'Topic and question required' });
+    const answer = `Great question about ${topic}! Try asking about specific concepts like formulas, examples, or how things work.`;
+    res.json({ answer });
+  } catch (error) {
+    console.error('Q&A error:', error);
+    res.status(500).json({ error: 'Failed to answer question' });
+  }
+});
+
+// PDF upload endpoint
+app.post('/upload', upload.single('file'), async (req, res) => {
+  try {
+    if (!req.file) return res.status(400).json({ error: 'No file uploaded' });
+    res.json({ problems: 'PDF uploaded successfully!', filename: req.file.filename });
+  } catch (error) {
+    console.error('Upload error:', error);
+    res.status(500).json({ error: error.message || 'Upload failed' });
+  }
+});
+
+// Form submission endpoint
+app.post('/submit', upload.single('file'), (req, res) => {
+  const { topic, name, link } = req.body;
+  if (!topic || !name) return res.status(400).send('Topic and name are required');
+  const filePath = req.file ? req.file.path : null;
+  db.run(
+    `INSERT INTO submissions(topic, name, filePath, link) VALUES(?,?,?,?)`,
+    [topic, name, filePath, link],
+    function(err) {
+      if (err) {
+        console.error('Database error:', err);
+        return res.status(500).send('Error saving submission');
+      }
+      res.send('Submission successful!');
+    }
+  );
+});
+
+// View submissions
+app.get('/submissions', (req, res) => {
+  db.all(`SELECT * FROM submissions ORDER BY created_at DESC`, [], (err, rows) => {
+    if (err) {
+      console.error('Database error:', err);
+      return res.status(500).send('Error fetching submissions');
+    }
+    res.render('submissions', { submissions: rows });
+  });
+});
+
+// Save game progress
+app.post('/save-progress', (req, res) => {
+  const { player_name, level, score, time } = req.body;
+  db.run(
+    `INSERT INTO progress(player_name, level, score, time) VALUES(?,?,?,?)`,
+    [player_name || 'Anonymous', level, score, time],
+    function(err) {
+      if (err) {
+        console.error('Progress save error:', err);
+        return res.status(500).json({ error: 'Failed to save progress' });
+      }
+      res.json({ success: true, id: this.lastID });
+    }
+  );
+});
+
+// Get leaderboard
+app.get('/leaderboard', (req, res) => {
+  db.all(
+    `SELECT player_name, level, score, time, created_at 
+     FROM progress 
+     ORDER BY level DESC, score DESC, time ASC 
+     LIMIT 10`,
+    [],
+    (err, rows) => {
+      if (err) {
+        console.error('Leaderboard error:', err);
+        return res.status(500).json({ error: 'Failed to fetch leaderboard' });
+      }
+      res.json({ leaderboard: rows });
+    }
+  );
+});
+
+// Track wrong answers
+app.post('/track-wrong-answer', (req, res) => {
+  const { question, wrong_answer, correct_answer, topic } = req.body;
+  db.run(
+    `INSERT INTO wrong_answers(question, wrong_answer, correct_answer, topic) VALUES(?,?,?,?)`,
+    [question, wrong_answer, correct_answer, topic],
+    function(err) {
+      if (err) {
+        console.error('Wrong answer tracking error:', err);
+        return res.status(500).json({ error: 'Failed to track answer' });
+      }
+      res.json({ success: true });
+    }
+  );
+});
+
+// Get review questions (questions user got wrong)
+app.get('/review-questions', (req, res) => {
+  db.all(
+    `SELECT question, correct_answer, topic, COUNT(*) as times_wrong
+     FROM wrong_answers
+     GROUP BY question
+     ORDER BY times_wrong DESC
+     LIMIT 5`,
+    [],
+    (err, rows) => {
+      if (err) {
+        console.error('Review questions error:', err);
+        return res.status(500).json({ error: 'Failed to fetch review questions' });
+      }
+      res.json({ questions: rows });
+    }
+  );
+});
+
+// Graceful shutdown
+process.on('SIGINT', () => {
+  db.close((err) => {
+    if (err) console.error('Error closing database:', err);
+    console.log('\nDatabase closed. Server shutting down.');
+    process.exit(0);
+  });
+});
 
 app.listen(port, '0.0.0.0', () => {
-  console.log(`Physics Game Server running at http://localhost:${port}`);
+  console.log(`🔥💧 Physics Game Server running at http://localhost:${port}`);
+  console.log(`📱 Access from other devices: http://YOUR_IP_ADDRESS:${port}`);
+  console.log(`💡 To find your IP: Run "ipconfig" (Windows) or "ifconfig" (Mac/Linux)`);
+  if (!openai) console.log('⚠️  No OpenAI API key found. Using fallback content.');
 });
