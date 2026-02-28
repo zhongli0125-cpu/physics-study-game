@@ -880,7 +880,27 @@ Two particles become correlated - measuring one instantly affects the other!
 - Everything is both wave and particle
 - Reality is fundamentally uncertain
 - Observation affects reality
-- Modern physics powers all modern technology!`
+- Modern physics powers all modern technology!
+
+---
+
+## References & Further Reading
+
+**Textbooks:**
+- Halliday, Resnick & Walker - "Fundamentals of Physics" (Standard physics textbook)
+- Serway & Jewett - "Physics for Scientists and Engineers"
+- Giancoli - "Physics: Principles with Applications"
+
+**Online Resources:**
+- Khan Academy Physics (https://www.khanacademy.org/science/physics)
+- The Physics Classroom (https://www.physicsclassroom.com)
+- HyperPhysics (http://hyperphysics.phy-astr.gsu.edu)
+- MIT OpenCourseWare Physics (https://ocw.mit.edu)
+
+**Interactive Simulations:**
+- PhET Interactive Simulations (https://phet.colorado.edu)
+
+**Note:** Content adapted from standard high school and introductory college physics curricula.`
       }
       
       explanation = fallbacks[topic] || `${topic} is an important physics concept.`;
