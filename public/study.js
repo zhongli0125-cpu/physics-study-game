@@ -3,14 +3,16 @@ let currentTopic = '';
 let lessonPages = [];
 let currentPage = 0;
 
-function selectTopic(topic) {
+function selectTopic(topic, event) {
   currentTopic = topic;
   console.log('Topic selected:', currentTopic);
   
   // Visual feedback
   const topicButtons = document.querySelectorAll('.topic-btn');
   topicButtons.forEach(btn => btn.classList.remove('active'));
-  event.target.classList.add('active');
+  if (event && event.target) {
+    event.target.classList.add('active');
+  }
   
   askAI(topic);
   generateFlashcards(topic);
@@ -55,25 +57,16 @@ async function askAI(topic) {
 }
 
 function splitIntoPages(text) {
-  // Split by major sections (##) or every 1500 characters
-  const sections = text.split(/(?=##)/);
-  const pages = [];
-  let currentPageText = '';
+  // Split by ## markers (page breaks)
+  const pages = text.split('##').filter(page => page.trim().length > 0);
   
-  sections.forEach(section => {
-    if (currentPageText.length + section.length > 1500 && currentPageText.length > 0) {
-      pages.push(currentPageText);
-      currentPageText = section;
-    } else {
-      currentPageText += section;
-    }
-  });
-  
-  if (currentPageText.length > 0) {
-    pages.push(currentPageText);
+  // If no ## markers found, return the whole text as one page
+  if (pages.length === 0) {
+    return [text];
   }
   
-  return pages.length > 0 ? pages : [text];
+  // Add back the ## to each page title (except first if it's intro)
+  return pages.map(page => page.trim());
 }
 
 function displayLessonPage() {
