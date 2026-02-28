@@ -57,9 +57,7 @@ function updatePlayer(player, leftKey, rightKey, jumpKey) {
   if (player.y > canvas.height) { player.alive = false; if (typeof playDeath !== 'undefined') playDeath(); }
   if (player === fireboy) {
     waterZones.forEach(zone => { if (checkCollision(player, zone)) { player.alive = false; if (typeof playDeath !== 'undefined') playDeath(); if (typeof createParticles !== 'undefined') createParticles(player.x + player.w/2, player.y + player.h/2, '#1e90ff', 20); } });
-  } else {
     lavaZones.forEach(zone => { if (checkCollision(player, zone)) { player.alive = false; if (typeof playDeath !== 'undefined') playDeath(); if (typeof createParticles !== 'undefined') createParticles(player.x + player.w/2, player.y + player.h/2, '#ff4500', 20); } });
-  }
   greenZones.forEach(zone => { if (checkCollision(player, zone)) { player.alive = false; if (typeof playDeath !== 'undefined') playDeath(); if (typeof createParticles !== 'undefined') createParticles(player.x + player.w/2, player.y + player.h/2, '#32cd32', 20); } });
   collectibles.forEach(item => {
     if (!item.collected && checkCollision(player, { x: item.x, y: item.y, w: 20, h: 20 })) {
@@ -68,8 +66,6 @@ function updatePlayer(player, leftKey, rightKey, jumpKey) {
         if (typeof playCollect !== 'undefined') playCollect();
         if (typeof createParticles !== 'undefined') createParticles(item.x + 10, item.y + 10, item.type === 'fire' ? '#ff4500' : '#1e90ff', 15);
       }
-    }
-  });
   if (questionGate && !questionGate.passed && checkCollision(player, questionGate)) askQuestion();
   if (player === fireboy && doors.fire && checkCollision(player, doors.fire)) fireboy.inDoor = true;
   if (player === watergirl && doors.water && checkCollision(player, doors.water)) watergirl.inDoor = true;
@@ -85,10 +81,8 @@ function update() {
     levelComplete = true;
     if (typeof playSuccess !== 'undefined') playSuccess();
     setTimeout(nextLevel, 1500);
-  }
   fireboy.inDoor = false; watergirl.inDoor = false;
   if (!fireboy.alive || !watergirl.alive) gameOver = true;
-}
 function draw() {
   ctx.fillStyle = "#1a1a2e"; ctx.fillRect(0, 0, canvas.width, canvas.height);
   if (!gameStarted) { ctx.fillStyle = "#00ffcc"; ctx.font = '16px Arial'; ctx.textAlign = 'center'; ctx.fillText('Click START GAME button below!', canvas.width/2, canvas.height/2); return; }
@@ -109,18 +103,72 @@ function draw() {
   else statusEl.textContent = '';
   document.getElementById('levelDisplay').textContent = level;
   document.getElementById('scoreDisplay').textContent = score;
-}
 function gameLoop() { update(); draw(); requestAnimationFrame(gameLoop); }
 function askQuestion() {
   const answer = prompt(questionGate.question + "\n\n" + questionGate.options.map((opt, i) => (i + 1) + ". " + opt).join("\n"));
-  if (parseInt(answer) - 1 === questionGate.answer) {
+  if (parseInt(answer) - 1 === questionGate.answer) { alert("✅ Correct! Gate opened!"); questionGate.passed = true; score += 50; if (typeof playGateOpen !== 'undefined') playGateOpen(); }
+  else {
+    alert("❌ Wrong answer! Try again.");
+    
+    // Track wrong answer
+function askQuestion() {
+  const answer = prompt(questionGate.question + "\n\n" + questionGate.options.map((opt, i) => (i + 1) + ". " + opt).join("\n"));
+  const answerIndex = parseInt(answer) - 1;
+  
+  if (answerIndex === questionGate.answer) {
     alert("✅ Correct! Gate opened!");
     questionGate.passed = true;
     score += 50;
     if (typeof playGateOpen !== 'undefined') playGateOpen();
   } else {
     alert("❌ Wrong answer! Try again.");
-    const answerIndex = parseInt(answer) - 1;
+    
+    // Track wrong answer
+    fetch('/track-wrong-answer', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        question: questionGate.question,
+        wrong_answer: questionGate.options[answerIndex] || 'Invalid',
+        correct_answer: questionGate.options[questionGate.answer],
+        topic: 'Game Question'
+      })
+    }).catch(err => console.error('Failed to track wrong answer:', err));
+  }
+}     body: JSON.stringify({
+        question: questionGate.question,
+        wrong_answer: questionGate.options[answerIndex] || 'Invalid',
+        correct_answer: questionGate.options[questionGate.answer],
+        topic: 'Game Question'
+      })
+    }).catch(err => console.error('Failed to track wrong answer:', err));
+  }
+function nextLevel() { level++; initLevel(level); }
+function resetLevel() { initLevel(level); }
+gameLoop();
+  if (parseInt(answer) - 1 === questionGate.answer) {
+    alert("✅ Correct! Gate opened!");
+    questionGate.passed = true;
+    score += 50;
+    if (typeof playGateOpen !== 'undefined') playGateOpen();
+    alert("❌ Wrong answer! Try again.");
+
+
+// Override askQuestion to track wrong answers
+const originalAskQuestion = askQuestion;
+function askQuestion() {
+  const answer = prompt(questionGate.question + "\n\n" + questionGate.options.map((opt, i) => (i + 1) + ". " + opt).join("\n"));
+  const answerIndex = parseInt(answer) - 1;
+  
+  if (answerIndex === questionGate.answer) {
+    alert("✅ Correct! Gate opened!");
+    questionGate.passed = true;
+    score += 50;
+    if (typeof playGateOpen !== 'undefined') playGateOpen();
+  } else {
+    alert("❌ Wrong answer! Try again.");
+    
+    // Track wrong answer
     fetch('/track-wrong-answer', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -133,6 +181,33 @@ function askQuestion() {
     }).catch(err => console.error('Failed to track wrong answer:', err));
   }
 }
-function nextLevel() { level++; initLevel(level); }
-function resetLevel() { initLevel(level); }
-gameLoop();
+
+
+
+// Override askQuestion to track wrong answers
+const _originalAskQuestion = askQuestion;
+function askQuestion() {
+  const answer = prompt(questionGate.question + "\n\n" + questionGate.options.map((opt, i) => (i + 1) + ". " + opt).join("\n"));
+const answerIndex = parseInt(answer) - 1;
+  
+  if (answerIndex === questionGate.answer) {
+    alert("✅ Correct! Gate opened!");
+    questionGate.passed = true;
+    score += 50;
+    if (typeof playGateOpen !== 'undefined') playGateOpen();
+  } else {
+    alert("❌ Wrong answer! Try again.");
+    
+    // Track wrong answer
+    fetch('/track-wrong-answer', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        question: questionGate.question,
+        wrong_answer: questionGate.options[answerIndex] || 'Invalid',
+        correct_answer: questionGate.options[questionGate.answer],
+        topic: 'Game Question'
+      })
+    }).catch(err => console.error('Failed to track wrong answer:', err));
+  }
+}
