@@ -14,7 +14,7 @@ let gameDifficulty = 'easy';
 function setDifficulty(diff) {
   gameDifficulty = diff;
   document.querySelectorAll('.difficulty-btn').forEach(btn => btn.classList.remove('active'));
-  event.target.classList.add('active');
+  window.event.target.classList.add('active');
 }
 
 function startGame() { gameStarted = true; const btn = document.getElementById('startButton'); if (btn) btn.style.display = 'none'; initLevel(1); }
@@ -36,7 +36,11 @@ function initLevel(lvl) {
     collectibles.push({ x: 370, y: 310, type: 'water', collected: false });
     const filteredQuestions = questionPool.filter(q => q.diff === gameDifficulty);
     const randomQ1 = filteredQuestions[Math.floor(Math.random() * filteredQuestions.length)];
-    questionGate = { x: 500, y: 200, w: 60, h: 80, question: randomQ1.q, options: randomQ1.opts, answer: randomQ1.ans, passed: false };
+    if (gameDifficulty === 'hard') {
+      questionGate = { x: 500, y: 200, w: 60, h: 80, question: randomQ1.q, answer: randomQ1.ans, passed: false };
+    } else {
+      questionGate = { x: 500, y: 200, w: 60, h: 80, question: randomQ1.q, options: randomQ1.opts, answer: randomQ1.ans, passed: false };
+    }
   } else {
     for (let i = 0; i < 6; i++) platforms.push({ x: 100 + i * 120, y: 380 + (Math.random() > 0.5 ? -60 : 60), w: 80, h: 20, type: 'platform' });
     lavaZones.push({ x: 150 + Math.random() * 200, y: 440, w: 100, h: 20 });
@@ -46,7 +50,11 @@ function initLevel(lvl) {
     doors.water = { x: 750, y: 360, w: 30, h: 50 };
     const filteredQuestions = questionPool.filter(q => q.diff === gameDifficulty);
     const randomQ2 = filteredQuestions[Math.floor(Math.random() * filteredQuestions.length)];
-    questionGate = { x: 400, y: 200, w: 60, h: 80, question: randomQ2.q, options: randomQ2.opts, answer: randomQ2.ans, passed: false };
+    if (gameDifficulty === 'hard') {
+      questionGate = { x: 400, y: 200, w: 60, h: 80, question: randomQ2.q, answer: randomQ2.ans, passed: false };
+    } else {
+      questionGate = { x: 400, y: 200, w: 60, h: 80, question: randomQ2.q, options: randomQ2.opts, answer: randomQ2.ans, passed: false };
+    }
   }
   fireboy.x = 50; fireboy.y = 300; fireboy.vx = 0; fireboy.vy = 0; fireboy.alive = true; fireboy.inDoor = false;
   watergirl.x = 100; watergirl.y = 300; watergirl.vx = 0; watergirl.vy = 0; watergirl.alive = true; watergirl.inDoor = false;
@@ -126,15 +134,29 @@ function draw() {
 function gameLoop() { update(); draw(); requestAnimationFrame(gameLoop); }
 function askQuestion() {
   isAnswering = true;
-  const answer = prompt(questionGate.question + "\n\n" + questionGate.options.map((opt, i) => (i + 1) + ". " + opt).join("\n"));
-  if (parseInt(answer) - 1 === questionGate.answer) {
-    alert("✅ Correct! Gate opened!");
-    questionGate.passed = true;
-    score += 50;
-    if (typeof playGateOpen !== 'undefined') playGateOpen();
+  
+  if (gameDifficulty === 'hard') {
+    const answer = prompt(questionGate.question + "\n\nType your answer:");
+    if (answer && answer.toLowerCase().trim() === questionGate.answer.toLowerCase().trim()) {
+      alert("✅ Correct! Gate opened!");
+      questionGate.passed = true;
+      score += 100;
+      if (typeof playGateOpen !== 'undefined') playGateOpen();
+    } else {
+      alert("❌ Wrong answer! The correct answer was: " + questionGate.answer);
+    }
   } else {
-    alert("❌ Wrong answer! Try again.");
+    const answer = prompt(questionGate.question + "\n\n" + questionGate.options.map((opt, i) => (i + 1) + ". " + opt).join("\n"));
+    if (parseInt(answer) - 1 === questionGate.answer) {
+      alert("✅ Correct! Gate opened!");
+      questionGate.passed = true;
+      score += 50;
+      if (typeof playGateOpen !== 'undefined') playGateOpen();
+    } else {
+      alert("❌ Wrong answer! Try again.");
+    }
   }
+  
   isAnswering = false;
 }
 function nextLevel() { level++; initLevel(level); }
