@@ -217,7 +217,26 @@ s = 0(5) + ½(3)(5²) = 37.5 meters
 0 = 400 - 19.6s → s = 20.4 meters
 
 **Problem 3:** Why do heavier objects NOT fall faster?
-**Answer:** Gravity accelerates all objects equally at 9.8 m/s². Mass doesn't matter (without air resistance)!`,
+**Answer:** Gravity accelerates all objects equally at 9.8 m/s². Mass doesn't matter (without air resistance)!
+
+---
+
+## References & Further Reading
+
+Textbooks:
+- Halliday, Resnick & Walker - "Fundamentals of Physics"
+- Serway & Jewett - "Physics for Scientists and Engineers"
+- Giancoli - "Physics: Principles with Applications"
+
+Online Resources:
+- Khan Academy Physics (https://www.khanacademy.org/science/physics)
+- The Physics Classroom (https://www.physicsclassroom.com)
+- HyperPhysics (http://hyperphysics.phy-astr.gsu.edu)
+
+Interactive Simulations:
+- PhET Interactive Simulations (https://phet.colorado.edu)
+
+Note: Content adapted from standard high school physics curricula.`,
 
   'Newton Laws': `## NEWTON'S LAWS OF MOTION
 
@@ -307,7 +326,26 @@ Sir Isaac Newton discovered three laws that explain how forces affect motion!
 **Real-World:**
 - Airbags: Increase collision time → reduce force
 - Seatbelts: Provide force to stop you with car
-- Sports: Every hit involves action-reaction pairs`,
+- Sports: Every hit involves action-reaction pairs
+
+---
+
+## References & Further Reading
+
+Textbooks:
+- Halliday, Resnick & Walker - "Fundamentals of Physics"
+- Serway & Jewett - "Physics for Scientists and Engineers"
+- Giancoli - "Physics: Principles with Applications"
+
+Online Resources:
+- Khan Academy Physics (https://www.khanacademy.org/science/physics)
+- The Physics Classroom (https://www.physicsclassroom.com)
+- HyperPhysics (http://hyperphysics.phy-astr.gsu.edu)
+
+Interactive Simulations:
+- PhET Interactive Simulations (https://phet.colorado.edu)
+
+Note: Content adapted from standard high school physics curricula.`,
 
   'Energy': `## ENERGY - The Ability to Do Work
 
@@ -406,7 +444,26 @@ Power = 2058/5 = 412 W
 **Answer:** PE converts to KE: mgh = ½mv²
 gh = ½v² → v = √(2gh) = √(2 × 9.8 × 20) = 19.8 m/s
 
-**Key Takeaway:** Energy is never lost, just transformed into different forms!`,
+**Key Takeaway:** Energy is never lost, just transformed into different forms!
+
+---
+
+## References & Further Reading
+
+Textbooks:
+- Halliday, Resnick & Walker - "Fundamentals of Physics"
+- Serway & Jewett - "Physics for Scientists and Engineers"
+- Giancoli - "Physics: Principles with Applications"
+
+Online Resources:
+- Khan Academy Physics (https://www.khanacademy.org/science/physics)
+- The Physics Classroom (https://www.physicsclassroom.com)
+- HyperPhysics (http://hyperphysics.phy-astr.gsu.edu)
+
+Interactive Simulations:
+- PhET Interactive Simulations (https://phet.colorado.edu)
+
+Note: Content adapted from standard high school physics curricula.`,
 
   'Electricity': `## ELECTRICITY - Flow of Electric Charge
 
@@ -527,7 +584,26 @@ Energy = 0.6 × 3 = 1.8 kWh
 Cost = 1.8 × $0.12 = $0.22
 
 **Problem 3:** Why do power lines use high voltage?
-**Answer:** Higher voltage = lower current for same power. Lower current = less power loss in wires (P = I²R). That's why transmission lines use 100,000+ volts!`,
+**Answer:** Higher voltage = lower current for same power. Lower current = less power loss in wires (P = I²R). That's why transmission lines use 100,000+ volts!
+
+---
+
+## References & Further Reading
+
+Textbooks:
+- Halliday, Resnick & Walker - "Fundamentals of Physics"
+- Serway & Jewett - "Physics for Scientists and Engineers"
+- Giancoli - "Physics: Principles with Applications"
+
+Online Resources:
+- Khan Academy Physics (https://www.khanacademy.org/science/physics)
+- The Physics Classroom (https://www.physicsclassroom.com)
+- HyperPhysics (http://hyperphysics.phy-astr.gsu.edu)
+
+Interactive Simulations:
+- PhET Interactive Simulations (https://phet.colorado.edu)
+
+Note: Content adapted from standard high school physics curricula.`,
 
   'Waves': `## WAVES - Energy Transfer
 
@@ -655,7 +731,26 @@ Frequency: f = v/λ = (3 × 10⁸)/(500 × 10⁻⁹) = 6 × 10¹⁴ Hz
 **Answer:** Sound needs matter (medium) to travel through. Space is a vacuum with no matter!
 
 **Problem 4:** Light has wavelength 600 nm. Find frequency.
-**Answer:** f = c/λ = (3 × 10⁸)/(600 × 10⁻⁹) = 5 × 10¹⁴ Hz`,
+**Answer:** f = c/λ = (3 × 10⁸)/(600 × 10⁻⁹) = 5 × 10¹⁴ Hz
+
+---
+
+## References & Further Reading
+
+Textbooks:
+- Halliday, Resnick & Walker - "Fundamentals of Physics"
+- Serway & Jewett - "Physics for Scientists and Engineers"
+- Giancoli - "Physics: Principles with Applications"
+
+Online Resources:
+- Khan Academy Physics (https://www.khanacademy.org/science/physics)
+- The Physics Classroom (https://www.physicsclassroom.com)
+- HyperPhysics (http://hyperphysics.phy-astr.gsu.edu)
+
+Interactive Simulations:
+- PhET Interactive Simulations (https://phet.colorado.edu)
+
+Note: Content adapted from standard high school physics curricula.`,
 
   'Modern Physics': `## MODERN PHYSICS - The Extreme Universe
 
@@ -886,21 +981,21 @@ Two particles become correlated - measuring one instantly affects the other!
 
 ## References & Further Reading
 
-**Textbooks:**
+Textbooks:
 - Halliday, Resnick & Walker - "Fundamentals of Physics" (Standard physics textbook)
 - Serway & Jewett - "Physics for Scientists and Engineers"
 - Giancoli - "Physics: Principles with Applications"
 
-**Online Resources:**
+Online Resources:
 - Khan Academy Physics (https://www.khanacademy.org/science/physics)
 - The Physics Classroom (https://www.physicsclassroom.com)
 - HyperPhysics (http://hyperphysics.phy-astr.gsu.edu)
 - MIT OpenCourseWare Physics (https://ocw.mit.edu)
 
-**Interactive Simulations:**
+Interactive Simulations:
 - PhET Interactive Simulations (https://phet.colorado.edu)
 
-**Note:** Content adapted from standard high school and introductory college physics curricula.`
+Note: Content adapted from standard high school and introductory college physics curricula.`
       }
       
       explanation = fallbacks[topic] || `${topic} is an important physics concept.`;
