@@ -23,6 +23,13 @@
 
   <button id="startButton" class="start-game-btn" onclick="startGame()">🎮 START GAME</button>
 
+  <div class="difficulty-selector">
+    <label>Difficulty:</label>
+    <button class="difficulty-btn active" onclick="setDifficulty('easy')">Easy (3 choices)</button>
+    <button class="difficulty-btn" onclick="setDifficulty('medium')">Medium (4 choices)</button>
+    <button class="difficulty-btn" onclick="setDifficulty('hard')">Hard (Type answer)</button>
+  </div>
+
   <div class="game-status" id="gameStatus"></div>
 </div>
 
@@ -78,8 +85,6 @@
 <script src="questions.js"></script>
 <script src="level-generator.js"></script>
 <script src="game.js"></script>
-<script src="game-working.js"></script>
-<script src="game-fix.js"></script>
 <script src="study.js"></script>
 </body>
 </html>
