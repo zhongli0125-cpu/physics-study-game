@@ -866,230 +866,1834 @@ c) v = u + at = 0 + 2.4(5) = 12 m/s
 ❌ Thinking action-reaction forces cancel (they act on different objects!)
 ❌ Using wrong units (mass in grams instead of kg)`,
 
-  'Energy': `## ENERGY - The Ability to Do Work
+  'Energy': `## ENERGY - The Ability to Do Work and Cause Change
 
-Energy is the ability to cause change or do work. It cannot be created or destroyed, only transformed!
+Energy is one of the most fundamental concepts in all of physics. It's the ability to do work or cause change. Energy exists in many forms and can transform from one form to another, but the total amount of energy in a closed system always remains constant. This principle, known as conservation of energy, is one of the most important laws in physics.
 
-## Page 1: Kinetic Energy
+## Page 1: Introduction to Energy and Work
+
+**What is Energy?**
+Energy is the capacity to do work or produce change. It's measured in Joules (J), named after James Prescott Joule who studied the relationship between heat and mechanical work in the 1840s.
+
+**What is Work?**
+In physics, work has a specific meaning: work is done when a force causes displacement.
+
+**Formula:** W = F × d × cos(θ)
+- W = work (Joules)
+- F = force (Newtons)
+- d = displacement (meters)
+- θ = angle between force and displacement
+
+**Simplified:** W = F × d (when force and displacement are in same direction)
+
+**Key Points About Work:**
+1. Force must cause displacement (pushing a wall that doesn't move = no work!)
+2. Only the component of force in the direction of motion does work
+3. Work can be positive (force aids motion) or negative (force opposes motion)
+4. No displacement = no work, regardless of force
+
+**Examples:**
+
+**Example 1: Lifting a Box**
+Lift a 10 kg box 2 meters vertically.
+- Force needed: F = mg = 10 × 9.8 = 98 N (upward)
+- Displacement: d = 2 m (upward)
+- Work: W = 98 × 2 = 196 J
+- You did 196 J of work against gravity
+
+**Example 2: Pushing a Car**
+Push a car with 500 N force for 10 meters.
+- Work: W = 500 × 10 = 5,000 J
+- You transferred 5,000 J of energy to the car
+
+**Example 3: Carrying a Suitcase Horizontally**
+Carry a 20 kg suitcase horizontally for 100 meters.
+- Force: 196 N upward (to support weight)
+- Displacement: 100 m horizontal
+- Angle between force and displacement: 90°
+- Work: W = F × d × cos(90°) = 196 × 100 × 0 = 0 J
+- No work done! (Force perpendicular to motion)
+
+**Example 4: Friction Doing Negative Work**
+A 50 kg box slides 5 meters on a surface with friction force 100 N.
+- Friction opposes motion (acts backward)
+- Work by friction: W = -100 × 5 = -500 J
+- Friction removes 500 J of energy from the box (converts to heat)
+
+**Historical Context:**
+The concept of energy unified many areas of physics. In the 1800s, scientists realized that heat, motion, electricity, and light were all forms of the same thing: energy. This led to the development of thermodynamics and revolutionized technology.
+
+## Page 2: Kinetic Energy - Energy of Motion
+
+**Definition:** Kinetic energy is the energy an object possesses due to its motion.
 
 **Formula:** KE = ½mv²
+- KE = kinetic energy (Joules)
+- m = mass (kg)
+- v = velocity (m/s)
 
-**Why v² matters:** 2× faster = 4× more energy!
+**Why v²?**
+The velocity is squared, which has profound implications:
+- 2× faster = 4× more energy
+- 3× faster = 9× more energy
+- 10× faster = 100× more energy!
 
-**Examples:**
-- Moving car has KE
-- Flying bullet has lots of KE (high velocity)
-- Wind has KE (can turn turbines)
+This is why high-speed collisions are so much more dangerous than low-speed ones.
 
-**Example Calculation:**
+**Derivation from Work:**
+When you apply force F to accelerate mass m over distance d:
+- Work done: W = F × d
+- Using F = ma and v² = u² + 2ad (starting from rest, u = 0):
+- W = ma × d = m × (v²/2d) × d = ½mv²
+- So work done equals kinetic energy gained!
+
+**Detailed Examples:**
+
+**Example 1: The Car**
 Car: mass = 1000 kg, velocity = 20 m/s
-KE = ½ × 1000 × 20² = 200,000 J
+KE = ½ × 1000 × 20² = ½ × 1000 × 400 = 200,000 J
 
-## Page 2: Potential Energy
+Same car at 40 m/s (2× faster):
+KE = ½ × 1000 × 40² = ½ × 1000 × 1600 = 800,000 J
+4× more energy! This is why speed limits exist.
 
-**Gravitational PE Formula:** PE = mgh
+**Example 2: The Bullet**
+Bullet: mass = 0.01 kg (10 grams), velocity = 400 m/s
+KE = ½ × 0.01 × 400² = ½ × 0.01 × 160,000 = 800 J
 
-**Examples:**
-- Book on shelf has PE
-- Water behind dam has PE
-- Skier at top of hill has PE
+Despite tiny mass, high velocity gives significant energy!
 
-**Example Calculation:**
-10 kg object at 5 m height:
+**Example 3: Comparing Objects**
+Which has more kinetic energy?
+A) 1000 kg car at 10 m/s: KE = ½ × 1000 × 100 = 50,000 J
+B) 0.1 kg baseball at 40 m/s: KE = ½ × 0.1 × 1600 = 80 J
+
+Car has 625× more kinetic energy!
+
+**Example 4: Stopping Distance**
+Car traveling at speed v needs distance d to stop.
+- Initial KE = ½mv²
+- Work by brakes = F × d
+- To stop: F × d = ½mv²
+- So d = mv²/(2F)
+
+If speed doubles (2v):
+- d = m(2v)²/(2F) = 4mv²/(2F) = 4 × original distance
+- Stopping distance increases by factor of 4!
+
+This is why speed limits are crucial for safety.
+
+**Real-World Applications:**
+- Vehicle safety: Crumple zones absorb kinetic energy
+- Sports: Kinetic energy of ball determines impact
+- Wind power: Turbines extract kinetic energy from moving air
+- Hydroelectric: Falling water's kinetic energy generates electricity
+
+## Page 3: Potential Energy - Stored Energy
+
+**Definition:** Potential energy is stored energy due to an object's position or configuration.
+
+**Gravitational Potential Energy:**
+Energy stored due to height above ground.
+
+**Formula:** PE = mgh
+- PE = potential energy (Joules)
+- m = mass (kg)
+- g = gravitational acceleration (9.8 m/s²)
+- h = height above reference point (meters)
+
+**Key Concept: Reference Point**
+Potential energy depends on where you measure from. The reference point (h = 0) is arbitrary - what matters is the change in height.
+
+**Detailed Examples:**
+
+**Example 1: Book on Shelf**
+10 kg book on 5 m high shelf:
 PE = 10 × 9.8 × 5 = 490 J
 
-## Page 3: Law of Conservation of Energy
+If it falls to the ground:
+- Loses 490 J of PE
+- Gains 490 J of KE
+- Hits ground with velocity: ½mv² = 490 → v = 9.9 m/s
 
-**Energy cannot be created or destroyed, only transformed!**
+**Example 2: Water Behind Dam**
+1,000,000 kg of water at height 100 m:
+PE = 1,000,000 × 9.8 × 100 = 980,000,000 J = 980 MJ
 
-**Roller Coaster Example:**
-- Top: Maximum PE, minimum KE
-- Bottom: Minimum PE, maximum KE
-- Total energy stays constant
+This energy can generate electricity when water flows down!
 
-## Page 4: Work and Power
+**Example 3: Roller Coaster**
+At top of 50 m hill:
+- PE = mgh = m × 9.8 × 50 = 490m J
+- KE ≈ 0 (moving slowly)
 
-**Work:** W = Force × Distance
-- Measured in Joules (J)
+At bottom (h = 0):
+- PE = 0
+- KE = 490m J (all PE converted to KE!)
+- Velocity: ½mv² = 490m → v = 31.3 m/s (113 km/h!)
 
-**Power:** P = Work / Time
-- Measured in Watts (W)
+**Example 4: Pendulum**
+At highest point:
+- Maximum PE, minimum KE (momentarily stopped)
+
+At lowest point:
+- Minimum PE, maximum KE (moving fastest)
+
+Energy constantly converts between PE and KE!
+
+**Other Forms of Potential Energy:**
+
+**Elastic Potential Energy:**
+Stored in stretched/compressed springs or elastic materials.
+Formula: PE = ½kx²
+- k = spring constant
+- x = displacement from equilibrium
+
+Examples: Bow and arrow, trampoline, rubber band
+
+**Chemical Potential Energy:**
+Stored in chemical bonds.
+Examples: Food, gasoline, batteries, explosives
+
+**Nuclear Potential Energy:**
+Stored in atomic nuclei.
+Examples: Nuclear reactors, atomic bombs, the sun
+
+**Electrical Potential Energy:**
+Stored in electric fields.
+Examples: Capacitors, thunderclouds
+
+## Page 4: Conservation of Energy - The Universal Law
+
+**Law of Conservation of Energy:**
+Energy cannot be created or destroyed, only transformed from one form to another. The total energy of an isolated system remains constant.
+
+**Formula:** E_initial = E_final
+Or: KE_i + PE_i + Other_i = KE_f + PE_f + Other_f
+
+**This is one of the most fundamental laws in physics!**
+
+**Detailed Examples:**
+
+**Example 1: Falling Object**
+Drop a 2 kg ball from 10 m height.
+
+At top (h = 10 m, v = 0):
+- PE = 2 × 9.8 × 10 = 196 J
+- KE = 0
+- Total = 196 J
+
+At middle (h = 5 m):
+- PE = 2 × 9.8 × 5 = 98 J
+- KE = 196 - 98 = 98 J (by conservation)
+- Total = 196 J ✓
+- Velocity: ½(2)v² = 98 → v = 9.9 m/s
+
+At bottom (h = 0):
+- PE = 0
+- KE = 196 J
+- Total = 196 J ✓
+- Velocity: ½(2)v² = 196 → v = 14 m/s
+
+Energy transformed from PE to KE, but total stayed constant!
+
+**Example 2: Roller Coaster**
+1000 kg car starts at 40 m height with 5 m/s velocity.
+
+Initial energy:
+- PE = 1000 × 9.8 × 40 = 392,000 J
+- KE = ½ × 1000 × 5² = 12,500 J
+- Total = 404,500 J
+
+At 20 m height:
+- PE = 1000 × 9.8 × 20 = 196,000 J
+- KE = 404,500 - 196,000 = 208,500 J
+- Velocity: ½(1000)v² = 208,500 → v = 20.4 m/s
+
+At ground level:
+- PE = 0
+- KE = 404,500 J
+- Velocity: ½(1000)v² = 404,500 → v = 28.5 m/s
+
+**Example 3: Pendulum**
+A pendulum swings back and forth. At each point:
+- Total energy = PE + KE = constant
+- At highest points: All PE, no KE
+- At lowest point: All KE, no PE
+- Energy continuously transforms between PE and KE
+
+**Example 4: Spring-Mass System**
+Compress a spring, release it to launch a mass:
+- Initially: Elastic PE in spring
+- During launch: Elastic PE → KE
+- After launch: All KE (if horizontal)
+
+**Real-World Considerations:**
+
+**Energy "Loss" to Heat:**
+In real systems, some energy converts to heat due to friction and air resistance. The energy isn't destroyed - it's just transformed into a less useful form.
+
+Example: Sliding box
+- Initial KE = 1000 J
+- Final KE = 200 J
+- "Lost" energy = 800 J → converted to heat by friction
+
+**Why Perpetual Motion is Impossible:**
+You can't create energy from nothing (1st Law of Thermodynamics). Any machine will eventually stop due to energy conversion to heat.
+
+## Page 5: Work-Energy Theorem
+
+**Statement:** The net work done on an object equals its change in kinetic energy.
+
+**Formula:** W_net = ΔKE = KE_final - KE_initial
+
+**This connects force (through work) to energy!**
+
+**Detailed Examples:**
+
+**Example 1: Accelerating Car**
+1000 kg car accelerates from 10 m/s to 20 m/s.
+
+Change in KE:
+- KE_i = ½ × 1000 × 10² = 50,000 J
+- KE_f = ½ × 1000 × 20² = 200,000 J
+- ΔKE = 200,000 - 50,000 = 150,000 J
+
+Work done by engine = 150,000 J
+
+If this happens over 100 m:
+- W = F × d
+- 150,000 = F × 100
+- F = 1,500 N (average force)
+
+**Example 2: Braking Car**
+1000 kg car brakes from 25 m/s to 0.
+
+Change in KE:
+- KE_i = ½ × 1000 × 25² = 312,500 J
+- KE_f = 0
+- ΔKE = -312,500 J (negative = energy removed)
+
+Work by brakes = -312,500 J
+
+If braking distance is 50 m:
+- -312,500 = F × 50
+- F = -6,250 N (negative = opposes motion)
+
+**Example 3: Lifting with Friction**
+Lift 10 kg box 3 m vertically. Friction force is 20 N.
+
+Work by you:
+- Against gravity: W_g = mgh = 10 × 9.8 × 3 = 294 J
+- Against friction: W_f = 20 × 3 = 60 J
+- Total work: W = 294 + 60 = 354 J
+
+Change in energy:
+- ΔPE = 294 J (gained)
+- Heat from friction = 60 J
+- Total = 354 J ✓
+
+## Page 6: Power - Rate of Energy Transfer
+
+**Definition:** Power is the rate at which work is done or energy is transferred.
+
+**Formula:** P = W/t = E/t
+- P = power (Watts)
+- W = work (Joules)
+- t = time (seconds)
 - 1 Watt = 1 Joule/second
 
-**Examples:**
-- 100 W light bulb uses 100 J every second
-- Car engine: 100,000 W (100 kW)
+**Alternative Formula:** P = F × v
+(Power = Force × velocity)
 
-## Page 5: Efficiency
+**Units:**
+- Watt (W): 1 J/s
+- Kilowatt (kW): 1000 W
+- Megawatt (MW): 1,000,000 W
+- Horsepower (hp): 746 W
+
+**Detailed Examples:**
+
+**Example 1: Light Bulb**
+100 W light bulb:
+- Uses 100 J every second
+- In 1 hour: E = 100 × 3600 = 360,000 J = 360 kJ
+- In 1 day: E = 100 × 86,400 = 8,640,000 J = 8.64 MJ
+
+**Example 2: Climbing Stairs**
+70 kg person climbs 3 m in 5 seconds.
+
+Work done:
+- W = mgh = 70 × 9.8 × 3 = 2,058 J
+
+Power:
+- P = W/t = 2,058/5 = 411.6 W
+
+Same person climbs in 10 seconds:
+- Work = 2,058 J (same!)
+- Power = 2,058/10 = 205.8 W (half the power)
+
+More time = less power needed (but same work!)
+
+**Example 3: Car Engine**
+100 kW (134 hp) car engine at 25 m/s:
+
+Power = Force × velocity
+100,000 = F × 25
+F = 4,000 N
+
+Engine provides 4,000 N force at this speed.
+
+**Example 4: Electricity Bill**
+Your home uses:
+- 5 × 100 W bulbs = 500 W
+- 1 × 1500 W microwave = 1500 W
+- 1 × 200 W TV = 200 W
+- Total = 2200 W = 2.2 kW
+
+Running for 5 hours:
+- Energy = 2.2 × 5 = 11 kWh (kilowatt-hours)
+- At $0.12/kWh: Cost = 11 × 0.12 = $1.32
+
+**Power in Daily Life:**
+- Human at rest: ~100 W
+- Human running: ~1000 W
+- Car engine: 50,000-300,000 W (67-402 hp)
+- Power plant: 1,000,000,000 W (1 GW)
+- Sun's output: 3.8 × 10²⁶ W!
+
+## Page 7: Efficiency and Energy Transformations
+
+**Efficiency:** The ratio of useful energy output to total energy input.
 
 **Formula:** Efficiency = (Useful energy out / Total energy in) × 100%
 
-**Examples:**
-- Incandescent bulb: 5% efficient (95% wasted as heat)
-- LED bulb: 20% efficient (much better!)
-- Car engine: 25% efficient
-- Electric motor: 90% efficient
+Or: Efficiency = (Useful power out / Total power in) × 100%
 
-## Page 6: Practice Problems
+**No machine is 100% efficient!** Some energy always converts to heat.
 
-**Problem 1:** A 2 kg ball is thrown at 10 m/s. What's its kinetic energy?
-**Answer:** KE = ½mv² = ½ × 2 × 10² = 100 J
+**Detailed Examples:**
 
-**Problem 2:** A 5 kg book is on a 2 m high shelf. What's its potential energy?
-**Answer:** PE = mgh = 5 × 9.8 × 2 = 98 J`,
+**Example 1: Incandescent Light Bulb**
+100 W input:
+- Light output: 5 W
+- Heat output: 95 W
+- Efficiency = (5/100) × 100% = 5%
 
-  'Electricity': `## ELECTRICITY - Flow of Electric Charge
+Only 5% of energy becomes light! Very inefficient.
 
-Electricity is electrons flowing through wires. Think of it like water flowing through pipes!
+**Example 2: LED Light Bulb**
+20 W input (same brightness as 100 W incandescent):
+- Light output: 4 W
+- Heat output: 16 W
+- Efficiency = (4/20) × 100% = 20%
 
-## Page 1: The Three Key Concepts
+4× more efficient than incandescent!
 
-**1. Voltage (V) - The Push**
-- Like water pressure
-- Measured in Volts
-- Wall outlet: 120V
+**Example 3: Car Engine**
+Gasoline contains 34 MJ/liter.
+Car uses 1 liter to travel 10 km.
 
-**2. Current (I) - The Flow**
-- How many electrons flow
-- Measured in Amps
-- Current is dangerous!
+Useful work (moving car): ~8.5 MJ
+Wasted as heat: ~25.5 MJ
+Efficiency = (8.5/34) × 100% = 25%
 
-**3. Resistance (R) - The Obstacle**
-- What slows down flow
-- Measured in Ohms (Ω)
-- Thin wire: high resistance
+Only 25% of fuel energy moves the car!
 
-## Page 2: Ohm's Law
+**Example 4: Electric Motor**
+1000 W input:
+- Mechanical output: 900 W
+- Heat loss: 100 W
+- Efficiency = (900/1000) × 100% = 90%
 
-**V = I × R**
-(Voltage = Current × Resistance)
+Electric motors are very efficient!
 
-This is the most important equation in electricity!
+**Example 5: Power Plant**
+Coal power plant:
+- Chemical energy in coal: 100 units
+- Heat from burning: 100 units
+- Steam turbine: 40 units (60% lost to environment)
+- Generator: 38 units (2% lost to friction)
+- Transmission: 35 units (3% lost in wires)
+- Overall efficiency: 35%
 
-**Example 1:** Battery: 12V, Resistance: 4Ω
-Current = V/R = 12/4 = 3A
+**Efficiency Comparison:**
+- Incandescent bulb: 5%
+- Fluorescent bulb: 10%
+- LED bulb: 20%
+- Gasoline car: 25%
+- Diesel car: 30%
+- Power plant: 35%
+- Solar panel: 15-20%
+- Wind turbine: 35-45%
+- Hydroelectric: 85-90%
+- Electric motor: 90-95%
 
-**Example 2:** Current: 2A, Resistance: 6Ω
-Voltage = I × R = 2 × 6 = 12V
+**Why Efficiency Matters:**
+- Saves money (less energy wasted)
+- Reduces environmental impact
+- Conserves resources
+- Less heat generation
 
-## Page 3: Series vs Parallel Circuits
+## Page 8: Forms of Energy
+
+**Mechanical Energy:**
+- Kinetic + Potential energy
+- Examples: Moving car, raised weight, compressed spring
+
+**Thermal Energy (Heat):**
+- Random kinetic energy of molecules
+- Examples: Hot water, fire, friction
+
+**Chemical Energy:**
+- Stored in chemical bonds
+- Examples: Food, gasoline, batteries, wood
+
+**Electrical Energy:**
+- Movement of electric charges
+- Examples: Lightning, power lines, circuits
+
+**Nuclear Energy:**
+- Stored in atomic nuclei
+- Examples: Nuclear reactors, atomic bombs, stars
+
+**Electromagnetic Energy:**
+- Carried by electromagnetic waves
+- Examples: Light, radio waves, X-rays, microwaves
+
+**Sound Energy:**
+- Vibrations traveling through matter
+- Examples: Music, speech, thunder
+
+**Energy Transformations:**
+
+**Power Plant:**
+Chemical → Thermal → Mechanical → Electrical
+
+**Solar Panel:**
+Electromagnetic → Electrical
+
+**Photosynthesis:**
+Electromagnetic → Chemical
+
+**Eating and Moving:**
+Chemical → Thermal + Mechanical
+
+**Battery-Powered Device:**
+Chemical → Electrical → Light/Sound/Mechanical
+
+## Page 9: Real-World Applications
+
+**1. Renewable Energy:**
+
+**Solar Power:**
+- Converts sunlight to electricity
+- Efficiency: 15-20%
+- Clean, unlimited source
+
+**Wind Power:**
+- Converts wind's kinetic energy to electricity
+- Efficiency: 35-45%
+- Clean, but location-dependent
+
+**Hydroelectric:**
+- Converts gravitational PE of water to electricity
+- Efficiency: 85-90%
+- Very efficient, but requires dams
+
+**2. Transportation:**
+
+**Hybrid Cars:**
+- Capture braking energy (normally wasted as heat)
+- Store in battery
+- Reuse for acceleration
+- Improves efficiency by ~30%
+
+**Regenerative Braking:**
+- Electric motor acts as generator when braking
+- Converts KE back to electrical energy
+- Used in electric cars and trains
+
+**3. Sports:**
+
+**Pole Vault:**
+- Runner's KE → Elastic PE in pole → Gravitational PE at height
+- Energy transformation allows jumping higher than possible without pole
+
+**Trampoline:**
+- Gravitational PE → Elastic PE → Gravitational PE
+- Allows bouncing higher than original jump
+
+**4. Safety:**
+
+**Airbags:**
+- Increase time of collision
+- Same change in KE, but over longer time
+- Reduces force (F = ΔKE/d)
+
+**Crumple Zones:**
+- Increase stopping distance
+- Absorb energy through deformation
+- Protects passengers
+
+## Page 10: Practice Problems
+
+**Problem 1:** A 2 kg ball is thrown upward at 15 m/s. Find:
+a) Initial kinetic energy
+b) Maximum height
+c) Velocity at 5 m height
+
+**Solution:**
+a) KE = ½mv² = ½(2)(15²) = 225 J
+
+b) At max height, all KE → PE:
+   mgh = 225
+   2(9.8)h = 225
+   h = 11.5 m
+
+c) At 5 m:
+   PE = 2(9.8)(5) = 98 J
+   KE = 225 - 98 = 127 J
+   ½(2)v² = 127
+   v = 11.3 m/s
+
+**Problem 2:** A 1500 kg car traveling at 20 m/s brakes to a stop in 40 m. Find:
+a) Initial kinetic energy
+b) Work done by brakes
+c) Braking force
+
+**Solution:**
+a) KE = ½(1500)(20²) = 300,000 J
+
+b) W = -300,000 J (negative because it removes energy)
+
+c) W = F × d
+   -300,000 = F × 40
+   F = -7,500 N (negative = opposes motion)
+
+**Problem 3:** A 60 kg person climbs 100 m stairs in 2 minutes. Find:
+a) Work done
+b) Power output
+
+**Solution:**
+a) W = mgh = 60(9.8)(100) = 58,800 J
+
+b) P = W/t = 58,800/120 = 490 W
+
+**Problem 4:** A machine uses 5000 J of energy and does 4000 J of useful work. Find efficiency.
+
+**Solution:**
+Efficiency = (4000/5000) × 100% = 80%
+
+**Common Misconceptions:**
+❌ "Energy is used up" → ✅ Energy is transformed, never destroyed
+❌ "Power and energy are the same" → ✅ Power is rate of energy transfer
+❌ "Heavier objects have more energy" → ✅ Depends on velocity too (KE = ½mv²)
+❌ "Work is done when you hold something" → ✅ No displacement = no work`,
+
+  'Electricity': `## ELECTRICITY - The Flow of Electric Charge
+
+Electricity is one of the most important discoveries in human history. It powers our modern world - from lights to computers to electric vehicles. Understanding electricity requires grasping three fundamental concepts: voltage, current, and resistance, and how they relate through Ohm's Law.
+
+## Page 1: Introduction to Electric Charge and Current
+
+**What is Electric Charge?**
+Electric charge is a fundamental property of matter. There are two types:
+- **Positive charge:** Carried by protons
+- **Negative charge:** Carried by electrons
+
+**Key Principles:**
+- Like charges repel (+ repels +, - repels -)
+- Opposite charges attract (+ attracts -)
+- Charge is conserved (can't be created or destroyed)
+- Charge is quantized (comes in discrete units)
+
+**Elementary Charge:**
+e = 1.6 × 10⁻¹⁹ Coulombs (C)
+- Charge of one proton: +e
+- Charge of one electron: -e
+
+**What is Electric Current?**
+Current is the flow of electric charge. In most circuits, electrons flow through wires.
+
+**Formula:** I = Q/t
+- I = current (Amperes, A)
+- Q = charge (Coulombs, C)
+- t = time (seconds)
+
+**1 Ampere = 1 Coulomb per second**
+
+**Direction of Current:**
+- **Conventional current:** Defined as flow of positive charge (+ to -)
+- **Electron flow:** Actual flow of electrons (- to +)
+- These are opposite directions!
+- We use conventional current (historical reasons)
+
+**Example 1: Current Calculation**
+10 Coulombs of charge flows through a wire in 2 seconds.
+I = Q/t = 10/2 = 5 A
+
+**Example 2: Charge from Current**
+A 3 A current flows for 5 seconds.
+Q = I × t = 3 × 5 = 15 C
+
+How many electrons?
+Number = Q/e = 15/(1.6 × 10⁻¹⁹) = 9.4 × 10¹⁹ electrons!
+
+**Historical Context:**
+Benjamin Franklin (1750s) defined current as positive charge flow before electrons were discovered. When electrons were discovered later, we learned current actually flows the opposite way, but we kept Franklin's convention.
+
+## Page 2: Voltage - The Electrical Push
+
+**What is Voltage?**
+Voltage (also called electric potential difference) is the "electrical pressure" that pushes charges through a circuit. It's the energy per unit charge.
+
+**Formula:** V = E/Q
+- V = voltage (Volts, V)
+- E = energy (Joules, J)
+- Q = charge (Coulombs, C)
+
+**1 Volt = 1 Joule per Coulomb**
+
+**Water Analogy:**
+Think of electricity like water in pipes:
+- **Voltage = Water pressure:** Higher pressure pushes water faster
+- **Current = Water flow rate:** How much water flows per second
+- **Resistance = Pipe narrowness:** Narrow pipes resist flow
+
+**Voltage Sources:**
+- **Battery:** Chemical energy → Electrical energy
+  * AA battery: 1.5 V
+  * Car battery: 12 V
+  * Laptop battery: 11-15 V
+- **Wall outlet:** 120 V (US) or 230 V (Europe)
+- **Power lines:** Thousands to hundreds of thousands of volts
+- **Lightning:** Millions of volts!
+
+**Example 1: Energy Transfer**
+A 12 V battery moves 5 C of charge through a circuit.
+Energy transferred: E = V × Q = 12 × 5 = 60 J
+
+**Example 2: Voltage and Power**
+A 120 V outlet supplies 10 A current.
+Power: P = V × I = 120 × 10 = 1200 W (1.2 kW)
+
+**Voltage Difference:**
+Voltage is always measured between two points. It's the difference in electrical potential.
+- Bird on power line: Safe! (No voltage difference across its body)
+- Touch power line and ground: Dangerous! (Large voltage difference)
+
+**Example 3: Series Voltages**
+Three batteries in series: 1.5 V + 1.5 V + 1.5 V = 4.5 V total
+Voltages add in series!
+
+## Page 3: Resistance - Opposition to Current Flow
+
+**What is Resistance?**
+Resistance is the opposition to current flow. It's caused by collisions between moving electrons and atoms in the material.
+
+**Formula:** R = ρL/A
+- R = resistance (Ohms, Ω)
+- ρ = resistivity (material property)
+- L = length of conductor
+- A = cross-sectional area
+
+**Key Points:**
+- Longer wire = more resistance
+- Thicker wire = less resistance
+- Different materials have different resistivities
+
+**Resistivity of Common Materials:**
+- Silver: 1.6 × 10⁻⁸ Ω⋅m (best conductor)
+- Copper: 1.7 × 10⁻⁸ Ω⋅m (commonly used)
+- Aluminum: 2.8 × 10⁻⁸ Ω⋅m
+- Iron: 1.0 × 10⁻⁷ Ω⋅m
+- Rubber: 10¹³ Ω⋅m (insulator)
+- Glass: 10¹¹ Ω⋅m (insulator)
+
+**Conductors vs Insulators:**
+- **Conductors:** Low resistance, allow current flow (metals)
+- **Insulators:** High resistance, block current flow (rubber, plastic, glass)
+- **Semiconductors:** Intermediate resistance (silicon, germanium)
+
+**Example 1: Wire Resistance**
+Copper wire: length = 10 m, diameter = 2 mm (radius = 0.001 m)
+Area: A = πr² = π(0.001)² = 3.14 × 10⁻⁶ m²
+R = ρL/A = (1.7 × 10⁻⁸)(10)/(3.14 × 10⁻⁶) = 0.054 Ω
+
+**Example 2: Effect of Length**
+Double the length → Double the resistance
+Wire 1: 10 m, R = 0.054 Ω
+Wire 2: 20 m, R = 0.108 Ω
+
+**Example 3: Effect of Thickness**
+Double the diameter → 4× the area → 1/4 the resistance
+Wire 1: 2 mm diameter, R = 0.054 Ω
+Wire 2: 4 mm diameter, R = 0.0135 Ω
+
+**Temperature Effect:**
+For most conductors, resistance increases with temperature.
+- Hot wire: Higher resistance
+- Cold wire: Lower resistance
+- Superconductors: Zero resistance at very low temperatures!
+
+## Page 4: Ohm's Law - The Fundamental Relationship
+
+**Ohm's Law:** V = I × R
+- V = voltage (Volts)
+- I = current (Amperes)
+- R = resistance (Ohms)
+
+**This is the most important equation in electricity!**
+
+**Three Forms:**
+1. V = I × R (find voltage)
+2. I = V/R (find current)
+3. R = V/I (find resistance)
+
+**Memory Triangle:**
+    V
+   ---
+  I | R
+
+Cover what you want to find, and you see the formula!
+
+**Detailed Examples:**
+
+**Example 1: Finding Current**
+Battery: 12 V, Resistor: 4 Ω
+Current: I = V/R = 12/4 = 3 A
+
+**Example 2: Finding Voltage**
+Current: 2 A, Resistance: 6 Ω
+Voltage: V = I × R = 2 × 6 = 12 V
+
+**Example 3: Finding Resistance**
+Voltage: 120 V, Current: 10 A
+Resistance: R = V/I = 120/10 = 12 Ω
+
+**Example 4: Light Bulb**
+120 V bulb draws 0.5 A
+Resistance: R = 120/0.5 = 240 Ω
+Power: P = V × I = 120 × 0.5 = 60 W (60-watt bulb!)
+
+**Example 5: Heater**
+1500 W heater on 120 V outlet
+Current: P = V × I → I = P/V = 1500/120 = 12.5 A
+Resistance: R = V/I = 120/12.5 = 9.6 Ω
+
+**Example 6: Multiple Resistors**
+Two resistors in series: R1 = 10 Ω, R2 = 20 Ω
+Total resistance: R_total = R1 + R2 = 30 Ω
+With 60 V battery: I = 60/30 = 2 A
+
+**Ohmic vs Non-Ohmic Materials:**
+- **Ohmic:** Resistance constant (metals) - V vs I graph is straight line
+- **Non-Ohmic:** Resistance changes (diodes, transistors) - V vs I graph is curved
+
+## Page 5: Series and Parallel Circuits
 
 **Series Circuit:**
-- Components in single path
-- Same current through all
-- If one breaks, all stop
-- Example: Old Christmas lights
+Components connected in a single path - current flows through each component one after another.
+
+**Series Rules:**
+1. **Same current everywhere:** I_total = I1 = I2 = I3
+2. **Voltages add:** V_total = V1 + V2 + V3
+3. **Resistances add:** R_total = R1 + R2 + R3
+
+**Example: Christmas Lights (Old Style)**
+10 bulbs in series, each 12 Ω, on 120 V
+- Total resistance: R = 10 × 12 = 120 Ω
+- Current: I = 120/120 = 1 A (same through all bulbs)
+- Voltage per bulb: V = 120/10 = 12 V
+- If one breaks, circuit opens, all go out!
 
 **Parallel Circuit:**
-- Components in multiple paths
-- Same voltage across all
-- If one breaks, others work
-- Example: House outlets
+Components connected across multiple paths - current splits among paths.
 
-## Page 4: Electrical Power
+**Parallel Rules:**
+1. **Same voltage across each:** V_total = V1 = V2 = V3
+2. **Currents add:** I_total = I1 + I2 + I3
+3. **Resistances:** 1/R_total = 1/R1 + 1/R2 + 1/R3
 
-**Formula:** P = V × I
+**Example: House Outlets**
+Three devices plugged into 120 V outlet:
+- Lamp: 240 Ω → I = 120/240 = 0.5 A
+- TV: 60 Ω → I = 120/60 = 2 A
+- Heater: 10 Ω → I = 120/10 = 12 A
+- Total current: 0.5 + 2 + 12 = 14.5 A
+- If one unplugs, others still work!
 
-**Examples:**
-- Light bulb: 120V × 0.5A = 60W
-- Phone charger: 5V × 2A = 10W
-- Microwave: 120V × 10A = 1200W
+**Detailed Example: Mixed Circuit**
+Two 10 Ω resistors in parallel, then in series with 5 Ω resistor, 30 V battery.
 
-## Page 5: Safety
+Step 1: Parallel resistors
+1/R_parallel = 1/10 + 1/10 = 2/10
+R_parallel = 5 Ω
 
-**Current is what's dangerous!**
+Step 2: Total resistance
+R_total = R_parallel + R_series = 5 + 5 = 10 Ω
 
-- 0.001A (1mA): Barely feel it
-- 0.01A (10mA): Can't let go
-- 0.1A (100mA): Can be fatal!
+Step 3: Total current
+I_total = V/R = 30/10 = 3 A
+
+Step 4: Voltage across parallel section
+V_parallel = I × R = 3 × 5 = 15 V
+
+Step 5: Current through each parallel resistor
+I_each = 15/10 = 1.5 A (splits equally)
+
+## Page 6: Electrical Power and Energy
+
+**Power:** Rate of energy transfer
+
+**Formulas:**
+1. P = V × I (voltage × current)
+2. P = I²R (current² × resistance)
+3. P = V²/R (voltage² / resistance)
+
+All three are equivalent (derived from Ohm's Law)!
+
+**Energy:** E = P × t
+- E = energy (Joules or kWh)
+- P = power (Watts)
+- t = time (seconds or hours)
+
+**Kilowatt-hour (kWh):**
+Energy unit used by electric companies
+1 kWh = 1000 W × 3600 s = 3,600,000 J = 3.6 MJ
+
+**Detailed Examples:**
+
+**Example 1: Light Bulb**
+60 W bulb on 120 V circuit
+Current: P = V × I → I = 60/120 = 0.5 A
+Resistance: R = V/I = 120/0.5 = 240 Ω
+
+Running for 5 hours:
+Energy = 60 W × 5 h = 300 Wh = 0.3 kWh
+Cost (at $0.12/kWh): 0.3 × $0.12 = $0.036 (less than 4 cents)
+
+**Example 2: Electric Heater**
+1500 W heater
+Current (on 120 V): I = 1500/120 = 12.5 A
+Resistance: R = 120/12.5 = 9.6 Ω
+
+Running for 8 hours:
+Energy = 1.5 kW × 8 h = 12 kWh
+Cost: 12 × $0.12 = $1.44
+
+**Example 3: Power Loss in Wires**
+10 A current through 0.5 Ω wire
+Power loss: P = I²R = 10² × 0.5 = 50 W
+This energy becomes heat!
+
+**Example 4: Comparing Bulbs**
+Incandescent: 60 W for 800 lumens
+LED: 10 W for 800 lumens (same brightness)
+
+Running 5 hours/day for 30 days:
+Incandescent: 60 × 5 × 30 = 9000 Wh = 9 kWh → $1.08
+LED: 10 × 5 × 30 = 1500 Wh = 1.5 kWh → $0.18
+Savings: $0.90/month, $10.80/year per bulb!
+
+**Why High Voltage for Power Transmission?**
+Power loss in wires: P = I²R
+For same power delivered: P = V × I
+Higher voltage → Lower current → Much less power loss!
+
+Example:
+Transmit 1,000,000 W over 1 Ω wire
+
+At 1000 V: I = 1,000,000/1000 = 1000 A
+Loss: P = 1000² × 1 = 1,000,000 W (100% loss!)
+
+At 100,000 V: I = 1,000,000/100,000 = 10 A
+Loss: P = 10² × 1 = 100 W (0.01% loss!)
+
+This is why power lines use very high voltages!
+
+## Page 7: Electrical Safety
+
+**Current is What's Dangerous!**
+
+**Effects of Current on Human Body:**
+- 0.001 A (1 mA): Barely perceptible
+- 0.005 A (5 mA): Maximum "safe" current
+- 0.010 A (10 mA): Involuntary muscle contractions, can't let go
+- 0.030 A (30 mA): Breathing difficulty
+- 0.075 A (75 mA): Ventricular fibrillation (heart stops pumping)
+- 0.100 A (100 mA): Often fatal
+- 1 A and above: Severe burns, cardiac arrest
+
+**Why is Current Dangerous?**
+- Disrupts electrical signals in nerves and heart
+- Causes muscles to contract involuntarily
+- Can stop the heart or breathing
+
+**Factors Affecting Shock Severity:**
+1. **Current magnitude:** More current = more dangerous
+2. **Duration:** Longer exposure = more dangerous
+3. **Path through body:** Through heart = most dangerous
+4. **Frequency:** AC at 50-60 Hz is most dangerous
+5. **Body resistance:** Wet skin = lower resistance = more current
+
+**Body Resistance:**
+- Dry skin: 100,000 Ω
+- Wet skin: 1,000 Ω (100× less!)
+- Internal body: 300-1000 Ω
+
+**Example: Shock Calculation**
+Touch 120 V with wet hands (1000 Ω resistance)
+Current: I = V/R = 120/1000 = 0.12 A = 120 mA
+This is potentially FATAL!
+
+Same voltage with dry hands (100,000 Ω):
+Current: I = 120/100,000 = 0.0012 A = 1.2 mA
+Barely felt, relatively safe
 
 **Safety Rules:**
-- Never touch wires with wet hands
-- Don't overload outlets
-- Use circuit breakers
-- Keep water away from electricity
+1. **Never touch electrical wires with wet hands**
+2. **Don't use electrical devices near water**
+3. **Don't overload outlets** (fire hazard)
+4. **Use circuit breakers and fuses**
+5. **Ground electrical systems properly**
+6. **Use GFCI outlets in bathrooms/kitchens**
+7. **Don't touch downed power lines**
+8. **Unplug devices before repairing**
 
-## Page 6: Practice Problems
+**Circuit Breakers:**
+Automatically disconnect circuit if current exceeds safe limit.
+- 15 A breaker: Trips if current > 15 A
+- Prevents fires from overheating wires
 
-**Problem 1:** A circuit has 12V battery and 4Ω resistor. What's the current?
-**Answer:** I = V/R = 12/4 = 3A
+**Ground Fault Circuit Interrupter (GFCI):**
+Detects current imbalance (leakage to ground)
+Trips in 0.025 seconds if imbalance > 5 mA
+Required in bathrooms, kitchens, outdoors
 
-**Problem 2:** A device uses 5A at 120V. What's the power?
-**Answer:** P = V × I = 120 × 5 = 600W`,
+## Page 8: Batteries and DC vs AC
 
-  'Waves': `## WAVES - Energy Transfer
+**Battery:**
+Converts chemical energy to electrical energy
+Provides constant voltage (Direct Current - DC)
 
-Waves transfer energy without moving material!
+**Types:**
+- **Primary (non-rechargeable):** Alkaline, zinc-carbon
+- **Secondary (rechargeable):** Lithium-ion, NiMH, lead-acid
 
-## Page 1: What Are Waves?
+**Battery Specifications:**
+- **Voltage:** Electrical potential (1.5 V, 3.7 V, 12 V, etc.)
+- **Capacity:** Energy storage (mAh or Ah)
+  * 2000 mAh = can provide 2000 mA for 1 hour, or 1000 mA for 2 hours
 
-A wave is a disturbance that transfers energy from one place to another.
+**Example: Phone Battery**
+3.7 V, 3000 mAh battery
+Energy: E = V × Q = 3.7 × 3 = 11.1 Wh
 
-**Key Concept:** The wave moves, but material just oscillates in place!
+If phone uses 1 W:
+Runtime: 11.1 Wh / 1 W = 11.1 hours
 
-**Example:** Ocean wave travels across ocean, but water just moves up and down.
+**Direct Current (DC):**
+- Current flows in one direction
+- Constant voltage
+- Sources: Batteries, solar panels, DC power supplies
+- Uses: Electronics, LED lights, electric vehicles
+
+**Alternating Current (AC):**
+- Current periodically reverses direction
+- Voltage oscillates sinusoidally
+- Frequency: 60 Hz (US) or 50 Hz (Europe)
+- Sources: Power plants, generators
+- Uses: Home outlets, appliances, power transmission
+
+**Why AC for Power Distribution?**
+1. Easy to transform voltage (transformers)
+2. Efficient long-distance transmission
+3. Simple generators
+4. Historically, won the "War of Currents" (Edison vs Tesla)
+
+**AC Specifications:**
+- **RMS Voltage:** Effective voltage (120 V in US)
+- **Peak Voltage:** Maximum voltage (170 V in US)
+- **Frequency:** Cycles per second (60 Hz in US)
+
+**Relationship:** V_peak = V_RMS × √2 ≈ V_RMS × 1.414
+
+## Page 9: Real-World Applications
+
+**1. Power Grid:**
+- Power plant generates AC at 25,000 V
+- Step-up transformer: 25,000 V → 500,000 V (transmission)
+- Step-down transformer: 500,000 V → 7,200 V (distribution)
+- Step-down transformer: 7,200 V → 120/240 V (homes)
+
+**2. Electric Vehicles:**
+- Battery: 400 V DC, 75 kWh capacity
+- Motor: 200 kW (268 hp)
+- Range: 300 miles
+- Charging: AC from outlet converted to DC for battery
+
+**3. Solar Power:**
+- Solar panels produce DC
+- Inverter converts DC to AC for home use
+- Excess power sent to grid
+
+**4. Electronics:**
+- Wall adapter converts 120 V AC to low voltage DC (5V, 12V, etc.)
+- Rectifier converts AC to DC
+- Voltage regulator maintains constant voltage
+
+**5. Lightning:**
+- Voltage: 100 million to 1 billion volts!
+- Current: 20,000 to 200,000 A
+- Duration: 0.0002 seconds
+- Energy: ~250 kWh (but too brief to capture)
+
+## Page 10: Practice Problems
+
+**Problem 1:** A 12 V battery is connected to a 4 Ω resistor. Find:
+a) Current
+b) Power dissipated
+
+**Solution:**
+a) I = V/R = 12/4 = 3 A
+b) P = V × I = 12 × 3 = 36 W
+   Or: P = I²R = 3² × 4 = 36 W ✓
+
+**Problem 2:** A device uses 5 A at 120 V. Find:
+a) Resistance
+b) Power
+c) Energy used in 3 hours
+d) Cost at $0.12/kWh
+
+**Solution:**
+a) R = V/I = 120/5 = 24 Ω
+b) P = V × I = 120 × 5 = 600 W
+c) E = P × t = 600 W × 3 h = 1800 Wh = 1.8 kWh
+d) Cost = 1.8 × $0.12 = $0.216 ≈ $0.22
+
+**Problem 3:** Three resistors in series: 10 Ω, 20 Ω, 30 Ω, connected to 60 V. Find:
+a) Total resistance
+b) Current
+c) Voltage across each resistor
+
+**Solution:**
+a) R_total = 10 + 20 + 30 = 60 Ω
+b) I = V/R = 60/60 = 1 A
+c) V1 = I × R1 = 1 × 10 = 10 V
+   V2 = 1 × 20 = 20 V
+   V3 = 1 × 30 = 30 V
+   Check: 10 + 20 + 30 = 60 V ✓
+
+**Problem 4:** Two resistors in parallel: 12 Ω and 6 Ω, connected to 12 V. Find:
+a) Total resistance
+b) Total current
+c) Current through each resistor
+
+**Solution:**
+a) 1/R_total = 1/12 + 1/6 = 1/12 + 2/12 = 3/12
+   R_total = 4 Ω
+b) I_total = V/R = 12/4 = 3 A
+c) I1 = 12/12 = 1 A
+   I2 = 12/6 = 2 A
+   Check: 1 + 2 = 3 A ✓
+
+**Common Misconceptions:**
+❌ "Voltage flows through a circuit" → ✅ Current flows, voltage is the push
+❌ "Batteries store charge" → ✅ Batteries store chemical energy, not charge
+❌ "Higher voltage is always more dangerous" → ✅ Current kills, not voltage (but higher V can cause higher I)
+❌ "Electricity travels at light speed" → ✅ Electrons drift slowly (~mm/s), but energy propagates fast`,
+
+  'Waves': `## WAVES - Energy Transfer Through Space and Matter
+
+Waves are one of the most important phenomena in physics. They transfer energy from one place to another without transferring matter. From ocean waves to sound to light to earthquakes, waves are everywhere in nature and technology. Understanding waves is essential for comprehending sound, light, radio, earthquakes, and even quantum mechanics.
+
+## Page 1: Introduction to Waves
+
+**What is a Wave?**
+A wave is a disturbance that transfers energy from one location to another without transferring matter. The medium (material) oscillates in place while the wave pattern moves forward.
+
+**Key Concept:** The wave moves, but the material doesn't travel with it!
+
+**Example: Ocean Wave**
+- Wave travels across ocean (energy moves)
+- Water molecules just move up and down in circles (matter stays in place)
+- Surfers ride the energy, not the water itself
+
+**Example: Stadium Wave**
+- Wave pattern travels around stadium
+- Each person just stands up and sits down (doesn't move to next seat)
+- Pattern moves, people don't
+
+**Parts of a Wave:**
+- **Crest:** Highest point
+- **Trough:** Lowest point
+- **Amplitude (A):** Maximum displacement from equilibrium (height of crest or depth of trough)
+- **Wavelength (λ):** Distance between consecutive crests (or troughs)
+- **Period (T):** Time for one complete wave cycle
+- **Frequency (f):** Number of complete cycles per second
+
+**Wave Properties:**
+1. **Wavelength (λ):** Measured in meters (m)
+2. **Frequency (f):** Measured in Hertz (Hz) = cycles/second
+3. **Period (T):** Measured in seconds (s)
+4. **Amplitude (A):** Measured in meters (m)
+5. **Speed (v):** Measured in m/s
+
+**Relationships:**
+- f = 1/T (frequency = 1 / period)
+- T = 1/f (period = 1 / frequency)
+- v = fλ (speed = frequency × wavelength)
+
+**Example 1: Wave Calculations**
+Wave with frequency 5 Hz:
+- Period: T = 1/5 = 0.2 seconds (each cycle takes 0.2 s)
+- Meaning: 5 complete waves pass per second
+
+Wave with period 0.1 seconds:
+- Frequency: f = 1/0.1 = 10 Hz
+- Meaning: 10 complete waves pass per second
+
+**Example 2: Energy and Amplitude**
+Amplitude determines energy:
+- Larger amplitude = more energy
+- 2× amplitude = 4× energy (energy ∝ amplitude²)
+
+Ocean waves:
+- Small waves (0.5 m amplitude): Gentle
+- Large waves (3 m amplitude): Powerful, dangerous
+- Tsunami (10+ m amplitude): Devastating
 
 ## Page 2: Types of Waves
 
-**1. Transverse Waves**
-Particles move perpendicular to wave direction.
-- Examples: Light, water waves, rope waves
+**1. Transverse Waves:**
+Particles oscillate perpendicular (at right angles) to wave direction.
 
-**2. Longitudinal Waves**
-Particles move parallel to wave direction.
-- Examples: Sound waves, earthquake waves
+**Examples:**
+- Light waves (electromagnetic)
+- Water waves (surface)
+- Waves on a string/rope
+- S-waves in earthquakes
 
-## Page 3: Wave Properties
+**Visualization:**
+Wave moves right →
+Particles move up ↑ and down ↓
 
-**Wavelength (λ):** Distance between peaks
-- Measured in meters
+**Example: Rope Wave**
+Shake rope up and down:
+- Wave travels horizontally along rope
+- Rope particles move vertically up and down
+- Perpendicular motion = transverse
 
-**Frequency (f):** Waves per second
-- Measured in Hertz (Hz)
+**2. Longitudinal Waves:**
+Particles oscillate parallel (same direction) to wave direction.
 
-**Amplitude:** Height of wave
-- Bigger amplitude = more energy
+**Examples:**
+- Sound waves
+- P-waves in earthquakes
+- Compression waves in springs
 
-**Speed (v):** How fast wave travels
+**Visualization:**
+Wave moves right →
+Particles move right → and left ←
 
-## Page 4: The Wave Equation
+**Example: Sound Wave**
+- Air molecules compress and expand
+- Compressions (high pressure) and rarefactions (low pressure)
+- Molecules vibrate back and forth in direction of wave travel
 
-**v = f × λ**
-(Speed = Frequency × Wavelength)
+**Example: Slinky**
+Push and pull slinky:
+- Wave travels along slinky
+- Coils compress and expand in same direction
+- Parallel motion = longitudinal
 
-**Example:** Sound wave: f = 440 Hz, λ = 0.78 m
-Speed = 440 × 0.78 = 343 m/s (speed of sound!)
+**3. Surface Waves:**
+Combination of transverse and longitudinal motion.
 
-## Page 5: Electromagnetic Spectrum
+**Example: Ocean Waves**
+- Water molecules move in circular paths
+- Both up/down and forward/backward
+- Energy travels horizontally across surface
 
-All travel at light speed: 3 × 10⁸ m/s!
+**Comparison:**
 
-**From longest to shortest:**
-1. Radio waves - Radio, TV, WiFi
-2. Microwaves - Microwave ovens
-3. Infrared - Heat, remotes
-4. Visible Light - What we see!
-5. Ultraviolet - Sunburn
-6. X-rays - See bones
-7. Gamma rays - Most dangerous
+| Property | Transverse | Longitudinal |
+|----------|------------|--------------|
+| Particle motion | Perpendicular | Parallel |
+| Can travel in vacuum | Yes (light) | No (need medium) |
+| Examples | Light, rope | Sound, slinky |
+| Can be polarized | Yes | No |
 
-## Page 6: Wave Behaviors
+## Page 3: Wave Properties - Wavelength, Frequency, and Speed
 
-**Reflection:** Wave bounces off (mirrors, echoes)
+**Wavelength (λ):**
+Distance between two consecutive points in phase (crest to crest, or trough to trough).
 
-**Refraction:** Wave bends (straw in water)
+**Measured in:** meters (m), centimeters (cm), nanometers (nm)
 
-**Diffraction:** Wave spreads (hear around corners)
+**Examples:**
+- Radio waves: 1 m to 100,000 m
+- Visible light: 400-700 nm (nanometers)
+- X-rays: 0.01-10 nm
+- Sound (middle C): 1.3 m
 
-**Interference:** Waves combine or cancel
+**Frequency (f):**
+Number of complete wave cycles passing a point per second.
 
-## Page 7: Practice Problems
+**Measured in:** Hertz (Hz) = cycles per second
 
-**Problem 1:** A wave has frequency 50 Hz and wavelength 2 m. What's its speed?
-**Answer:** v = f × λ = 50 × 2 = 100 m/s
+**Examples:**
+- AM radio: 500-1600 kHz (kilohertz)
+- FM radio: 88-108 MHz (megahertz)
+- WiFi: 2.4 or 5 GHz (gigahertz)
+- Visible light: 430-750 THz (terahertz)
+- Sound (middle C): 262 Hz
 
-**Problem 2:** Why can't sound travel through space?
-**Answer:** Sound needs matter to travel through. Space is a vacuum!`,
+**Period (T):**
+Time for one complete wave cycle.
+
+**Measured in:** seconds (s)
+
+**Relationship:** T = 1/f
+
+**Examples:**
+- 60 Hz AC power: T = 1/60 = 0.0167 s (16.7 ms)
+- 440 Hz sound (A note): T = 1/440 = 0.00227 s (2.27 ms)
+
+**Amplitude (A):**
+Maximum displacement from equilibrium position.
+
+**Determines:**
+- Energy of wave (Energy ∝ A²)
+- Intensity (brightness for light, loudness for sound)
+
+**Examples:**
+- Loud sound: Large amplitude
+- Quiet sound: Small amplitude
+- Bright light: Large amplitude
+- Dim light: Small amplitude
+
+**Wave Speed (v):**
+How fast the wave pattern travels.
+
+**Formula:** v = fλ (speed = frequency × wavelength)
+
+This is the FUNDAMENTAL WAVE EQUATION!
+
+**Detailed Examples:**
+
+**Example 1: Sound Wave**
+Frequency: 440 Hz (A note)
+Speed of sound: 343 m/s
+Wavelength: λ = v/f = 343/440 = 0.78 m
+
+**Example 2: Light Wave**
+Wavelength: 500 nm (green light)
+Speed of light: 3 × 10⁸ m/s
+Frequency: f = v/λ = (3 × 10⁸)/(500 × 10⁻⁹) = 6 × 10¹⁴ Hz
+
+**Example 3: Radio Wave**
+FM station at 100 MHz
+Speed: 3 × 10⁸ m/s (light speed)
+Wavelength: λ = v/f = (3 × 10⁸)/(100 × 10⁶) = 3 m
+
+**Example 4: Relationship**
+If frequency doubles, wavelength halves (for constant speed):
+- Original: f = 100 Hz, λ = 3.43 m
+- Doubled: f = 200 Hz, λ = 1.715 m
+- v = fλ = 343 m/s (constant!)
+
+## Page 4: The Electromagnetic Spectrum
+
+**Electromagnetic Waves:**
+Transverse waves consisting of oscillating electric and magnetic fields. They can travel through vacuum (no medium needed)!
+
+**ALL electromagnetic waves travel at the speed of light:** c = 3 × 10⁸ m/s (in vacuum)
+
+**The Spectrum (from longest to shortest wavelength):**
+
+**1. Radio Waves**
+- Wavelength: > 1 mm
+- Frequency: < 300 GHz
+- Uses: Radio, TV, WiFi, cell phones, radar
+- Penetration: Pass through walls easily
+
+**2. Microwaves**
+- Wavelength: 1 mm to 1 m
+- Frequency: 300 MHz to 300 GHz
+- Uses: Microwave ovens, satellite communication, radar
+- Fact: Microwave ovens use 2.45 GHz to heat water molecules
+
+**3. Infrared (IR)**
+- Wavelength: 700 nm to 1 mm
+- Frequency: 300 GHz to 430 THz
+- Uses: Remote controls, thermal imaging, night vision
+- Fact: We feel IR as heat
+
+**4. Visible Light**
+- Wavelength: 400-700 nm
+- Frequency: 430-750 THz
+- Colors (ROYGBIV):
+  * Red: 700 nm (lowest frequency)
+  * Orange: 620 nm
+  * Yellow: 580 nm
+  * Green: 550 nm
+  * Blue: 470 nm
+  * Indigo: 450 nm
+  * Violet: 400 nm (highest frequency)
+- Only part we can see!
+
+**5. Ultraviolet (UV)**
+- Wavelength: 10-400 nm
+- Frequency: 750 THz to 30 PHz
+- Effects: Causes sunburn, kills bacteria, produces vitamin D
+- Blocked by: Ozone layer (mostly), sunscreen, glass
+
+**6. X-rays**
+- Wavelength: 0.01-10 nm
+- Frequency: 30 PHz to 30 EHz
+- Uses: Medical imaging, airport security, astronomy
+- Penetration: Pass through soft tissue, blocked by bones/metal
+
+**7. Gamma Rays**
+- Wavelength: < 0.01 nm
+- Frequency: > 30 EHz
+- Sources: Radioactive decay, nuclear reactions, cosmic events
+- Most energetic, most dangerous
+- Uses: Cancer treatment, sterilization
+
+**Key Relationships:**
+- Longer wavelength = Lower frequency = Lower energy
+- Shorter wavelength = Higher frequency = Higher energy
+- Energy = h × f (h = Planck's constant)
+
+**Example: Comparing Waves**
+Red light: λ = 700 nm, f = 4.3 × 10¹⁴ Hz
+Blue light: λ = 400 nm, f = 7.5 × 10¹⁴ Hz
+Blue has shorter wavelength, higher frequency, more energy!
+
+**Why Sky is Blue:**
+Blue light scatters more than red (shorter wavelength)
+Sunlight hits atmosphere → blue scatters in all directions → we see blue sky!
+
+## Page 5: Wave Behaviors - Reflection, Refraction, Diffraction
+
+**1. Reflection:**
+Wave bounces off a surface.
+
+**Law of Reflection:** Angle of incidence = Angle of reflection
+
+**Examples:**
+- Mirror: Light reflects
+- Echo: Sound reflects off walls/mountains
+- Radar: Radio waves reflect off objects
+- Sonar: Sound waves reflect off underwater objects
+
+**Types:**
+- **Specular reflection:** Smooth surface (mirror) - organized reflection
+- **Diffuse reflection:** Rough surface (paper) - scattered reflection
+
+**Example: Echo**
+Shout at mountain 343 m away:
+- Sound travels to mountain: t = 343/343 = 1 second
+- Reflects back: t = 1 second
+- Total time: 2 seconds
+- You hear echo after 2 seconds
+
+**2. Refraction:**
+Wave bends when entering a different medium (due to speed change).
+
+**Cause:** Wave speed changes in different materials
+
+**Examples:**
+- Straw in water looks bent
+- Lenses focus light
+- Mirages in desert
+- Rainbow formation
+
+**Snell's Law:** n₁ sin(θ₁) = n₂ sin(θ₂)
+- n = refractive index
+- θ = angle from normal
+
+**Refractive Indices:**
+- Vacuum: 1.00
+- Air: 1.0003 ≈ 1.00
+- Water: 1.33
+- Glass: 1.5
+- Diamond: 2.42
+
+**Example: Light Entering Water**
+Light slows down in water (from 3 × 10⁸ m/s to 2.25 × 10⁸ m/s)
+Bends toward normal (perpendicular to surface)
+This is why pools look shallower than they are!
+
+**3. Diffraction:**
+Wave spreads out when passing through an opening or around an obstacle.
+
+**Key Point:** More diffraction when:
+- Wavelength is larger
+- Opening is smaller
+
+**Examples:**
+- Hear sound around corners (long wavelength)
+- Can't see light around corners (short wavelength)
+- Radio waves bend around buildings
+- Water waves spread through harbor entrance
+
+**Example: Why We Hear But Don't See Around Corners**
+Sound wavelength: ~1 m (similar to door size) → diffracts well
+Light wavelength: ~500 nm (much smaller than door) → minimal diffraction
+
+**4. Interference:**
+Two or more waves overlap and combine.
+
+**Constructive Interference:**
+- Waves in phase (crests align)
+- Amplitudes add
+- Result: Larger amplitude
+
+**Destructive Interference:**
+- Waves out of phase (crest meets trough)
+- Amplitudes subtract
+- Result: Smaller amplitude or cancellation
+
+**Examples:**
+- Noise-canceling headphones: Create opposite wave to cancel noise
+- Thin film interference: Colors in soap bubbles, oil slicks
+- Double-slit experiment: Proves wave nature of light
+
+**Example: Noise Cancellation**
+Original noise: Amplitude = +A
+Canceling wave: Amplitude = -A
+Result: +A + (-A) = 0 (silence!)
+
+## Page 6: Sound Waves
+
+**What is Sound?**
+Longitudinal pressure waves traveling through matter (air, water, solids).
+
+**Cannot travel through vacuum!** (No medium = no sound)
+
+**Speed of Sound:**
+- Air (20°C): 343 m/s (767 mph)
+- Water: 1,480 m/s (4.3× faster than air)
+- Steel: 5,960 m/s (17× faster than air)
+- Vacuum: 0 m/s (can't travel!)
+
+**Why faster in solids?**
+Molecules closer together → vibrations transfer faster
+
+**Properties of Sound:**
+
+**1. Pitch:**
+Determined by frequency
+- High frequency = High pitch (soprano, whistle)
+- Low frequency = Low pitch (bass, thunder)
+
+**Human hearing range:** 20 Hz to 20,000 Hz
+- Infrasound: < 20 Hz (elephants, earthquakes)
+- Ultrasound: > 20,000 Hz (bats, dolphins, medical imaging)
+
+**2. Loudness:**
+Determined by amplitude
+- Large amplitude = Loud
+- Small amplitude = Quiet
+
+**Measured in:** Decibels (dB)
+- 0 dB: Threshold of hearing
+- 30 dB: Whisper
+- 60 dB: Normal conversation
+- 85 dB: Heavy traffic (hearing damage with prolonged exposure)
+- 120 dB: Rock concert (pain threshold)
+- 140 dB: Jet engine (immediate hearing damage)
+- 194 dB: Loudest possible sound in air (shockwave)
+
+**3. Timbre (Quality):**
+Determined by wave shape (combination of frequencies)
+- Why different instruments sound different playing same note
+- Piano vs guitar vs violin - all playing middle C (262 Hz)
+
+**Doppler Effect:**
+Frequency changes when source or observer moves.
+
+**Moving toward:** Frequency increases (higher pitch)
+**Moving away:** Frequency decreases (lower pitch)
+
+**Examples:**
+- Ambulance siren: Higher pitch approaching, lower pitch leaving
+- Race car: Pitch drops as it passes
+- Astronomy: Red shift (galaxies moving away), blue shift (moving toward)
+
+**Formula:** f' = f × (v ± v_observer) / (v ∓ v_source)
+
+**Example: Ambulance**
+Siren frequency: 1000 Hz
+Ambulance speed: 30 m/s
+Sound speed: 343 m/s
+
+Approaching: f' = 1000 × 343/(343-30) = 1096 Hz (higher!)
+Leaving: f' = 1000 × 343/(343+30) = 920 Hz (lower!)
+
+**Sonic Boom:**
+When object travels faster than sound (supersonic)
+- Creates shockwave (cone-shaped)
+- Heard as loud boom
+- Examples: Supersonic jets, bullets, whips
+
+## Page 7: Light Waves and Optics
+
+**Light as a Wave:**
+Electromagnetic wave with wavelength 400-700 nm
+
+**Properties:**
+- Travels at c = 3 × 10⁸ m/s (in vacuum)
+- Can travel through vacuum
+- Transverse wave
+- Exhibits reflection, refraction, diffraction, interference
+
+**Reflection:**
+
+**Plane Mirror:**
+- Image is virtual (behind mirror)
+- Same size as object
+- Left-right reversed
+
+**Curved Mirrors:**
+- **Concave (converging):** Can form real or virtual images
+  * Uses: Telescopes, makeup mirrors, headlights
+- **Convex (diverging):** Always forms virtual, smaller images
+  * Uses: Security mirrors, car side mirrors
+
+**Refraction:**
+
+**Lenses:**
+- **Convex (converging):** Thicker in middle
+  * Focuses light to a point
+  * Uses: Magnifying glass, camera, eyeglasses (farsightedness)
+- **Concave (diverging):** Thinner in middle
+  * Spreads light out
+  * Uses: Eyeglasses (nearsightedness), peepholes
+
+**Lens Equation:** 1/f = 1/d_o + 1/d_i
+- f = focal length
+- d_o = object distance
+- d_i = image distance
+
+**Dispersion:**
+Different colors refract by different amounts
+- Red bends least
+- Violet bends most
+- Creates rainbows!
+
+**Rainbow Formation:**
+1. Sunlight enters water droplet
+2. Refracts (separates into colors)
+3. Reflects off back of droplet
+4. Refracts again exiting droplet
+5. Colors spread out → rainbow!
+
+**Polarization:**
+Light waves oscillating in one plane only
+
+**Examples:**
+- Polarized sunglasses: Block glare (reflected light is polarized)
+- 3D movies: Use polarization to separate images for each eye
+- LCD screens: Use polarized light
+
+**Interference:**
+
+**Thin Film Interference:**
+Light reflects from top and bottom of thin film
+- Two reflected waves interfere
+- Creates colors in soap bubbles, oil slicks, butterfly wings
+
+**Double-Slit Experiment:**
+Light through two slits creates interference pattern
+- Proves wave nature of light
+- Alternating bright and dark bands
+
+## Page 8: Standing Waves and Resonance
+
+**Standing Wave:**
+Wave pattern that appears stationary, formed by interference of two waves traveling in opposite directions.
+
+**Nodes:** Points of zero amplitude (no motion)
+**Antinodes:** Points of maximum amplitude
+
+**Examples:**
+- Guitar string
+- Organ pipe
+- Microwave oven
+- Laser cavity
+
+**String Fixed at Both Ends:**
+
+**Fundamental (1st harmonic):**
+- Wavelength: λ = 2L
+- Frequency: f₁ = v/(2L)
+- One antinode in middle
+
+**2nd Harmonic:**
+- Wavelength: λ = L
+- Frequency: f₂ = 2f₁
+- Two antinodes
+
+**3rd Harmonic:**
+- Wavelength: λ = 2L/3
+- Frequency: f₃ = 3f₁
+- Three antinodes
+
+**General:** f_n = n × f₁ (n = 1, 2, 3, ...)
+
+**Example: Guitar String**
+Length: 0.65 m
+Wave speed: 400 m/s
+
+Fundamental: f₁ = 400/(2 × 0.65) = 308 Hz
+2nd harmonic: f₂ = 2 × 308 = 616 Hz
+3rd harmonic: f₃ = 3 × 308 = 924 Hz
+
+**Resonance:**
+System vibrates with maximum amplitude at its natural frequency.
+
+**Examples:**
+- Pushing swing at right time → high amplitude
+- Shattering glass with sound (opera singer)
+- Tacoma Narrows Bridge collapse (1940)
+- Musical instruments
+- Radio tuning
+
+**Resonance Conditions:**
+- Driving frequency = Natural frequency
+- Energy efficiently transferred
+- Amplitude builds up
+
+**Example: Swing**
+Natural period: 2 seconds
+Push every 2 seconds → resonance → swing goes high
+Push every 1 second → no resonance → swing doesn't go high
+
+## Page 9: Real-World Applications
+
+**1. Medical Imaging:**
+
+**Ultrasound:**
+- Frequency: 1-20 MHz
+- Uses: Pregnancy imaging, examining organs
+- Safe (no radiation)
+
+**X-rays:**
+- High-energy electromagnetic waves
+- Pass through soft tissue, blocked by bones
+- Uses: Broken bones, dental imaging
+
+**MRI:**
+- Uses radio waves and magnetic fields
+- Creates detailed images of soft tissues
+- No radiation
+
+**2. Communication:**
+
+**Radio/TV:**
+- AM radio: 500-1600 kHz
+- FM radio: 88-108 MHz
+- TV: 54-890 MHz
+- Waves carry information through air
+
+**Cell Phones:**
+- Frequency: 800-2600 MHz
+- Digital signals
+- Towers relay signals
+
+**WiFi:**
+- Frequency: 2.4 or 5 GHz
+- Short range
+- High data rate
+
+**Fiber Optics:**
+- Uses light waves in glass fibers
+- Total internal reflection keeps light inside
+- Very high data rate
+- Internet backbone
+
+**3. Remote Sensing:**
+
+**Radar:**
+- Radio waves reflect off objects
+- Measures distance and speed
+- Uses: Weather, air traffic control, speed guns
+
+**Sonar:**
+- Sound waves underwater
+- Echolocation
+- Uses: Submarines, fish finders, mapping ocean floor
+
+**Lidar:**
+- Laser light
+- Very precise distance measurement
+- Uses: Self-driving cars, 3D mapping
+
+**4. Energy:**
+
+**Microwave Oven:**
+- 2.45 GHz microwaves
+- Water molecules absorb energy
+- Rotate rapidly → heat
+
+**Solar Panels:**
+- Convert light to electricity
+- Photovoltaic effect
+- Renewable energy
+
+**5. Entertainment:**
+
+**Music:**
+- Instruments create standing waves
+- Different harmonics = different timbres
+- Speakers convert electrical signals to sound waves
+
+**3D Movies:**
+- Polarized light
+- Different polarization for each eye
+- Creates depth perception
+
+## Page 10: Practice Problems
+
+**Problem 1:** A wave has frequency 50 Hz and wavelength 2 m. Find:
+a) Period
+b) Speed
+
+**Solution:**
+a) T = 1/f = 1/50 = 0.02 seconds
+b) v = fλ = 50 × 2 = 100 m/s
+
+**Problem 2:** Sound wave in air at 343 m/s has frequency 686 Hz. Find wavelength.
+
+**Solution:**
+λ = v/f = 343/686 = 0.5 m
+
+**Problem 3:** Light has wavelength 600 nm. Find frequency.
+
+**Solution:**
+f = v/λ = (3 × 10⁸)/(600 × 10⁻⁹) = 5 × 10¹⁴ Hz
+
+**Problem 4:** Guitar string length 0.6 m, wave speed 300 m/s. Find fundamental frequency.
+
+**Solution:**
+f₁ = v/(2L) = 300/(2 × 0.6) = 250 Hz
+
+**Problem 5:** Why can't sound travel through space?
+
+**Solution:**
+Sound is a mechanical wave that requires a medium (matter) to travel through. Space is a vacuum (no matter), so sound waves cannot propagate.
+
+**Common Misconceptions:**
+❌ "Sound travels faster than light" → ✅ Light is ~1 million times faster
+❌ "Radio waves and light are different things" → ✅ Both are electromagnetic waves, just different frequencies
+❌ "Waves carry matter" → ✅ Waves carry energy, not matter
+❌ "Higher amplitude = higher frequency" → ✅ Amplitude and frequency are independent`,
 
   'Modern Physics': `## MODERN PHYSICS - The Extreme Universe
 
