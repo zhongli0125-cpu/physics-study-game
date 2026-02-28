@@ -2697,135 +2697,780 @@ Sound is a mechanical wave that requires a medium (matter) to travel through. Sp
 
   'Modern Physics': `## MODERN PHYSICS - The Extreme Universe
 
-Modern Physics explains the very small (atoms) and very fast (near light speed)!
+Modern Physics is the study of the universe at extreme scales - the incredibly small (atoms and subatomic particles) and the incredibly fast (near the speed of light). It revolutionized our understanding of reality in the early 20th century and continues to challenge our intuitions about how the universe works.
 
-## Page 1: Special Relativity
+## Page 1: Introduction to Modern Physics
 
-**Einstein's Big Ideas:**
+**The Two Pillars:**
+1. **Relativity (Einstein):** Physics of the very fast and very massive
+2. **Quantum Mechanics:** Physics of the very small
 
-**1. Speed of Light is Constant**
-Light always travels at c = 3 × 10⁸ m/s, no matter what!
+**Why "Modern"?**
+- Classical physics (Newton, Maxwell) worked perfectly for everyday objects
+- But failed at extreme scales
+- Early 1900s: New theories needed
+- Einstein, Bohr, Heisenberg, Schrödinger revolutionized physics
 
-**2. Time Dilation**
-Time slows down as you go faster!
+**The Crisis of Classical Physics:**
 
-**Example:** Travel at 90% light speed for 1 year (your time):
-- People on Earth age 2.3 years!
-- This is real, not an illusion!
+**Problem 1: Blackbody Radiation**
+- Classical physics predicted infinite energy at high frequencies ("ultraviolet catastrophe")
+- Max Planck (1900): Energy comes in discrete packets (quanta)
+- This was the birth of quantum mechanics!
 
-**3. E = mc²**
-Mass and energy are the same thing!
-- Tiny mass = Huge energy
-- Nuclear power uses this
+**Problem 2: Photoelectric Effect**
+- Light shining on metal ejects electrons
+- Classical wave theory couldn't explain observations
+- Einstein (1905): Light is made of particles (photons)
+- Won Nobel Prize for this, not relativity!
 
-## Page 2: General Relativity
+**Problem 3: Atomic Stability**
+- Classical physics said atoms should collapse instantly
+- Electrons orbiting nucleus should radiate energy and spiral in
+- Bohr (1913): Electrons exist in discrete energy levels
+- Can't spiral in - quantum mechanics prevents it!
 
-**Key Idea:** Gravity isn't a force - it's curved space-time!
+**Problem 4: Speed of Light**
+- Maxwell's equations predicted constant light speed
+- But relative to what?
+- Michelson-Morley experiment (1887): Light speed same in all directions
+- Einstein (1905): Light speed is absolute constant
+- Led to special relativity!
 
-**What this means:**
-- Massive objects bend space and time
-- Objects follow curved paths
-- We're not "pulled" down - we're following curved space!
+**The Revolution:**
+Modern physics showed that:
+- Time is not absolute (relativity)
+- Energy is quantized (quantum mechanics)
+- Particles are waves (wave-particle duality)
+- Reality is probabilistic (quantum mechanics)
+- Mass and energy are equivalent (E = mc²)
 
-**Black Holes:**
-- Space curves infinitely
-- Nothing can escape, not even light
+## Page 2: Special Relativity - Part 1
+
+**Einstein's 1905 Breakthrough:**
+At age 26, Einstein published his theory of Special Relativity, forever changing our understanding of space and time.
+
+**Two Postulates:**
+1. **Laws of physics are the same in all inertial reference frames**
+   - No experiment can tell if you're at rest or moving at constant velocity
+   - Physics works the same on Earth or on a spaceship moving at constant speed
+
+2. **Speed of light is constant for all observers**
+   - Light always travels at c = 299,792,458 m/s ≈ 3 × 10⁸ m/s
+   - Doesn't matter if you're moving toward or away from light source
+   - This seems impossible, but it's true!
+
+**Why This is Weird:**
+
+**Classical (Wrong) View:**
+- You're on a train going 50 mph
+- Throw a ball forward at 20 mph
+- Observer on ground sees ball at 50 + 20 = 70 mph
+- Velocities add!
+
+**Relativistic (Correct) View:**
+- You're on a spaceship going 0.5c (half light speed)
+- Shine a flashlight forward
+- You see light at c
+- Observer on Earth ALSO sees light at c (not 1.5c!)
+- Light speed doesn't add!
+
+**Time Dilation:**
+Moving clocks run slower!
+
+**Formula:** t' = t / √(1 - v²/c²)
+- t = time for stationary observer
+- t' = time for moving observer
+- v = velocity
+- c = speed of light
+
+**Lorentz Factor:** γ = 1 / √(1 - v²/c²)
+- At low speeds: γ ≈ 1 (no noticeable effect)
+- At high speeds: γ >> 1 (huge effect!)
+
+**Examples:**
+
+**Example 1: Everyday Speeds**
+Car at 100 mph = 45 m/s
+γ = 1 / √(1 - 45²/(3×10⁸)²) ≈ 1.0000000000000112
+Time dilation: Completely negligible!
+
+**Example 2: High Speed**
+Spaceship at 0.9c (90% light speed)
+γ = 1 / √(1 - 0.9²) = 1 / √(1 - 0.81) = 1 / √0.19 = 2.29
+
+Travel for 1 year (your time):
+- Earth time: 1 × 2.29 = 2.29 years
+- You age 1 year, Earth ages 2.29 years!
+
+**Example 3: Near Light Speed**
+Spaceship at 0.99c
+γ = 7.09
+Your 1 year = Earth's 7.09 years!
+
+Spaceship at 0.999c
+γ = 22.4
+Your 1 year = Earth's 22.4 years!
+
+**Real Evidence:**
+- Muons (particles) created in upper atmosphere
+- Should decay before reaching ground
+- But time dilation extends their lifetime
+- We detect them at ground level!
+- Proves time dilation is real!
+
+## Page 3: Special Relativity - Part 2
+
+**Length Contraction:**
+Moving objects appear shorter in the direction of motion!
+
+**Formula:** L' = L × √(1 - v²/c²) = L / γ
+
+**Example:**
+Spaceship 100 m long traveling at 0.9c
+L' = 100 / 2.29 = 43.7 m
+Appears only 43.7 m long to stationary observer!
+
+**Mass-Energy Equivalence: E = mc²**
+
+This is the most famous equation in physics!
+
+**What it means:**
+- Mass and energy are the same thing
+- Mass is "frozen" energy
+- Energy is "liberated" mass
+- They can convert into each other
+
+**Formula:** E = mc²
+- E = energy (Joules)
+- m = mass (kg)
+- c = speed of light (3 × 10⁸ m/s)
+
+**Why c²?**
+c² = (3 × 10⁸)² = 9 × 10¹⁶
+This is HUGE! Tiny mass = enormous energy!
+
+**Detailed Examples:**
+
+**Example 1: One Gram**
+m = 0.001 kg
+E = 0.001 × (3 × 10⁸)² = 9 × 10¹³ J
+
+This equals:
+- 21 kilotons of TNT (Hiroshima bomb was 15 kilotons)
+- Enough to power a city for days
+- All from 1 gram!
+
+**Example 2: One Kilogram**
+E = 1 × 9 × 10¹⁶ = 90,000,000,000,000,000 J
+= 90 petajoules
+= 21 megatons of TNT
+= Enough to power USA for several hours!
+
+**Example 3: The Sun**
+Sun converts 4 million tons of mass to energy every second!
+E = 4,000,000,000 kg × 9 × 10¹⁶ = 3.6 × 10²⁶ J/second
+This is why the sun shines!
+
+**Nuclear Reactions:**
+
+**Fission (splitting atoms):**
+- Uranium-235 splits into smaller atoms
+- Products have slightly less mass than original
+- Missing mass converted to energy (E = mc²)
+- Nuclear power plants use this
+
+**Fusion (combining atoms):**
+- Hydrogen atoms fuse into helium
+- Products have less mass than original
+- Missing mass → energy
+- Powers the sun and stars
+- Future of clean energy?
+
+**Relativistic Momentum:**
+p = γmv
+At high speeds, momentum increases more than classically predicted!
+
+**Why Nothing Can Reach Light Speed:**
+As v → c:
+- γ → ∞
+- Mass → ∞
+- Energy needed → ∞
+- Impossible!
+
+Only massless particles (photons) can travel at c!
+
+## Page 4: General Relativity - Gravity as Curved Spacetime
+
+**Einstein's Greatest Achievement (1915):**
+General Relativity extends Special Relativity to include gravity and acceleration.
+
+**Revolutionary Idea:**
+Gravity is not a force - it's the curvature of spacetime!
+
+**Spacetime:**
+- Not separate "space" and "time"
+- Combined 4-dimensional "spacetime"
+- 3 space dimensions + 1 time dimension
+- Massive objects curve spacetime
+
+**The Rubber Sheet Analogy:**
+- Imagine spacetime as a stretched rubber sheet
+- Place a bowling ball (massive object) on it
+- Sheet curves around the ball
+- Roll a marble nearby - it curves toward the ball
+- Not because of "force" - because of curved space!
+
+**Einstein's Field Equations:**
+Describe how mass/energy curves spacetime
+(Very complex mathematics - tensor calculus)
+
+**Key Predictions:**
+
+**1. Gravitational Time Dilation:**
+Time runs slower in stronger gravity!
+- At sea level: Time runs slower than on mountain
+- Near black hole: Time nearly stops
+- GPS satellites: Must correct for this!
+
+**Example: GPS Satellites**
+- Orbit at 20,000 km altitude (weaker gravity)
+- Clocks run 45 microseconds/day faster than Earth
+- Without correction: GPS off by 11 km per day!
+- Proves general relativity!
+
+**2. Gravitational Lensing:**
+Light bends around massive objects
+- Confirmed during 1919 solar eclipse
+- Made Einstein world famous
+- Used to find dark matter and exoplanets
+
+**3. Gravitational Waves:**
+Ripples in spacetime from accelerating masses
+- Predicted 1916
+- Detected 2015 (LIGO)
+- From merging black holes
+- Nobel Prize 2017!
+
+**4. Black Holes:**
+Extreme curvature of spacetime
+- Escape velocity > light speed
+- Nothing can escape
 - Time stops at event horizon
 
-## Page 3: Quantum Mechanics
+**Black Hole Properties:**
+- **Event Horizon:** Point of no return
+- **Singularity:** Infinite density at center
+- **Schwarzschild Radius:** Size of event horizon
+  * Formula: r = 2GM/c²
+  * For Earth: 9 mm (if compressed to black hole)
+  * For Sun: 3 km
 
-**The Physics of the Very Small**
+**Example: Falling into Black Hole**
+From outside perspective:
+- You slow down as you approach
+- Time dilation increases
+- You appear to freeze at event horizon
+- Never actually see you cross it!
 
-At atomic scales, reality is WEIRD:
-- Particles are also waves
-- Can't know position AND speed perfectly
-- Particles exist in multiple states at once
-- Observation changes reality
+From your perspective:
+- Nothing special at event horizon
+- Cross it normally
+- Then pulled to singularity
+- "Spaghettification" - stretched by tidal forces!
 
-## Page 4: Wave-Particle Duality
+## Page 5: Introduction to Quantum Mechanics
 
-**Light is BOTH a wave AND a particle!**
+**The Quantum Revolution:**
+Quantum mechanics describes the behavior of matter and energy at atomic and subatomic scales. It's the most successful theory in physics - incredibly accurate predictions!
 
-**Evidence for Wave:** Interference, diffraction
+**Key Principles:**
+1. Energy is quantized (comes in discrete packets)
+2. Wave-particle duality (everything is both wave and particle)
+3. Uncertainty principle (can't know everything precisely)
+4. Superposition (particles in multiple states simultaneously)
+5. Probability (can only predict probabilities, not certainties)
 
-**Evidence for Particle:** Photoelectric effect, comes in packets (photons)
+**Why Quantum Mechanics?**
 
-**Matter is ALSO both wave and particle!**
-- Electrons show interference patterns
-- Everything has a wave nature
+**Classical physics failed for atoms:**
+- Predicted atoms should collapse instantly
+- Couldn't explain atomic spectra
+- Couldn't explain chemical bonds
+- Couldn't explain why matter is stable
 
-## Page 5: Heisenberg Uncertainty Principle
+**Quantum mechanics succeeded:**
+- Explains atomic structure perfectly
+- Predicts spectra with incredible accuracy
+- Explains all of chemistry
+- Basis for modern technology
 
-**You can't know both position AND momentum perfectly!**
+**The Quantum World is Weird:**
+- Particles don't have definite positions until measured
+- Observation affects reality
+- Particles can be in two places at once
+- Particles can tunnel through barriers
+- Entangled particles affect each other instantly
 
-**Formula:** Δx × Δp ≥ h/4π
+**But it works!**
+- Most precisely tested theory ever
+- Predictions accurate to 12 decimal places
+- Basis for: computers, smartphones, lasers, LEDs, solar panels, MRI, etc.
 
-**What this means:**
-- More you know position, less you know momentum
-- This isn't a measurement problem - it's how nature works!
+## Page 6: Wave-Particle Duality
 
-## Page 6: Quantum Superposition
+**The Central Mystery of Quantum Mechanics:**
+Everything is BOTH a wave AND a particle!
 
-**Particles exist in multiple states at once until observed!**
+**Light as Particles (Photons):**
 
-**Schrödinger's Cat:**
-- Cat in box is BOTH alive AND dead until you look!
+**Photoelectric Effect (Einstein, 1905):**
+- Shine light on metal → electrons ejected
+- Classical wave theory predictions:
+  * Brighter light → more energetic electrons (WRONG!)
+  * Any frequency should work eventually (WRONG!)
+- Actual observations:
+  * Brighter light → more electrons, same energy
+  * Only high frequency light works
+  * Instant ejection (no delay)
+
+**Einstein's Explanation:**
+- Light comes in particles (photons)
+- Each photon has energy: E = hf
+  * h = Planck's constant = 6.626 × 10⁻³⁴ J·s
+  * f = frequency
+- One photon ejects one electron
+- Higher frequency → more energy per photon
+
+**Example:**
+Red light: f = 4.5 × 10¹⁴ Hz
+E = (6.626 × 10⁻³⁴)(4.5 × 10¹⁴) = 3.0 × 10⁻¹⁹ J per photon
+
+Blue light: f = 7.5 × 10¹⁴ Hz
+E = (6.626 × 10⁻³⁴)(7.5 × 10¹⁴) = 5.0 × 10⁻¹⁹ J per photon
+
+Blue photons have more energy!
+
+**Light as Waves:**
+- Interference patterns (double-slit experiment)
+- Diffraction
+- Polarization
+- All wave behaviors!
+
+**Matter as Waves (de Broglie, 1924):**
+
+If light (wave) can be particle, can matter (particle) be wave?
+
+**de Broglie Wavelength:** λ = h / p = h / (mv)
+- λ = wavelength
+- h = Planck's constant
+- p = momentum
+- m = mass, v = velocity
+
+**Examples:**
+
+**Example 1: Electron**
+m = 9.11 × 10⁻³¹ kg, v = 10⁶ m/s
+λ = (6.626 × 10⁻³⁴) / (9.11 × 10⁻³¹ × 10⁶) = 7.3 × 10⁻¹⁰ m
+Similar to atomic spacing - wave effects observable!
+
+**Example 2: Baseball**
+m = 0.145 kg, v = 40 m/s
+λ = (6.626 × 10⁻³⁴) / (0.145 × 40) = 1.1 × 10⁻³⁴ m
+Way too small to observe - acts like particle!
+
+**Electron Diffraction:**
+- Shoot electrons at crystal
+- Get interference pattern (wave behavior!)
+- Proves electrons are waves
+- Used in electron microscopes
+
+**Double-Slit Experiment:**
+- Shoot particles (electrons, photons) at two slits
+- Get interference pattern (wave!)
+- But detect individual particles (particle!)
+- Each particle goes through BOTH slits simultaneously!
+- Observing which slit → pattern disappears!
+- Observation changes reality!
+
+## Page 7: Heisenberg Uncertainty Principle
+
+**The Fundamental Limit of Knowledge:**
+You cannot simultaneously know both the exact position and exact momentum of a particle.
+
+**Formula:** Δx × Δp ≥ h/(4π)
+- Δx = uncertainty in position
+- Δp = uncertainty in momentum
+- h = Planck's constant
+
+**What This Means:**
+- More precisely you know position → less precisely you know momentum
+- More precisely you know momentum → less precisely you know position
+- This is NOT a measurement problem
+- This is how nature fundamentally works!
+
+**Why?**
+Particles are waves! Waves are spread out. A particle doesn't HAVE an exact position and momentum simultaneously!
+
+**Examples:**
+
+**Example 1: Electron in Atom**
+If we know electron position within 10⁻¹⁰ m (atomic size):
+Δp ≥ (6.626 × 10⁻³⁴) / (4π × 10⁻¹⁰) ≈ 5 × 10⁻²⁵ kg·m/s
+
+This uncertainty in momentum means electron has kinetic energy - prevents collapse into nucleus!
+
+**Example 2: Baseball**
+Δx = 1 mm = 10⁻³ m
+Δp ≥ (6.626 × 10⁻³⁴) / (4π × 10⁻³) ≈ 5 × 10⁻³² kg·m/s
+
+For 0.145 kg baseball:
+Δv ≥ 5 × 10⁻³² / 0.145 ≈ 3 × 10⁻³¹ m/s
+
+Completely negligible! Uncertainty principle doesn't affect large objects.
+
+**Energy-Time Uncertainty:**
+ΔE × Δt ≥ h/(4π)
+
+Can "borrow" energy for short time!
+- Basis for virtual particles
+- Quantum fluctuations
+- Hawking radiation from black holes
+
+**Philosophical Implications:**
+- Reality is fundamentally uncertain
+- Determinism is impossible at quantum level
+- Can only predict probabilities
+- Einstein hated this: "God does not play dice!"
+- But experiments prove Einstein wrong!
+
+## Page 8: Quantum Superposition and Entanglement
+
+**Superposition:**
+Particles exist in multiple states simultaneously until measured!
+
+**Schrödinger's Cat (Thought Experiment):**
+- Cat in sealed box
+- Radioactive atom: 50% chance to decay in 1 hour
+- If decays → releases poison → cat dies
+- If doesn't decay → cat lives
+
+**Quantum interpretation:**
+- Before opening box, atom is in superposition (decayed AND not decayed)
+- Cat is in superposition (alive AND dead)
+- Opening box = measurement
+- Superposition collapses to one state
+- Cat becomes definitely alive OR dead
+
+**This seems absurd!** But it's how quantum mechanics works for particles!
+
+**Real Examples:**
+
+**Electron Spin:**
+- Electron has "spin" (up or down)
+- Before measurement: Superposition of both!
+- Measurement: Collapses to up OR down
+- 50% probability each
+
+**Photon Polarization:**
+- Photon can be vertically or horizontally polarized
+- Before measurement: Superposition of both!
+- Measurement: Collapses to one
 
 **Quantum Entanglement:**
-- Two particles connected instantly across any distance
-- Einstein called it "spooky action at a distance"
-- Proven real!
+Two particles become correlated - measuring one instantly affects the other, regardless of distance!
 
-## Page 7: Real-World Applications
+**Einstein called it "spooky action at a distance"** and thought it proved quantum mechanics was incomplete. He was wrong!
 
-**1. Nuclear Energy**
-- E = mc² explains nuclear power
-- 1 kg uranium = 3 million kg coal
+**Example: Entangled Photons**
+- Create two photons with opposite spins
+- Send them in opposite directions
+- Measure one: Gets spin up
+- Other INSTANTLY becomes spin down
+- Even if separated by light-years!
+- Faster than light? No - can't send information this way
 
-**2. Semiconductors**
-- Quantum mechanics explains transistors
-- All electronics use this
+**Bell's Theorem (1964):**
+- Proved entanglement is real
+- No "hidden variables" can explain it
+- Experiments confirm: Nature is truly non-local!
 
-**3. Lasers**
-- Quantum mechanics explains how they work
-- Used in surgery, communications, DVD players
+**Applications:**
+- **Quantum Computing:** Use superposition for parallel computation
+- **Quantum Cryptography:** Unbreakable encryption using entanglement
+- **Quantum Teleportation:** Transfer quantum states (not matter!)
 
-**4. MRI Machines**
-- Uses quantum spin of atoms
-- Sees inside body without surgery
+## Page 9: Quantum Tunneling and Applications
 
-**5. GPS**
-- Needs relativity corrections!
-- Without them: Off by miles per day
+**Quantum Tunneling:**
+Particles can pass through barriers they classically couldn't!
 
-## Page 8: Mind-Blowing Facts
+**Classical View:**
+- Ball rolling toward hill
+- Not enough energy → bounces back
+- Can't go through hill!
 
-**1. Time Travel (Forward):**
+**Quantum View:**
+- Particle is a wave
+- Wave extends into barrier
+- Small probability of appearing on other side
+- Particle "tunnels" through!
+
+**Probability:** Decreases exponentially with barrier width and height
+
+**Real Examples:**
+
+**1. Radioactive Decay:**
+- Alpha particles trapped in nucleus
+- Don't have enough energy to escape
+- But they tunnel out!
+- This is why radioactivity happens
+
+**2. Nuclear Fusion in Sun:**
+- Protons need to get very close to fuse
+- But they repel each other (both positive)
+- Don't have enough energy to overcome repulsion
+- But they tunnel through the barrier!
+- This is why the sun shines!
+
+**3. Scanning Tunneling Microscope (STM):**
+- Sharp tip brought near surface
+- Electrons tunnel between tip and surface
+- Tunneling current depends on distance
+- Can image individual atoms!
+- Nobel Prize 1986
+
+**4. Flash Memory:**
+- Electrons tunnel through insulator
+- Get trapped in floating gate
+- Stores data in your USB drive, SSD, phone!
+
+**5. Enzymes:**
+- Biological reactions use quantum tunneling
+- Protons and electrons tunnel through barriers
+- Makes reactions faster
+- Life depends on quantum mechanics!
+
+## Page 10: Atomic Structure and Quantum Numbers
+
+**Bohr Model (1913):**
+- Electrons orbit nucleus in specific energy levels
+- Can't exist between levels
+- Jumping between levels absorbs/emits photons
+
+**Quantum Mechanical Model:**
+- Electrons don't have definite orbits
+- Exist in "orbitals" (probability clouds)
+- Described by wave functions
+
+**Quantum Numbers:**
+Four numbers describe each electron:
+
+**1. Principal Quantum Number (n):**
+- Energy level: n = 1, 2, 3, ...
+- Higher n = higher energy, farther from nucleus
+
+**2. Angular Momentum Quantum Number (l):**
+- Orbital shape: l = 0, 1, 2, ..., (n-1)
+- l = 0: s orbital (spherical)
+- l = 1: p orbital (dumbbell)
+- l = 2: d orbital (complex)
+- l = 3: f orbital (very complex)
+
+**3. Magnetic Quantum Number (m_l):**
+- Orbital orientation: m_l = -l, ..., 0, ..., +l
+
+**4. Spin Quantum Number (m_s):**
+- Electron spin: m_s = +1/2 or -1/2 (up or down)
+
+**Pauli Exclusion Principle:**
+No two electrons can have the same set of all four quantum numbers!
+
+This explains:
+- Periodic table structure
+- Chemical bonding
+- Why matter doesn't collapse
+
+## Page 11: Real-World Applications of Modern Physics
+
+**1. Nuclear Energy:**
+- **Fission Reactors:** Split uranium → energy (E = mc²)
+  * 1 kg uranium = 3 million kg coal
+  * Powers 20% of US electricity
+- **Future Fusion:** Combine hydrogen → helium
+  * Clean, abundant fuel
+  * Still experimental (ITER project)
+
+**2. Semiconductors and Electronics:**
+- **Transistors:** Quantum mechanics explains how they work
+  * Billions in every computer chip
+  * Basis of all modern electronics
+- **LEDs:** Electrons drop energy levels → emit photons
+  * Energy-efficient lighting
+- **Solar Panels:** Photoelectric effect
+  * Convert light to electricity
+
+**3. Lasers:**
+- **Stimulated Emission:** Quantum process
+- Applications:
+  * Surgery (precise cutting)
+  * Communications (fiber optics)
+  * Manufacturing (cutting, welding)
+  * Entertainment (laser shows, Blu-ray)
+  * Measurement (LIDAR, surveying)
+
+**4. Medical Imaging:**
+- **MRI:** Uses quantum spin of hydrogen nuclei
+  * No radiation
+  * Detailed soft tissue images
+- **PET Scans:** Uses antimatter (positrons!)
+  * Detects cancer, brain activity
+
+**5. GPS:**
+- **Requires relativity corrections!**
+  * Special relativity: Satellite clocks run slower (moving fast)
+  * General relativity: Satellite clocks run faster (weaker gravity)
+  * Net effect: +38 microseconds/day
+  * Without correction: 11 km error per day!
+
+**6. Quantum Computing:**
+- Uses superposition and entanglement
+- Can solve certain problems exponentially faster
+- Still experimental but rapidly developing
+- Applications: Cryptography, drug discovery, AI
+
+**7. Atomic Clocks:**
+- Use quantum transitions in atoms
+- Accurate to 1 second in 100 million years!
+- Basis for GPS, internet timing, scientific experiments
+
+## Page 12: Mind-Blowing Facts and Future Physics
+
+**Time Travel:**
+
+**Forward Time Travel (Possible!):**
 - Travel near light speed → time slows for you
-- Return to Earth → everyone aged more
-- You've traveled to the future!
+- Return to Earth → you've traveled to future!
+- Example: Travel at 0.999c for 1 year (your time)
+  * Earth time: 22.4 years
+  * You've jumped 21.4 years into future!
 
-**2. Quantum Tunneling:**
-- Particles can pass through barriers!
-- Like a ball rolling through a wall
+**Backward Time Travel (Probably Impossible):**
+- Would violate causality (grandfather paradox)
+- General relativity allows some solutions (wormholes, rotating black holes)
+- But require exotic matter with negative energy
+- Probably impossible in practice
 
-**3. Antimatter:**
-- For every particle, there's an opposite
-- Matter + Antimatter = Pure energy!
+**Antimatter:**
+- For every particle, there's an antiparticle
+  * Electron ↔ Positron
+  * Proton ↔ Antiproton
+- Same mass, opposite charge
+- Matter + Antimatter → Pure energy!
+  * 100% efficient (E = mc²)
+  * 1 kg matter + 1 kg antimatter = 180 petajoules
+  * Enough to power USA for 2 days!
+- Why is universe made of matter, not antimatter?
+  * One of biggest unsolved mysteries!
 
-**4. Observation Changes Reality:**
-- Measuring a particle changes its state
-- Reality is fundamentally probabilistic
+**Dark Matter and Dark Energy:**
+- **Dark Matter:** 27% of universe
+  * Doesn't emit light
+  * Only detected through gravity
+  * Unknown what it is!
+- **Dark Energy:** 68% of universe
+  * Causes universe to expand faster
+  * Completely mysterious!
+- **Normal Matter:** Only 5% of universe!
+  * Everything we can see and touch
 
-## Page 9: Practice Problems
+**Quantum Foam:**
+- At Planck scale (10⁻³⁵ m), spacetime is turbulent
+- Virtual particles pop in and out of existence
+- Energy borrowed from uncertainty principle
+- Spacetime itself is quantum!
 
-**Problem 1:** How much energy from 0.001 kg of matter?
-**Answer:** E = mc² = 0.001 × (3×10⁸)² = 9 × 10¹³ J
+**The Measurement Problem:**
+- When does superposition collapse?
+- What counts as "measurement"?
+- Does consciousness play a role?
+- Still debated after 100 years!
 
-**Problem 2:** Why can't we notice quantum effects in daily life?
-**Answer:** Quantum effects are significant only at atomic scales. For large objects, wavelengths are too small.
+**Many-Worlds Interpretation:**
+- Every quantum measurement splits universe
+- All possibilities happen in parallel universes
+- Schrödinger's cat: Both alive AND dead, in different universes!
+- Controversial but mathematically consistent
 
-**Remember:** Modern physics shows reality is WAY weirder than it seems! Time isn't constant, particles are waves, and observation changes reality!`
+**Unsolved Mysteries:**
+1. How to combine quantum mechanics and general relativity?
+   - Need "quantum gravity" theory
+   - String theory? Loop quantum gravity?
+2. What is dark matter?
+3. What is dark energy?
+4. Why is there more matter than antimatter?
+5. What happened before Big Bang?
+6. Are there extra dimensions?
+7. Is our universe unique, or one of many?
+
+## Page 13: Practice Problems and Summary
+
+**Problem 1:** A spaceship travels at 0.8c. How much time passes on Earth while 5 years pass on the ship?
+
+**Solution:**
+γ = 1 / √(1 - 0.8²) = 1 / √0.36 = 1.67
+Earth time = 5 × 1.67 = 8.35 years
+
+**Problem 2:** How much energy is released if 0.01 kg of matter is converted to energy?
+
+**Solution:**
+E = mc² = 0.01 × (3 × 10⁸)² = 9 × 10¹⁴ J
+(About 200,000 tons of TNT!)
+
+**Problem 3:** A photon has wavelength 500 nm. What is its energy?
+
+**Solution:**
+f = c/λ = (3 × 10⁸)/(500 × 10⁻⁹) = 6 × 10¹⁴ Hz
+E = hf = (6.626 × 10⁻³⁴)(6 × 10¹⁴) = 4.0 × 10⁻¹⁹ J
+
+**Problem 4:** What is the de Broglie wavelength of an electron moving at 10⁶ m/s?
+
+**Solution:**
+λ = h/(mv) = (6.626 × 10⁻³⁴)/[(9.11 × 10⁻³¹)(10⁶)]
+λ = 7.3 × 10⁻¹⁰ m (about atomic size!)
+
+**Key Takeaways:**
+
+**Relativity:**
+- Time and space are relative, not absolute
+- Nothing can exceed light speed
+- Mass and energy are equivalent (E = mc²)
+- Gravity is curved spacetime
+- GPS needs relativity to work!
+
+**Quantum Mechanics:**
+- Energy is quantized
+- Everything is both wave and particle
+- Uncertainty is fundamental
+- Superposition and entanglement are real
+- Observation affects reality
+- Basis for all modern technology
+
+**The Weirdness is Real:**
+- Confirmed by countless experiments
+- Most precisely tested theories ever
+- But still don't fully understand WHY
+- Nature is stranger than we imagined!
+
+**Common Misconceptions:**
+❌ "Relativity is just a theory" → ✅ Confirmed by countless experiments, used in GPS
+❌ "Quantum mechanics only applies to tiny things" → ✅ Basis for lasers, computers, solar panels
+❌ "Time travel is impossible" → ✅ Forward time travel is possible (and proven!)
+❌ "Schrödinger's cat is really alive and dead" → ✅ Thought experiment to show absurdity at macro scale
+❌ "Quantum mechanics is just probability" → ✅ It's fundamentally different from classical probability
+
+**The Future:**
+Modern physics continues to evolve. Current frontiers include quantum computing, quantum gravity, dark matter detection, and understanding the early universe. The next revolution in physics may be just around the corner!`
       };
       explanation = fallbacks[topic] || `${topic} is an important concept in physics that involves the study of matter, energy, and their interactions. This topic covers fundamental principles that help us understand the natural world and develop new technologies. To learn more about ${topic}, study the key formulas, work through practice problems, and try to connect the concepts to real-world examples you encounter in daily life.`;
       console.log('Explanation length:', explanation.length);
