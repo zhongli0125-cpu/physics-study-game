@@ -112,67 +112,62 @@ app.post('/ai-explain', async (req, res) => {
       const fallbacks = {
   'Motion': `## MOTION - The Physics of Movement
 
-Motion is the change in position of an object over time. Everything in the universe is moving - from atoms vibrating to galaxies spinning. Understanding motion is the foundation of all physics!
+Motion is the change in position of an object over time. Understanding motion is the foundation of all physics!
 
 ## Page 1: Distance vs Displacement
 
-**Distance** is the total path length you traveled. It's a scalar quantity (just a number with no direction).
+**Distance (Scalar):** Total path length traveled
+- Always positive
+- Example: Walk 3 km north, then 3 km south = 6 km distance
 
-**Displacement** is your change in position from start to finish. It's a vector quantity (has both magnitude and direction).
+**Displacement (Vector):** Straight-line distance from start to finish with direction
+- Can be positive, negative, or zero
+- Same example: Displacement = 0 km (ended where you started)
 
-**Example:**
-Imagine you walk 3 blocks north, then 3 blocks south.
-- Distance = 6 blocks (you walked 6 blocks total)
-- Displacement = 0 blocks (you ended where you started!)
+**Key Point:** Distance ≥ Displacement always
 
-**Another Example:**
-You walk 4 meters east, then 3 meters north.
-- Distance = 4 + 3 = 7 meters
-- Displacement = 5 meters northeast (using Pythagorean theorem: √(4² + 3²) = 5)
-
-**Key Point:** Distance is always positive or zero. Displacement can be positive, negative, or zero depending on direction.
+**Example:** Walk 4 m east, then 3 m north
+- Distance = 7 m
+- Displacement = 5 m northeast (using Pythagorean theorem: √(4² + 3²) = 5)
 
 ## Page 2: Speed vs Velocity
 
-**Speed** tells you how fast you're going. It's a scalar (just a number).
+**Speed (Scalar):** How fast you're going
 - Formula: speed = distance / time
 - Unit: m/s, km/h, mph
-- Example: "I'm driving 60 mph"
 
-**Velocity** tells you how fast AND in what direction. It's a vector.
+**Velocity (Vector):** How fast AND in what direction
 - Formula: velocity = displacement / time
-- Unit: m/s (with direction)
-- Example: "I'm driving 60 mph north"
+- Unit: m/s with direction
 
-**Important Difference:**
-Two cars both going 60 mph have the same speed. But if one goes north and one goes south, they have DIFFERENT velocities! Direction matters for velocity.
+**Key Difference:** Two cars at 60 mph have same speed, but different velocities if going opposite directions!
+
+**Example:** Drive 60 km north in 1 hour, then 60 km south in 1 hour
+- Average speed = 120 km / 2 h = 60 km/h
+- Average velocity = 0 km / 2 h = 0 km/h
 
 ## Page 3: Acceleration
 
-Acceleration is the rate of change of velocity. It happens when you:
-1. Speed up (positive acceleration)
-2. Slow down (negative acceleration, called deceleration)
-3. Change direction (even at constant speed!)
+**Acceleration:** Rate of change of velocity
+- Formula: a = (v_final - v_initial) / time
+- Unit: m/s² (meters per second squared)
 
-**Formula:** a = (v_final - v_initial) / time
+**Types:**
+1. Speeding up (positive acceleration)
+2. Slowing down (negative acceleration/deceleration)
+3. Changing direction (even at constant speed!)
 
-**Unit:** m/s² (meters per second squared)
-
-**Example:**
-A car accelerates at 2 m/s²
+**Example:** Car accelerates at 2 m/s²
 - After 1 second: velocity increases by 2 m/s
 - After 2 seconds: velocity increases by 4 m/s
 - After 3 seconds: velocity increases by 6 m/s
 
-## Page 4: The Equations of Motion
+## Page 4: Equations of Motion
 
-These are the most important formulas in physics:
+**The Big Three:**
 
 **1. v = u + at**
-- v = final velocity
-- u = initial velocity
-- a = acceleration
-- t = time
+- v = final velocity, u = initial velocity, a = acceleration, t = time
 
 **2. s = ut + ½at²**
 - s = displacement
@@ -180,30 +175,49 @@ These are the most important formulas in physics:
 **3. v² = u² + 2as**
 - Useful when you don't know time
 
-**Example Problem:**
-A car starts from rest (u = 0) and accelerates at 3 m/s² for 5 seconds. How far does it travel?
+**Example:** Car starts from rest, accelerates at 3 m/s² for 5 seconds
 s = 0(5) + ½(3)(5²) = 37.5 meters
 
 ## Page 5: Free Fall and Gravity
 
 **Acceleration due to gravity:** g = 9.8 m/s²
 
-**Amazing Fact:** This is the SAME for all objects! A feather and a bowling ball fall at the same rate in a vacuum.
+**Amazing Fact:** ALL objects fall at the same rate (without air resistance)!
+- Feather and bowling ball fall together in vacuum
+- Proven on the Moon by Apollo 15 astronauts
 
 **Example: Dropping a ball**
 - After 1 second: v = 9.8 m/s downward
 - After 2 seconds: v = 19.6 m/s downward
-- It keeps getting faster!
+- Keeps getting faster!
 
-## Page 6: Practice Problems
+**Throwing upward:** Ball slows down going up, stops at peak (but acceleration is still 9.8 m/s² down!), then speeds up coming down
 
-**Problem 1:** A car accelerates from 0 to 60 mph (27 m/s) in 6 seconds. What's the acceleration?
+## Page 6: Projectile Motion
+
+**Key Principle:** Horizontal and vertical motions are independent!
+
+**Horizontal:** Constant velocity (no acceleration)
+**Vertical:** Constant acceleration (gravity = 9.8 m/s² down)
+
+**Example:** Cannon fires ball at 50 m/s at 30° angle
+- Horizontal velocity: 50 cos(30°) = 43.3 m/s
+- Vertical velocity: 50 sin(30°) = 25 m/s
+- Path: Parabola (curved)
+
+**Optimal angle for maximum range:** 45°
+
+## Page 7: Practice Problems
+
+**Problem 1:** Car accelerates from 0 to 27 m/s in 6 seconds. Find acceleration.
 **Answer:** a = (27 - 0) / 6 = 4.5 m/s²
 
-**Problem 2:** You throw a ball upward at 20 m/s. How high does it go?
-**Answer:** Use v² = u² + 2as, where v=0 at peak, u=20, a=-9.8
-0 = 400 - 19.6s → s = 20.4 meters`,
+**Problem 2:** Throw ball upward at 20 m/s. How high does it go?
+**Answer:** Use v² = u² + 2as where v=0, u=20, a=-9.8
+0 = 400 - 19.6s → s = 20.4 meters
 
+**Problem 3:** Why do heavier objects NOT fall faster?
+**Answer:** Gravity accelerates all objects equally at 9.8 m/s². Mass doesn't matter (without air resistance)!`,
 
   'Newton Laws': `## NEWTON'S LAWS OF MOTION
 
@@ -213,31 +227,40 @@ Sir Isaac Newton discovered three laws that explain how forces affect motion!
 
 **Statement:** An object at rest stays at rest, and an object in motion stays in motion at constant velocity, unless acted upon by an external force.
 
-**What is Inertia?** Resistance to changes in motion. More mass = more inertia.
+**Inertia:** Resistance to changes in motion. More mass = more inertia.
 
 **Examples:**
-- Car braking: You jerk forward (your body wants to keep moving)
+- Car braking: You jerk forward (body wants to keep moving)
 - Tablecloth trick: Dishes stay in place when cloth pulled quickly
 - Space travel: Spacecraft keeps moving without engines
+
+**Key Point:** Objects don't naturally slow down - friction slows them!
 
 ## Page 2: Newton's Second Law - F = ma
 
 **Statement:** Force equals mass times acceleration
 
 **Formula:** F = ma
+- F = force (Newtons, N)
+- m = mass (kg)
+- a = acceleration (m/s²)
 
 **What it means:**
-- More force = more acceleration
-- More mass = less acceleration (for same force)
+- More force → More acceleration
+- More mass → Less acceleration (for same force)
 - Force and acceleration have same direction
 
 **The Newton:** 1 N = force to accelerate 1 kg at 1 m/s²
+
+**Example:** Push 10 kg box with 50 N force, friction is 20 N
+- Net force = 50 - 20 = 30 N
+- Acceleration: a = F/m = 30/10 = 3 m/s²
 
 ## Page 3: Weight vs Mass
 
 **Mass:** Amount of matter (doesn't change)
 - Measured in kilograms (kg)
-- Same everywhere
+- Same everywhere in universe
 
 **Weight:** Force of gravity on mass
 - Formula: W = mg
@@ -246,8 +269,10 @@ Sir Isaac Newton discovered three laws that explain how forces affect motion!
 
 **Example: 60 kg person**
 - On Earth: Weight = 60 × 9.8 = 588 N
-- On Moon: Weight = 60 × 1.6 = 96 N
-- Mass is ALWAYS 60 kg!
+- On Moon: Weight = 60 × 1.6 = 96 N (feels 6× lighter!)
+- Mass is ALWAYS 60 kg
+
+**Key Point:** You don't "weigh" 60 kg, you have a mass of 60 kg!
 
 ## Page 4: Newton's Third Law - Action-Reaction
 
@@ -256,18 +281,33 @@ Sir Isaac Newton discovered three laws that explain how forces affect motion!
 **Important:** Forces act on DIFFERENT objects!
 
 **Examples:**
-- Walking: You push ground back, ground pushes you forward
-- Swimming: You push water back, water pushes you forward
-- Rocket: Pushes gas down, gas pushes rocket up
-- Jumping: You push down, ground pushes you up
+- Walking: You push ground back → ground pushes you forward
+- Swimming: You push water back → water pushes you forward
+- Rocket: Pushes gas down → gas pushes rocket up
+- Jumping: You push down on ground → ground pushes you up
 
-## Page 5: Practice Problems
+**Why don't they cancel?** They act on different objects, so they don't cancel out!
 
-**Problem 1:** A 10 kg box is pushed with 50 N force. Friction is 20 N. What's the acceleration?
-**Answer:** Net force = 50 - 20 = 30 N. a = F/m = 30/10 = 3 m/s²
+## Page 5: Applications and Practice
 
-**Problem 2:** What force is needed to accelerate a 1000 kg car at 2 m/s²?
-**Answer:** F = ma = 1000 × 2 = 2000 N`,
+**Example: Elevator**
+70 kg person in elevator:
+- At rest: Normal force = 686 N (feels normal)
+- Accelerating up at 2 m/s²: N = 826 N (feels heavier!)
+- Accelerating down at 2 m/s²: N = 546 N (feels lighter!)
+
+**Practice Problems:**
+
+**Problem 1:** 10 kg box pushed with 50 N, friction 20 N. Find acceleration.
+**Answer:** Net force = 30 N, a = 30/10 = 3 m/s²
+
+**Problem 2:** What force needed to accelerate 1000 kg car at 2 m/s²?
+**Answer:** F = ma = 1000 × 2 = 2000 N
+
+**Real-World:**
+- Airbags: Increase collision time → reduce force
+- Seatbelts: Provide force to stop you with car
+- Sports: Every hit involves action-reaction pairs`,
 
   'Energy': `## ENERGY - The Ability to Do Work
 
@@ -282,38 +322,51 @@ Energy is the ability to cause change or do work. It cannot be created or destro
 **Examples:**
 - Moving car has KE
 - Flying bullet has lots of KE (high velocity)
-- Wind has KE (can turn turbines)
+- Wind has KE (turns turbines)
 
-**Example Calculation:**
-Car: mass = 1000 kg, velocity = 20 m/s
+**Example:** 1000 kg car at 20 m/s
 KE = ½ × 1000 × 20² = 200,000 J
+
+**Important:** Doubling speed quadruples energy! This is why high-speed crashes are so dangerous.
 
 ## Page 2: Potential Energy
 
 **Gravitational PE Formula:** PE = mgh
+- m = mass, g = 9.8 m/s², h = height
 
 **Examples:**
 - Book on shelf has PE
 - Water behind dam has PE
 - Skier at top of hill has PE
 
-**Example Calculation:**
-10 kg object at 5 m height:
+**Example:** 10 kg object at 5 m height
 PE = 10 × 9.8 × 5 = 490 J
 
-## Page 3: Law of Conservation of Energy
+**Other types:** Elastic PE (springs), Chemical PE (food, gasoline), Nuclear PE
 
-**Energy cannot be created or destroyed, only transformed!**
+## Page 3: Conservation of Energy
+
+**Law:** Energy cannot be created or destroyed, only transformed!
+
+**Formula:** Total Energy Initial = Total Energy Final
 
 **Roller Coaster Example:**
 - Top: Maximum PE, minimum KE
 - Bottom: Minimum PE, maximum KE
-- Total energy stays constant
+- Total energy stays constant!
+
+**Example: Falling ball from 10 m**
+At top: PE = 196 J, KE = 0, Total = 196 J
+At middle (5 m): PE = 98 J, KE = 98 J, Total = 196 J
+At bottom: PE = 0, KE = 196 J, Total = 196 J
+
+Energy transformed from PE to KE, but total stayed constant!
 
 ## Page 4: Work and Power
 
 **Work:** W = Force × Distance
 - Measured in Joules (J)
+- Only force in direction of motion does work
 
 **Power:** P = Work / Time
 - Measured in Watts (W)
@@ -321,25 +374,39 @@ PE = 10 × 9.8 × 5 = 490 J
 
 **Examples:**
 - 100 W light bulb uses 100 J every second
-- Car engine: 100,000 W (100 kW)
+- Climb stairs in 5 seconds vs 10 seconds: Same work, different power!
+
+**Example:** 70 kg person climbs 3 m stairs in 5 seconds
+Work = mgh = 70 × 9.8 × 3 = 2058 J
+Power = 2058/5 = 412 W
 
 ## Page 5: Efficiency
 
 **Formula:** Efficiency = (Useful energy out / Total energy in) × 100%
 
+**No machine is 100% efficient!** Some energy always becomes heat.
+
 **Examples:**
-- Incandescent bulb: 5% efficient (95% wasted as heat)
-- LED bulb: 20% efficient (much better!)
+- Incandescent bulb: 5% efficient (95% wasted as heat!)
+- LED bulb: 20% efficient (much better)
 - Car engine: 25% efficient
 - Electric motor: 90% efficient
 
+**Why it matters:** More efficient = less energy wasted = saves money and environment
+
 ## Page 6: Practice Problems
 
-**Problem 1:** A 2 kg ball is thrown at 10 m/s. What's its kinetic energy?
+**Problem 1:** 2 kg ball thrown at 10 m/s. Find kinetic energy.
 **Answer:** KE = ½mv² = ½ × 2 × 10² = 100 J
 
-**Problem 2:** A 5 kg book is on a 2 m high shelf. What's its potential energy?
-**Answer:** PE = mgh = 5 × 9.8 × 2 = 98 J`,
+**Problem 2:** 5 kg book on 2 m shelf. Find potential energy.
+**Answer:** PE = mgh = 5 × 9.8 × 2 = 98 J
+
+**Problem 3:** Ball dropped from 20 m. What's velocity at ground?
+**Answer:** PE converts to KE: mgh = ½mv²
+gh = ½v² → v = √(2gh) = √(2 × 9.8 × 20) = 19.8 m/s
+
+**Key Takeaway:** Energy is never lost, just transformed into different forms!`,
 
   'Electricity': `## ELECTRICITY - Flow of Electric Charge
 
@@ -349,282 +416,471 @@ Electricity is electrons flowing through wires. Think of it like water flowing t
 
 **1. Voltage (V) - The Push**
 - Like water pressure
-- Measured in Volts
-- Wall outlet: 120V
+- Measured in Volts (V)
+- Wall outlet: 120V (US)
 
 **2. Current (I) - The Flow**
-- How many electrons flow
-- Measured in Amps
-- Current is dangerous!
+- How many electrons flow per second
+- Measured in Amperes (A)
+- Current is what's dangerous!
 
 **3. Resistance (R) - The Obstacle**
 - What slows down flow
 - Measured in Ohms (Ω)
-- Thin wire: high resistance
+- Thin wire = high resistance
+
+**Water Analogy:**
+- Voltage = Water pressure
+- Current = Water flow rate
+- Resistance = Pipe narrowness
 
 ## Page 2: Ohm's Law
 
-**V = I × R**
-(Voltage = Current × Resistance)
+**V = I × R** (Voltage = Current × Resistance)
 
-This is the most important equation in electricity!
+This is the MOST IMPORTANT equation in electricity!
 
-**Example 1:** Battery: 12V, Resistance: 4Ω
-Current = V/R = 12/4 = 3A
+**Three forms:**
+1. V = I × R (find voltage)
+2. I = V/R (find current)
+3. R = V/I (find resistance)
 
-**Example 2:** Current: 2A, Resistance: 6Ω
-Voltage = I × R = 2 × 6 = 12V
+**Examples:**
+
+**Example 1:** 12V battery, 4Ω resistor
+Current: I = V/R = 12/4 = 3A
+
+**Example 2:** 2A current, 6Ω resistor
+Voltage: V = I × R = 2 × 6 = 12V
+
+**Example 3:** 120V, 10A current
+Resistance: R = V/I = 120/10 = 12Ω
 
 ## Page 3: Series vs Parallel Circuits
 
 **Series Circuit:**
 - Components in single path
 - Same current through all
-- If one breaks, all stop
-- Example: Old Christmas lights
+- Voltages add: V_total = V1 + V2 + V3
+- Resistances add: R_total = R1 + R2 + R3
+- If one breaks, all stop (old Christmas lights)
 
 **Parallel Circuit:**
 - Components in multiple paths
 - Same voltage across all
-- If one breaks, others work
-- Example: House outlets
+- Currents add: I_total = I1 + I2 + I3
+- Resistances: 1/R_total = 1/R1 + 1/R2 + 1/R3
+- If one breaks, others work (house outlets)
+
+**Example:** Three 10Ω resistors
+- In series: R_total = 10 + 10 + 10 = 30Ω
+- In parallel: 1/R_total = 1/10 + 1/10 + 1/10 = 3/10, so R_total = 3.33Ω
 
 ## Page 4: Electrical Power
 
-**Formula:** P = V × I
+**Formula:** P = V × I (Power = Voltage × Current)
+
+**Also:** P = I²R and P = V²/R
+
+**Unit:** Watts (W)
 
 **Examples:**
-- Light bulb: 120V × 0.5A = 60W
+- 60W light bulb at 120V: I = P/V = 60/120 = 0.5A
 - Phone charger: 5V × 2A = 10W
 - Microwave: 120V × 10A = 1200W
 
-## Page 5: Safety
+**Electricity Bill:**
+- Energy = Power × Time
+- Unit: kilowatt-hour (kWh)
+- Example: 100W bulb for 10 hours = 1 kWh
+- At $0.12/kWh: Cost = $0.12
 
-**Current is what's dangerous!**
+## Page 5: Electrical Safety
 
-- 0.001A (1mA): Barely feel it
-- 0.01A (10mA): Can't let go
-- 0.1A (100mA): Can be fatal!
+**Current is what kills, not voltage!**
+
+**Effects on human body:**
+- 1 mA: Barely feel it
+- 10 mA: Can't let go
+- 100 mA: Can be FATAL!
 
 **Safety Rules:**
-- Never touch wires with wet hands
-- Don't overload outlets
-- Use circuit breakers
-- Keep water away from electricity
+1. Never touch wires with wet hands (lowers resistance!)
+2. Don't use electrical devices near water
+3. Don't overload outlets
+4. Use circuit breakers
+5. Keep water away from electricity
+
+**Why wet hands are dangerous:**
+- Dry skin: 100,000Ω resistance
+- Wet skin: 1,000Ω resistance (100× less!)
+- Same voltage → 100× more current!
 
 ## Page 6: Practice Problems
 
-**Problem 1:** A circuit has 12V battery and 4Ω resistor. What's the current?
-**Answer:** I = V/R = 12/4 = 3A
+**Problem 1:** 12V battery, 4Ω resistor. Find current and power.
+**Answer:** I = 12/4 = 3A, P = 12 × 3 = 36W
 
-**Problem 2:** A device uses 5A at 120V. What's the power?
-**Answer:** P = V × I = 120 × 5 = 600W`,
+**Problem 2:** Device uses 5A at 120V. Find power and cost for 3 hours at $0.12/kWh.
+**Answer:** P = 120 × 5 = 600W = 0.6kW
+Energy = 0.6 × 3 = 1.8 kWh
+Cost = 1.8 × $0.12 = $0.22
+
+**Problem 3:** Why do power lines use high voltage?
+**Answer:** Higher voltage = lower current for same power. Lower current = less power loss in wires (P = I²R). That's why transmission lines use 100,000+ volts!`,
 
   'Waves': `## WAVES - Energy Transfer
 
-Waves transfer energy without moving material!
+Waves transfer energy from one place to another without moving material!
 
 ## Page 1: What Are Waves?
 
-A wave is a disturbance that transfers energy from one place to another.
+**Wave:** A disturbance that transfers energy
 
 **Key Concept:** The wave moves, but material just oscillates in place!
 
-**Example:** Ocean wave travels across ocean, but water just moves up and down.
+**Example:** Ocean wave travels across ocean, but water just moves up and down in circles.
+
+**Wave Parts:**
+- **Crest:** Highest point
+- **Trough:** Lowest point
+- **Wavelength (λ):** Distance between crests
+- **Amplitude:** Height of wave (more amplitude = more energy)
+- **Frequency (f):** Waves per second (Hz)
+- **Period (T):** Time for one wave (T = 1/f)
 
 ## Page 2: Types of Waves
 
-**1. Transverse Waves**
-Particles move perpendicular to wave direction.
+**Transverse Waves:** Particles move perpendicular to wave direction
 - Examples: Light, water waves, rope waves
+- Visualization: Shake rope up/down, wave travels horizontally
 
-**2. Longitudinal Waves**
-Particles move parallel to wave direction.
-- Examples: Sound waves, earthquake waves
+**Longitudinal Waves:** Particles move parallel to wave direction
+- Examples: Sound waves, slinky compression waves
+- Visualization: Push/pull slinky, compressions travel along it
 
-## Page 3: Wave Properties
+**Key Difference:** Direction of particle motion relative to wave direction
 
-**Wavelength (λ):** Distance between peaks
-- Measured in meters
+## Page 3: Wave Equation
 
-**Frequency (f):** Waves per second
-- Measured in Hertz (Hz)
+**v = f × λ** (Speed = Frequency × Wavelength)
 
-**Amplitude:** Height of wave
-- Bigger amplitude = more energy
+This is the FUNDAMENTAL WAVE EQUATION!
 
-**Speed (v):** How fast wave travels
+**Examples:**
 
-## Page 4: The Wave Equation
+**Example 1: Sound**
+Frequency: 440 Hz (A note)
+Speed: 343 m/s
+Wavelength: λ = v/f = 343/440 = 0.78 m
 
-**v = f × λ**
-(Speed = Frequency × Wavelength)
+**Example 2: Light**
+Wavelength: 500 nm (green)
+Speed: 3 × 10⁸ m/s
+Frequency: f = v/λ = (3 × 10⁸)/(500 × 10⁻⁹) = 6 × 10¹⁴ Hz
 
-**Example:** Sound wave: f = 440 Hz, λ = 0.78 m
-Speed = 440 × 0.78 = 343 m/s (speed of sound!)
+**Key Point:** If frequency doubles, wavelength halves (for constant speed)
 
-## Page 5: Electromagnetic Spectrum
+## Page 4: Electromagnetic Spectrum
 
-All travel at light speed: 3 × 10⁸ m/s!
+**ALL electromagnetic waves travel at light speed:** c = 3 × 10⁸ m/s
 
-**From longest to shortest:**
-1. Radio waves - Radio, TV, WiFi
-2. Microwaves - Microwave ovens
-3. Infrared - Heat, remotes
-4. Visible Light - What we see!
-5. Ultraviolet - Sunburn
-6. X-rays - See bones
-7. Gamma rays - Most dangerous
+**From longest to shortest wavelength:**
+1. **Radio waves:** Radio, TV, WiFi
+2. **Microwaves:** Microwave ovens, radar
+3. **Infrared:** Heat, remote controls
+4. **Visible Light:** ROYGBIV (Red to Violet)
+5. **Ultraviolet:** Sunburn, kills bacteria
+6. **X-rays:** Medical imaging, see bones
+7. **Gamma rays:** Most energetic, most dangerous
 
-## Page 6: Wave Behaviors
+**Key:** Longer wavelength = Lower frequency = Lower energy
 
-**Reflection:** Wave bounces off (mirrors, echoes)
+**Why sky is blue:** Blue light scatters more than red (shorter wavelength)
 
-**Refraction:** Wave bends (straw in water)
+## Page 5: Wave Behaviors
 
-**Diffraction:** Wave spreads (hear around corners)
+**1. Reflection:** Wave bounces off surface
+- Examples: Mirrors (light), echoes (sound)
+- Law: Angle in = Angle out
 
-**Interference:** Waves combine or cancel
+**2. Refraction:** Wave bends when entering different medium
+- Cause: Speed changes in different materials
+- Examples: Straw looks bent in water, rainbows
+
+**3. Diffraction:** Wave spreads through opening or around obstacle
+- More diffraction when wavelength ≈ opening size
+- Why we hear around corners but don't see around them!
+
+**4. Interference:** Waves overlap and combine
+- **Constructive:** Crests align → bigger wave
+- **Destructive:** Crest meets trough → cancel out
+- Example: Noise-canceling headphones create opposite wave
+
+## Page 6: Sound Waves
+
+**Sound:** Longitudinal pressure waves through matter
+
+**Cannot travel through vacuum!** (No medium = no sound)
+
+**Speed of sound:**
+- Air: 343 m/s
+- Water: 1480 m/s (4× faster)
+- Steel: 5960 m/s (17× faster)
+
+**Properties:**
+- **Pitch:** Determined by frequency (high frequency = high pitch)
+- **Loudness:** Determined by amplitude (big amplitude = loud)
+- **Human hearing:** 20 Hz to 20,000 Hz
+
+**Doppler Effect:** Frequency changes when source moves
+- Approaching: Higher pitch (ambulance siren)
+- Moving away: Lower pitch
+
+**Decibels (dB):**
+- 30 dB: Whisper
+- 60 dB: Normal conversation
+- 120 dB: Rock concert (pain threshold)
+- 140 dB: Jet engine (immediate damage)
 
 ## Page 7: Practice Problems
 
-**Problem 1:** A wave has frequency 50 Hz and wavelength 2 m. What's its speed?
+**Problem 1:** Wave has frequency 50 Hz and wavelength 2 m. Find speed.
 **Answer:** v = f × λ = 50 × 2 = 100 m/s
 
-**Problem 2:** Why can't sound travel through space?
-**Answer:** Sound needs matter to travel through. Space is a vacuum!`,
+**Problem 2:** Sound in air (343 m/s) has frequency 686 Hz. Find wavelength.
+**Answer:** λ = v/f = 343/686 = 0.5 m
+
+**Problem 3:** Why can't sound travel through space?
+**Answer:** Sound needs matter (medium) to travel through. Space is a vacuum with no matter!
+
+**Problem 4:** Light has wavelength 600 nm. Find frequency.
+**Answer:** f = c/λ = (3 × 10⁸)/(600 × 10⁻⁹) = 5 × 10¹⁴ Hz`,
 
   'Modern Physics': `## MODERN PHYSICS - The Extreme Universe
 
 Modern Physics explains the very small (atoms) and very fast (near light speed)!
 
-## Page 1: Special Relativity
+## Page 1: Special Relativity Basics
 
-**Einstein's Big Ideas:**
+**Einstein's Two Postulates (1905):**
+1. Laws of physics same in all inertial reference frames
+2. Speed of light is constant for all observers: c = 3 × 10⁸ m/s
 
-**1. Speed of Light is Constant**
-Light always travels at c = 3 × 10⁸ m/s, no matter what!
+**Time Dilation:** Moving clocks run slower!
 
-**2. Time Dilation**
-Time slows down as you go faster!
+**Formula:** t' = t / √(1 - v²/c²)
 
-**Example:** Travel at 90% light speed for 1 year (your time):
-- People on Earth age 2.3 years!
-- This is real, not an illusion!
+**Example:** Travel at 0.9c (90% light speed) for 1 year (your time)
+- γ = 1/√(1 - 0.9²) = 2.29
+- Earth time = 1 × 2.29 = 2.29 years
+- You age 1 year, Earth ages 2.29 years!
 
-**3. E = mc²**
-Mass and energy are the same thing!
-- Tiny mass = Huge energy
-- Nuclear power uses this
+**Real Evidence:** Muons from upper atmosphere reach ground due to time dilation!
 
-## Page 2: General Relativity
+## Page 2: E = mc²
 
-**Key Idea:** Gravity isn't a force - it's curved space-time!
+**Mass-Energy Equivalence:** Mass and energy are the same thing!
 
-**What this means:**
-- Massive objects bend space and time
-- Objects follow curved paths
-- We're not "pulled" down - we're following curved space!
+**Formula:** E = mc²
+- E = energy (Joules)
+- m = mass (kg)
+- c = speed of light
+
+**Why c²?** c² = 9 × 10¹⁶ → Tiny mass = HUGE energy!
+
+**Example:** 1 gram of matter
+E = 0.001 × (3 × 10⁸)² = 9 × 10¹³ J
+= 21 kilotons of TNT (more than Hiroshima bomb!)
+
+**Applications:**
+- Nuclear power: Uranium fission releases energy
+- The Sun: Converts 4 million tons of mass to energy every second!
+- Why nothing can reach light speed: Would need infinite energy
+
+## Page 3: General Relativity
+
+**Key Idea:** Gravity is not a force - it's curved spacetime!
+
+**Massive objects bend spacetime, objects follow curved paths**
+
+**Predictions:**
+1. **Gravitational Time Dilation:** Time runs slower in stronger gravity
+2. **Gravitational Lensing:** Light bends around massive objects
+3. **Gravitational Waves:** Ripples in spacetime (detected 2015!)
+4. **Black Holes:** Extreme curvature, nothing escapes
+
+**GPS Example:** Satellites need relativity corrections!
+- Without corrections: GPS off by 11 km per day
+- Proves relativity is real and practical!
 
 **Black Holes:**
-- Space curves infinitely
-- Nothing can escape, not even light
-- Time stops at event horizon
+- Event horizon: Point of no return
+- Singularity: Infinite density at center
+- Time stops at event horizon (from outside view)
 
-## Page 3: Quantum Mechanics
+## Page 4: Quantum Mechanics Basics
 
-**The Physics of the Very Small**
+**The Quantum World:**
+At atomic scales, reality is WEIRD!
 
-At atomic scales, reality is WEIRD:
-- Particles are also waves
-- Can't know position AND speed perfectly
-- Particles exist in multiple states at once
-- Observation changes reality
+**Key Principles:**
+1. Energy is quantized (comes in discrete packets)
+2. Wave-particle duality (everything is both)
+3. Uncertainty principle (can't know everything)
+4. Superposition (multiple states at once)
+5. Probability (can only predict probabilities)
 
-## Page 4: Wave-Particle Duality
+**Why Quantum Mechanics?**
+- Classical physics failed for atoms
+- Quantum mechanics explains: atomic structure, chemistry, electronics, lasers
 
-**Light is BOTH a wave AND a particle!**
+**Most precisely tested theory ever!** Predictions accurate to 12 decimal places.
 
-**Evidence for Wave:** Interference, diffraction
+## Page 5: Wave-Particle Duality
 
-**Evidence for Particle:** Photoelectric effect, comes in packets (photons)
+**Everything is BOTH wave AND particle!**
 
-**Matter is ALSO both wave and particle!**
-- Electrons show interference patterns
-- Everything has a wave nature
+**Light as Particles (Photons):**
+- Photoelectric Effect: Light ejects electrons from metal
+- Each photon has energy: E = hf (h = Planck's constant)
+- Higher frequency = more energy per photon
 
-## Page 5: Heisenberg Uncertainty Principle
+**Light as Waves:**
+- Interference patterns
+- Diffraction
+- Polarization
 
-**You can't know both position AND momentum perfectly!**
+**Matter as Waves:**
+- de Broglie wavelength: λ = h/(mv)
+- Electrons show interference patterns!
+- Everything has wave nature
 
-**Formula:** Δx × Δp ≥ h/4π
+**Example:** Electron at 10⁶ m/s
+λ = 7.3 × 10⁻¹⁰ m (atomic size - wave effects observable!)
 
-**What this means:**
-- More you know position, less you know momentum
-- This isn't a measurement problem - it's how nature works!
+**Double-Slit Experiment:** Particles go through BOTH slits simultaneously! Observation changes the result!
 
-## Page 6: Quantum Superposition
+## Page 6: Heisenberg Uncertainty Principle
 
-**Particles exist in multiple states at once until observed!**
+**You cannot know both position AND momentum precisely!**
 
-**Schrödinger's Cat:**
-- Cat in box is BOTH alive AND dead until you look!
+**Formula:** Δx × Δp ≥ h/(4π)
+
+**What it means:**
+- More precisely you know position → less precisely you know momentum
+- This is NOT a measurement problem
+- This is how nature fundamentally works!
+
+**Why?** Particles are waves! Waves are spread out.
+
+**Example:** If you know electron position within atomic size (10⁻¹⁰ m), momentum uncertainty prevents collapse into nucleus!
+
+**Philosophical Impact:** Reality is fundamentally uncertain. Can only predict probabilities, not certainties.
+
+## Page 7: Quantum Superposition and Entanglement
+
+**Superposition:** Particles exist in multiple states simultaneously until measured!
+
+**Schrödinger's Cat (Thought Experiment):**
+- Cat in box with radioactive atom
+- Before opening: Cat is BOTH alive AND dead
+- Opening box = measurement → collapses to one state
+- Shows absurdity of quantum rules at macro scale
 
 **Quantum Entanglement:**
-- Two particles connected instantly across any distance
+Two particles become correlated - measuring one instantly affects the other!
+
+**Example:** Two entangled photons with opposite spins
+- Measure one: Gets spin up
+- Other INSTANTLY becomes spin down
+- Even if separated by light-years!
 - Einstein called it "spooky action at a distance"
-- Proven real!
 
-## Page 7: Real-World Applications
+**Bell's Theorem:** Proved entanglement is real! No hidden variables can explain it.
 
-**1. Nuclear Energy**
+**Applications:**
+- Quantum computing: Use superposition for parallel computation
+- Quantum cryptography: Unbreakable encryption
+- Quantum teleportation: Transfer quantum states
+
+## Page 8: Real-World Applications
+
+**1. Nuclear Energy:**
 - E = mc² explains nuclear power
 - 1 kg uranium = 3 million kg coal
+- Powers 20% of US electricity
 
-**2. Semiconductors**
-- Quantum mechanics explains transistors
-- All electronics use this
+**2. Semiconductors & Electronics:**
+- Transistors work via quantum mechanics
+- Billions in every computer chip
+- LEDs, solar panels, all electronics
 
-**3. Lasers**
-- Quantum mechanics explains how they work
-- Used in surgery, communications, DVD players
+**3. Lasers:**
+- Quantum process (stimulated emission)
+- Uses: Surgery, fiber optics, manufacturing, Blu-ray
 
-**4. MRI Machines**
-- Uses quantum spin of atoms
-- Sees inside body without surgery
+**4. Medical Imaging:**
+- MRI: Uses quantum spin of atoms
+- PET scans: Uses antimatter (positrons!)
 
-**5. GPS**
-- Needs relativity corrections!
-- Without them: Off by miles per day
+**5. GPS:**
+- Requires both special and general relativity corrections
+- Without them: Off by miles per day!
 
-## Page 8: Mind-Blowing Facts
+**6. Quantum Computing:**
+- Uses superposition and entanglement
+- Can solve certain problems exponentially faster
+- Future of computing!
 
-**1. Time Travel (Forward):**
+## Page 9: Mind-Blowing Facts
+
+**Time Travel (Forward):**
 - Travel near light speed → time slows for you
-- Return to Earth → everyone aged more
-- You've traveled to the future!
+- Return to Earth → you've traveled to future!
+- Example: Travel at 0.999c for 1 year → Earth ages 22.4 years
 
-**2. Quantum Tunneling:**
-- Particles can pass through barriers!
-- Like a ball rolling through a wall
+**Antimatter:**
+- For every particle, there's an antiparticle
+- Matter + Antimatter → Pure energy (100% efficient!)
+- Why is universe made of matter, not antimatter? Mystery!
 
-**3. Antimatter:**
-- For every particle, there's an opposite
-- Matter + Antimatter = Pure energy!
+**Quantum Tunneling:**
+- Particles can pass through barriers they shouldn't!
+- Why radioactivity happens
+- Why the sun shines (protons tunnel through repulsion)
+- Used in: Flash memory, scanning tunneling microscopes
 
-**4. Observation Changes Reality:**
-- Measuring a particle changes its state
-- Reality is fundamentally probabilistic
+**Dark Matter & Dark Energy:**
+- Dark Matter: 27% of universe (only detected through gravity)
+- Dark Energy: 68% of universe (causes expansion)
+- Normal Matter: Only 5% of universe!
 
-## Page 9: Practice Problems
+**Unsolved Mysteries:**
+1. How to combine quantum mechanics and general relativity?
+2. What is dark matter?
+3. What is dark energy?
+4. Why more matter than antimatter?
+5. What happened before Big Bang?
 
-**Problem 1:** How much energy from 0.001 kg of matter?
-**Answer:** E = mc² = 0.001 × (3×10⁸)² = 9 × 10¹³ J
+## Page 10: Practice Problems
 
-**Problem 2:** Why can't we notice quantum effects in daily life?
-**Answer:** Quantum effects are significant only at atomic scales. For large objects, wavelengths are too small.
+**Problem 1:** Spaceship travels at 0.8c. How much time passes on Earth while 5 years pass on ship?
+**Answer:** γ = 1/√(1-0.8²) = 1.67, Earth time = 5 × 1.67 = 8.35 years
 
-**Remember:** Modern physics shows reality is WAY weirder than it seems! Time isn't constant, particles are waves, and observation changes reality!`
+**Problem 2:** How much energy from 0.01 kg of matter?
+**Answer:** E = mc² = 0.01 × (3×10⁸)² = 9 × 10¹⁴ J (200,000 tons of TNT!)
+
+**Problem 3:** Photon has wavelength 500 nm. Find energy.
+**Answer:** f = c/λ = 6 × 10¹⁴ Hz, E = hf = 4.0 × 10⁻¹⁹ J
+
+**Key Takeaways:**
+- Time and space are relative
+- Mass and energy are equivalent
+- Everything is both wave and particle
+- Reality is fundamentally uncertain
+- Observation affects reality
+- Modern physics powers all modern technology!`
       }
       
       explanation = fallbacks[topic] || `${topic} is an important physics concept.`;
