@@ -104,166 +104,767 @@ app.post('/ai-explain', async (req, res) => {
       explanation = completion.choices[0].message.content;
     } else {
       console.log('Using fallback explanations');
-      // Expanded lessons with pagination support (## marks new pages)
+      // FULLY EXPANDED LESSONS - Research Quality with Detailed Content (## marks new pages)
       const fallbacks = {
   'Motion': `## MOTION - The Physics of Movement
 
-Motion is the change in position of an object over time. Everything in the universe is moving - from atoms vibrating to galaxies spinning. Understanding motion is the foundation of all physics!
+Motion is one of the most fundamental concepts in physics. It describes the change in position of an object over time. From the smallest subatomic particles to the largest galaxies, everything in the universe is in constant motion. Understanding motion is essential for comprehending all other areas of physics, from mechanics to thermodynamics to quantum mechanics.
 
-## Page 1: Distance vs Displacement
+## Page 1: Introduction to Motion and Reference Frames
 
-**Distance** is the total path length you traveled. It's a scalar quantity (just a number with no direction).
+**What is Motion?**
+Motion is the change in position of an object with respect to a reference point over time. This seemingly simple definition contains several important concepts that we must understand.
 
-**Displacement** is your change in position from start to finish. It's a vector quantity (has both magnitude and direction).
+**Reference Frames:**
+Motion is always relative. When we say something is moving, we must ask: moving relative to what? A reference frame is the perspective from which we observe and measure motion.
 
-**Example:**
-Imagine you walk 3 blocks north, then 3 blocks south.
-- Distance = 6 blocks (you walked 6 blocks total)
-- Displacement = 0 blocks (you ended where you started!)
+**Example:** You're sitting in a train reading this. Relative to the train, you're stationary. Relative to the ground outside, you're moving at the train's speed. Relative to the sun, you're moving at Earth's orbital speed (about 30 km/s!). All these descriptions are correct - motion depends on your reference frame.
 
-**Another Example:**
+**Types of Motion:**
+1. **Linear Motion:** Movement along a straight line (car on straight road)
+2. **Circular Motion:** Movement along a circular path (Earth around sun)
+3. **Rotational Motion:** Spinning around an axis (spinning top)
+4. **Oscillatory Motion:** Back and forth movement (pendulum)
+5. **Random Motion:** Unpredictable movement (gas molecules)
+
+**Historical Context:**
+Ancient Greek philosophers like Aristotle believed that objects naturally came to rest - that motion required a continuous force. It wasn't until Galileo and Newton in the 16th-17th centuries that we understood that objects in motion tend to stay in motion (inertia). This revolutionary insight laid the foundation for modern physics.
+
+## Page 2: Distance and Displacement
+
+**Distance (Scalar Quantity):**
+Distance is the total length of the path traveled by an object. It's a scalar quantity, meaning it has magnitude (size) but no direction. Distance is always positive or zero, never negative.
+
+**Formula:** Distance = Total path length
+**Unit:** meters (m), kilometers (km), miles, etc.
+**Symbol:** Usually 'd' or 's'
+
+**Displacement (Vector Quantity):**
+Displacement is the straight-line distance from the starting position to the final position, including direction. It's a vector quantity with both magnitude and direction.
+
+**Formula:** Displacement = Final position - Initial position
+**Unit:** meters (m) with direction
+**Symbol:** Usually Δx, Δy, or Δs (Δ means "change in")
+
+**Key Differences:**
+- Distance depends on the path taken; displacement doesn't
+- Distance is always ≥ displacement
+- Distance is always positive; displacement can be positive, negative, or zero
+- Distance is scalar; displacement is vector
+
+**Detailed Examples:**
+
+**Example 1: The Round Trip**
+You walk 3 km north from your house to a store, then 3 km south back home.
+- Distance = 3 + 3 = 6 km (you walked 6 km total)
+- Displacement = 0 km (you ended where you started)
+- This shows that distance and displacement can be very different!
+
+**Example 2: The Right Triangle**
 You walk 4 meters east, then 3 meters north.
-- Distance = 4 + 3 = 7 meters
-- Displacement = 5 meters northeast (using Pythagorean theorem: √(4² + 3²) = 5)
+- Distance = 4 + 3 = 7 meters (total path length)
+- Displacement = 5 meters northeast
+  * Using Pythagorean theorem: √(4² + 3²) = √(16 + 9) = √25 = 5 m
+  * Direction: arctan(3/4) = 36.87° north of east
 
-**Key Point:** Distance is always positive or zero. Displacement can be positive, negative, or zero depending on direction.
+**Example 3: The Race Track**
+A runner completes one lap around a 400 m circular track.
+- Distance = 400 m (circumference of track)
+- Displacement = 0 m (ended at starting point)
 
-## Page 2: Speed vs Velocity
+**Real-World Applications:**
+- GPS systems calculate displacement (straight-line distance) but also track distance traveled
+- Delivery drivers care about distance (affects fuel, time) more than displacement
+- Migrating birds use displacement to navigate straight to their destination
+- Taxi fares are based on distance, not displacement
 
-**Speed** tells you how fast you're going. It's a scalar (just a number).
-- Formula: speed = distance / time
-- Unit: m/s, km/h, mph
-- Example: "I'm driving 60 mph"
+## Page 3: Speed and Velocity
 
-**Velocity** tells you how fast AND in what direction. It's a vector.
-- Formula: velocity = displacement / time
-- Unit: m/s (with direction)
-- Example: "I'm driving 60 mph north"
+**Speed (Scalar):**
+Speed measures how fast an object is moving, regardless of direction. It's the rate of change of distance with time.
 
-**Important Difference:**
-Two cars both going 60 mph have the same speed. But if one goes north and one goes south, they have DIFFERENT velocities! Direction matters for velocity.
+**Formula:** Speed = Distance / Time
+**Unit:** m/s, km/h, mph
+**Types:**
+- **Average Speed:** Total distance / Total time
+- **Instantaneous Speed:** Speed at a specific moment (what your speedometer shows)
 
-## Page 3: Acceleration
+**Velocity (Vector):**
+Velocity measures how fast an object is moving in a specific direction. It's the rate of change of displacement with time.
 
-Acceleration is the rate of change of velocity. It happens when you:
-1. Speed up (positive acceleration)
-2. Slow down (negative acceleration, called deceleration)
-3. Change direction (even at constant speed!)
+**Formula:** Velocity = Displacement / Time
+**Unit:** m/s (with direction)
+**Types:**
+- **Average Velocity:** Total displacement / Total time
+- **Instantaneous Velocity:** Velocity at a specific moment
 
-**Formula:** a = (v_final - v_initial) / time
+**Critical Difference:**
+Speed tells you "how fast" - velocity tells you "how fast and which way"
 
+**Detailed Examples:**
+
+**Example 1: The Commute**
+You drive 60 km north in 1 hour, then 60 km south in 1 hour.
+- Total distance = 120 km
+- Total displacement = 0 km
+- Average speed = 120 km / 2 h = 60 km/h
+- Average velocity = 0 km / 2 h = 0 km/h
+- Your speed was 60 km/h, but your average velocity was zero!
+
+**Example 2: The Speedometer**
+Two cars both traveling at 100 km/h:
+- Car A heading north
+- Car B heading south
+- Same speed (100 km/h)
+- Different velocities (100 km/h north vs 100 km/h south)
+- If they collide head-on, the relative velocity is 200 km/h!
+
+**Example 3: Circular Motion**
+A car drives around a circular track at constant 60 mph:
+- Speed is constant (60 mph)
+- Velocity is constantly changing (direction changes)
+- This means the car is accelerating even though speed is constant!
+
+**Speed Records:**
+- Fastest human (Usain Bolt): 44.72 km/h (27.8 mph)
+- Fastest land animal (Cheetah): 120 km/h (75 mph)
+- Speed of sound: 343 m/s (1,235 km/h)
+- Speed of light: 299,792,458 m/s (ultimate speed limit!)
+
+**Real-World Applications:**
+- Air traffic control tracks velocity (speed + direction) for safety
+- Weather forecasts report wind velocity (speed + direction)
+- Sports analytics use speed for performance metrics
+- Navigation systems calculate velocity for accurate arrival times
+
+## Page 4: Acceleration - The Rate of Change
+
+**What is Acceleration?**
+Acceleration is the rate of change of velocity. Any change in velocity - speeding up, slowing down, or changing direction - involves acceleration.
+
+**Formula:** a = (v_final - v_initial) / time = Δv / Δt
 **Unit:** m/s² (meters per second squared)
 
-**Example:**
-A car accelerates at 2 m/s²
-- After 1 second: velocity increases by 2 m/s
-- After 2 seconds: velocity increases by 4 m/s
-- After 3 seconds: velocity increases by 6 m/s
+**What does m/s² mean?**
+It means your velocity changes by that many m/s every second. If acceleration is 5 m/s², your velocity increases by 5 m/s each second.
 
-## Page 4: The Equations of Motion
+**Types of Acceleration:**
 
-These are the most important formulas in physics:
+**1. Positive Acceleration (Speeding Up):**
+When velocity increases in the positive direction.
+Example: Car accelerating from 0 to 60 mph
 
-**1. v = u + at**
-- v = final velocity
-- u = initial velocity
-- a = acceleration
-- t = time
+**2. Negative Acceleration/Deceleration (Slowing Down):**
+When velocity decreases.
+Example: Car braking from 60 mph to 0
 
-**2. s = ut + ½at²**
-- s = displacement
+**3. Centripetal Acceleration (Changing Direction):**
+When direction changes even if speed is constant.
+Example: Car turning a corner at constant speed
 
-**3. v² = u² + 2as**
-- Useful when you don't know time
+**Detailed Examples:**
 
-**Example Problem:**
-A car starts from rest (u = 0) and accelerates at 3 m/s² for 5 seconds. How far does it travel?
-s = 0(5) + ½(3)(5²) = 37.5 meters
+**Example 1: The Drag Race**
+A car accelerates at 5 m/s² from rest:
+- After 1 second: v = 0 + 5(1) = 5 m/s
+- After 2 seconds: v = 0 + 5(2) = 10 m/s
+- After 3 seconds: v = 0 + 5(3) = 15 m/s
+- After 4 seconds: v = 0 + 5(4) = 20 m/s
+- Velocity increases by 5 m/s every second
 
-## Page 5: Free Fall and Gravity
+**Example 2: Emergency Braking**
+A car traveling at 30 m/s brakes with acceleration -6 m/s²:
+- After 1 second: v = 30 + (-6)(1) = 24 m/s
+- After 2 seconds: v = 30 + (-6)(2) = 18 m/s
+- After 3 seconds: v = 30 + (-6)(3) = 12 m/s
+- After 4 seconds: v = 30 + (-6)(4) = 6 m/s
+- After 5 seconds: v = 30 + (-6)(5) = 0 m/s (stopped!)
 
-**Acceleration due to gravity:** g = 9.8 m/s²
+**Example 3: The Elevator**
+When an elevator starts moving up:
+- You feel heavier (positive acceleration upward)
+When it stops:
+- You feel lighter (negative acceleration)
+This is why your stomach feels funny in elevators!
 
-**Amazing Fact:** This is the SAME for all objects! A feather and a bowling ball fall at the same rate in a vacuum.
+**Acceleration in Daily Life:**
+- Car acceleration: 0-60 mph in 6 seconds = 4.5 m/s²
+- Roller coaster: Up to 40 m/s² (4g's!)
+- Fighter jet: Up to 90 m/s² (9g's - pilots can black out)
+- Space shuttle launch: 30 m/s² (3g's)
+- Gravity on Earth: 9.8 m/s² (1g)
 
-**Example: Dropping a ball**
-- After 1 second: v = 9.8 m/s downward
-- After 2 seconds: v = 19.6 m/s downward
-- It keeps getting faster!
+## Page 5: The Kinematic Equations
 
-## Page 6: Practice Problems
+These four equations describe motion with constant acceleration. They're derived from calculus but can be understood intuitively.
 
-**Problem 1:** A car accelerates from 0 to 60 mph (27 m/s) in 6 seconds. What's the acceleration?
-**Answer:** a = (27 - 0) / 6 = 4.5 m/s²
+**Equation 1: v = u + at**
+**Meaning:** Final velocity = Initial velocity + (acceleration × time)
+**Use when:** You know initial velocity, acceleration, and time
+**Example:** Car starts at 10 m/s, accelerates at 2 m/s² for 5 seconds
+v = 10 + 2(5) = 20 m/s
 
-**Problem 2:** You throw a ball upward at 20 m/s. How high does it go?
-**Answer:** Use v² = u² + 2as, where v=0 at peak, u=20, a=-9.8
-0 = 400 - 19.6s → s = 20.4 meters`,
+**Equation 2: s = ut + ½at²**
+**Meaning:** Displacement = (initial velocity × time) + (half × acceleration × time²)
+**Use when:** You want to find distance traveled
+**Example:** Car starts from rest, accelerates at 3 m/s² for 4 seconds
+s = 0(4) + ½(3)(4²) = 0 + ½(3)(16) = 24 meters
 
+**Equation 3: v² = u² + 2as**
+**Meaning:** (Final velocity)² = (Initial velocity)² + (2 × acceleration × displacement)
+**Use when:** You don't know time
+**Example:** Car accelerates from 10 m/s to 20 m/s over 75 meters. Find acceleration.
+20² = 10² + 2a(75)
+400 = 100 + 150a
+300 = 150a
+a = 2 m/s²
 
-  'Newton Laws': `## NEWTON'S LAWS OF MOTION
+**Equation 4: s = (u + v)t / 2**
+**Meaning:** Displacement = (average velocity) × time
+**Use when:** You know both initial and final velocity
+**Example:** Car goes from 20 m/s to 30 m/s in 10 seconds
+s = (20 + 30)(10) / 2 = (50)(10) / 2 = 250 meters
 
-Sir Isaac Newton discovered three laws that explain how forces affect motion!
+**Complex Problem:**
+A car traveling at 25 m/s sees a red light and brakes with deceleration 5 m/s². How far does it travel before stopping?
 
-## Page 1: Newton's First Law - Inertia
+Given: u = 25 m/s, v = 0 m/s, a = -5 m/s²
+Find: s = ?
+Use: v² = u² + 2as
+0² = 25² + 2(-5)s
+0 = 625 - 10s
+10s = 625
+s = 62.5 meters
 
-**Statement:** An object at rest stays at rest, and an object in motion stays in motion at constant velocity, unless acted upon by an external force.
+## Page 6: Free Fall and Gravity
 
-**What is Inertia?** Resistance to changes in motion. More mass = more inertia.
+**Gravity - The Universal Force:**
+Every object with mass attracts every other object. On Earth's surface, this creates a constant downward acceleration.
+
+**Acceleration due to gravity:** g = 9.8 m/s² (often rounded to 10 m/s² for calculations)
+
+**Galileo's Revolutionary Discovery:**
+In the late 1500s, Galileo proved that all objects fall at the same rate, regardless of mass. Legend says he dropped objects from the Leaning Tower of Pisa. This contradicted Aristotle's 2000-year-old belief that heavier objects fall faster.
+
+**Why do feathers fall slower than rocks on Earth?**
+Air resistance! In a vacuum (no air), they fall at exactly the same rate. Apollo 15 astronaut David Scott demonstrated this on the Moon in 1971, dropping a hammer and feather simultaneously - they hit the ground together!
+
+**Free Fall Equations:**
+For objects falling or thrown vertically, use kinematic equations with a = -g = -9.8 m/s²
+(Negative because gravity pulls downward)
+
+**Example 1: Dropping a Ball**
+Drop a ball from rest (u = 0):
+- After 1 second: v = 0 + 9.8(1) = 9.8 m/s, distance = ½(9.8)(1²) = 4.9 m
+- After 2 seconds: v = 0 + 9.8(2) = 19.6 m/s, distance = ½(9.8)(2²) = 19.6 m
+- After 3 seconds: v = 0 + 9.8(3) = 29.4 m/s, distance = ½(9.8)(3²) = 44.1 m
+- Velocity increases linearly, distance increases quadratically!
+
+**Example 2: Throwing Upward**
+Throw a ball upward at 20 m/s:
+- Going up: Gravity slows it down at 9.8 m/s²
+- At peak: Velocity = 0 (but acceleration is still 9.8 m/s² downward!)
+- Coming down: Gravity speeds it up at 9.8 m/s²
+- Returns to hand at 20 m/s downward (same speed, opposite direction)
+
+**How high does it go?**
+Use v² = u² + 2as where v = 0, u = 20, a = -9.8
+0 = 400 + 2(-9.8)s
+19.6s = 400
+s = 20.4 meters
+
+**Terminal Velocity:**
+In real air, falling objects eventually reach terminal velocity when air resistance equals gravitational force:
+- Skydiver (spread out): ~120 mph (53 m/s)
+- Skydiver (head down): ~200 mph (89 m/s)
+- Raindrop: ~20 mph (9 m/s)
+- Feather: ~2 mph (0.9 m/s)
+
+## Page 7: Projectile Motion
+
+**What is Projectile Motion?**
+When an object is thrown at an angle, it follows a curved parabolic path. This combines horizontal motion (constant velocity) and vertical motion (constant acceleration due to gravity).
+
+**Key Principle: Independence of Motion**
+Horizontal and vertical motions are completely independent! They don't affect each other.
+
+**Horizontal Motion:**
+- No acceleration (ignoring air resistance)
+- Constant velocity: v_x = v₀ cos(θ)
+- Distance: x = v_x × t
+
+**Vertical Motion:**
+- Constant acceleration: a_y = -g = -9.8 m/s²
+- Initial velocity: v_y = v₀ sin(θ)
+- Use kinematic equations with a = -g
+
+**Example: The Cannon Ball**
+A cannon fires a ball at 50 m/s at 30° above horizontal.
+
+**Initial velocities:**
+- Horizontal: v_x = 50 cos(30°) = 50(0.866) = 43.3 m/s
+- Vertical: v_y = 50 sin(30°) = 50(0.5) = 25 m/s
+
+**Time to reach peak:**
+At peak, v_y = 0
+0 = 25 - 9.8t
+t = 2.55 seconds
+
+**Maximum height:**
+v² = u² + 2as
+0 = 25² + 2(-9.8)s
+s = 31.9 meters
+
+**Total flight time:**
+2 × 2.55 = 5.1 seconds (symmetry!)
+
+**Range (horizontal distance):**
+x = v_x × t = 43.3 × 5.1 = 220.8 meters
+
+**Optimal Angle:**
+For maximum range on level ground, launch at 45°! This balances height and distance.
+
+**Real-World Applications:**
+- Basketball: Players instinctively use projectile motion
+- Artillery: Calculating shell trajectories
+- Water fountains: Parabolic water arcs
+- Long jump: Athletes launch at ~20° (not 45° due to running speed)
+
+## Page 8: Relative Motion and Reference Frames
+
+**Relative Velocity:**
+Velocity depends on the observer's reference frame. The velocity of object A relative to object B is:
+v_AB = v_A - v_B
+
+**Example 1: Trains Passing**
+Train A: 30 m/s east
+Train B: 20 m/s east
+Relative velocity of A with respect to B: 30 - 20 = 10 m/s east
+(A appears to move 10 m/s east to passengers on B)
+
+**Example 2: Head-On Collision**
+Car A: 25 m/s east
+Car B: 25 m/s west (-25 m/s east)
+Relative velocity: 25 - (-25) = 50 m/s
+(They approach each other at 50 m/s!)
+
+**Example 3: River Crossing**
+Boat speed in still water: 5 m/s
+River current: 3 m/s downstream
+If boat aims straight across:
+- Resultant velocity: √(5² + 3²) = √34 = 5.83 m/s
+- Direction: arctan(3/5) = 31° downstream from straight across
+
+**Einstein's Relativity:**
+At everyday speeds, velocities add simply. But near light speed, Einstein showed that velocities don't add normally - nothing can exceed light speed!
+
+## Page 9: Circular Motion
+
+**Uniform Circular Motion:**
+Moving in a circle at constant speed. Even though speed is constant, velocity changes because direction changes constantly.
+
+**Centripetal Acceleration:**
+Acceleration toward the center of the circle.
+**Formula:** a_c = v² / r
+- v = speed
+- r = radius
+
+**Example: Car on Curve**
+Car traveling 20 m/s around curve with radius 50 m:
+a_c = 20² / 50 = 400 / 50 = 8 m/s²
+
+**Centripetal Force:**
+The force causing centripetal acceleration.
+**Formula:** F_c = mv² / r
 
 **Examples:**
-- Car braking: You jerk forward (your body wants to keep moving)
-- Tablecloth trick: Dishes stay in place when cloth pulled quickly
-- Space travel: Spacecraft keeps moving without engines
+- Earth orbiting sun: Gravity provides centripetal force
+- Car turning: Friction provides centripetal force
+- Satellite orbiting Earth: Gravity provides centripetal force
+- Spinning bucket of water: Tension in your arm provides centripetal force
+
+**Period and Frequency:**
+- **Period (T):** Time for one complete revolution
+- **Frequency (f):** Number of revolutions per second
+- Relationship: f = 1/T
+- Speed: v = 2πr / T = 2πrf
+
+## Page 10: Practice Problems and Applications
+
+**Problem 1:** A car accelerates from rest to 27 m/s (60 mph) in 6 seconds. Find:
+a) Acceleration
+b) Distance traveled
+
+**Solution:**
+a) a = (v - u) / t = (27 - 0) / 6 = 4.5 m/s²
+b) s = ut + ½at² = 0 + ½(4.5)(6²) = 81 meters
+
+**Problem 2:** A ball is thrown upward at 25 m/s. Find:
+a) Maximum height
+b) Time to return to hand
+c) Velocity when it returns
+
+**Solution:**
+a) v² = u² + 2as → 0 = 625 + 2(-9.8)s → s = 31.9 meters
+b) v = u + at → 0 = 25 - 9.8t → t = 2.55 s (up), total = 5.1 seconds
+c) 25 m/s downward (same speed, opposite direction)
+
+**Problem 3:** Two cars approach an intersection. Car A travels north at 15 m/s, Car B travels east at 20 m/s. What is their relative velocity?
+
+**Solution:**
+Relative velocity magnitude: √(15² + 20²) = √625 = 25 m/s
+Direction: arctan(15/20) = 36.87° north of east (from B's perspective)
+
+**Real-World Applications:**
+
+**1. Vehicle Safety:**
+- Stopping distance increases with speed squared
+- At 30 mph: ~75 feet stopping distance
+- At 60 mph: ~300 feet (4× the distance, not 2×!)
+
+**2. Sports:**
+- Baseball pitch: Understanding projectile motion
+- Track and field: Optimizing launch angles
+- Diving: Controlling rotational motion
+
+**3. Space Exploration:**
+- Orbital mechanics: Satellites use circular motion
+- Rocket launches: Overcoming gravity
+- Interplanetary travel: Relative motion between planets
+
+**4. Transportation:**
+- GPS: Calculating position from velocity
+- Air traffic control: Tracking relative velocities
+- Autonomous vehicles: Predicting motion
+
+**Common Misconceptions:**
+❌ Heavier objects fall faster → ✅ All objects fall at same rate (without air resistance)
+❌ No force means no motion → ✅ Objects keep moving without force (Newton's 1st Law)
+❌ Acceleration always means speeding up → ✅ Can mean slowing down or changing direction
+❌ At the peak of a throw, acceleration is zero → ✅ Acceleration is always 9.8 m/s² downward`,
+
+
+  'Newton Laws': `## NEWTON'S LAWS OF MOTION - The Foundation of Classical Mechanics
+
+Sir Isaac Newton (1642-1727) revolutionized physics with three simple laws that explain how forces affect motion. Published in his 1687 masterpiece "Philosophiæ Naturalis Principia Mathematica," these laws unified terrestrial and celestial mechanics, showing that the same principles govern falling apples and orbiting planets.
+
+## Page 1: Newton's First Law - The Law of Inertia
+
+**Statement:** An object at rest stays at rest, and an object in motion stays in motion at constant velocity, unless acted upon by an external net force.
+
+**What is Inertia?**
+Inertia is the resistance of an object to changes in its state of motion. It's the tendency of objects to "keep doing what they're doing." Mass is the measure of inertia - more mass means more inertia.
+
+**Historical Context:**
+Before Newton, Aristotle's view dominated for 2000 years: objects naturally come to rest, so continuous force is needed for motion. Galileo challenged this, showing that friction (not nature) stops moving objects. Newton formalized this insight.
+
+**Understanding "Net Force":**
+The First Law applies when net force is zero. Net force is the vector sum of all forces. If forces balance (cancel out), net force = 0, and the object maintains constant velocity (which could be zero).
+
+**Detailed Examples:**
+
+**Example 1: The Hockey Puck**
+On ice (low friction), a puck slides far after being hit. In space (no friction), it would slide forever at constant velocity. This demonstrates inertia - the puck "wants" to keep moving.
+
+**Example 2: Car Crash**
+When a car suddenly stops, passengers continue forward at the car's original speed (inertia). Seatbelts provide the external force needed to stop the passengers with the car.
+
+**Example 3: Tablecloth Trick**
+Pull a tablecloth quickly from under dishes. The dishes' inertia keeps them stationary while the cloth slides out. Pull slowly, and friction has time to accelerate the dishes.
+
+**Example 4: Space Travel**
+Spacecraft don't need engines to maintain speed in space. Once accelerated, they coast at constant velocity indefinitely (ignoring gravity). Engines are only needed to change velocity.
+
+**Example 5: The Coin Drop**
+Place a coin on a card on a glass. Flick the card horizontally. The coin drops straight into the glass because its inertia keeps it stationary while the card moves.
+
+**Misconceptions:**
+❌ "Objects naturally slow down" → ✅ Friction slows them; without friction, they'd continue forever
+❌ "Heavier objects have more inertia" → ✅ TRUE! Mass measures inertia
+❌ "Force is needed to maintain motion" → ✅ Force is needed only to CHANGE motion
 
 ## Page 2: Newton's Second Law - F = ma
 
-**Statement:** Force equals mass times acceleration
+**Statement:** The acceleration of an object is directly proportional to the net force acting on it and inversely proportional to its mass. The direction of acceleration is in the direction of the net force.
 
-**Formula:** F = ma
+**Formula:** F = ma or a = F/m
+- F = net force (Newtons, N)
+- m = mass (kilograms, kg)
+- a = acceleration (m/s²)
 
-**What it means:**
-- More force = more acceleration
-- More mass = less acceleration (for same force)
-- Force and acceleration have same direction
+**What This Means:**
+1. **More force → More acceleration:** Double the force, double the acceleration
+2. **More mass → Less acceleration:** Double the mass, half the acceleration (for same force)
+3. **Force and acceleration have the same direction:** Push right, accelerate right
 
-**The Newton:** 1 N = force to accelerate 1 kg at 1 m/s²
+**The Newton (Unit of Force):**
+1 Newton = force needed to accelerate 1 kg at 1 m/s²
+1 N = 1 kg⋅m/s²
 
-## Page 3: Weight vs Mass
+**Intuitive Understanding:**
+- Pushing a shopping cart (low mass): Easy to accelerate
+- Pushing a car (high mass): Hard to accelerate
+- Same force, different accelerations due to different masses
 
-**Mass:** Amount of matter (doesn't change)
-- Measured in kilograms (kg)
-- Same everywhere
+**Detailed Examples:**
 
-**Weight:** Force of gravity on mass
-- Formula: W = mg
-- Measured in Newtons (N)
+**Example 1: The Shopping Cart**
+Empty cart: mass = 10 kg, push with 20 N
+a = F/m = 20/10 = 2 m/s²
+
+Full cart: mass = 50 kg, push with 20 N
+a = F/m = 20/50 = 0.4 m/s²
+
+Same force, but full cart accelerates 5× slower!
+
+**Example 2: The Rocket**
+Rocket: mass = 1,000,000 kg, thrust = 15,000,000 N
+a = F/m = 15,000,000 / 1,000,000 = 15 m/s²
+
+As fuel burns, mass decreases, so acceleration increases (with same thrust)!
+
+**Example 3: Multiple Forces**
+Box on table:
+- Push right: 50 N
+- Friction left: 20 N
+- Net force: 50 - 20 = 30 N right
+- Mass: 10 kg
+- Acceleration: a = 30/10 = 3 m/s² right
+
+**Example 4: Vertical Motion**
+Object falling:
+- Weight down: mg
+- Air resistance up: F_air
+- Net force: mg - F_air
+- Acceleration: a = (mg - F_air) / m = g - F_air/m
+- As speed increases, F_air increases, so acceleration decreases
+- Eventually F_air = mg, so a = 0 (terminal velocity!)
+
+**Vector Nature:**
+Forces are vectors - they have magnitude and direction. When multiple forces act, we must add them as vectors:
+- Forces in same direction: Add magnitudes
+- Forces in opposite directions: Subtract magnitudes
+- Forces at angles: Use vector addition (Pythagorean theorem, trigonometry)
+
+## Page 3: Mass vs Weight - A Critical Distinction
+
+**Mass:**
+- Amount of matter in an object
+- Measure of inertia
+- Scalar quantity
+- Unit: kilogram (kg)
+- NEVER changes (same everywhere in universe)
+- Intrinsic property of object
+
+**Weight:**
+- Force of gravity on an object
+- Vector quantity (has direction: toward center of planet)
+- Unit: Newton (N)
 - Changes with gravity
+- Depends on location
 
-**Example: 60 kg person**
-- On Earth: Weight = 60 × 9.8 = 588 N
-- On Moon: Weight = 60 × 1.6 = 96 N
-- Mass is ALWAYS 60 kg!
+**Formula:** W = mg
+- W = weight (N)
+- m = mass (kg)
+- g = gravitational acceleration (m/s²)
 
-## Page 4: Newton's Third Law - Action-Reaction
+**Gravitational Acceleration on Different Bodies:**
+- Earth: g = 9.8 m/s²
+- Moon: g = 1.6 m/s² (1/6 of Earth)
+- Mars: g = 3.7 m/s² (3/8 of Earth)
+- Jupiter: g = 24.8 m/s² (2.5× Earth)
+- Sun: g = 274 m/s² (28× Earth!)
 
-**Statement:** For every action, there is an equal and opposite reaction.
+**Detailed Example: 60 kg Person**
 
-**Important:** Forces act on DIFFERENT objects!
+**On Earth:**
+- Mass: 60 kg (always)
+- Weight: W = 60 × 9.8 = 588 N
+- Feels "normal"
 
-**Examples:**
-- Walking: You push ground back, ground pushes you forward
-- Swimming: You push water back, water pushes you forward
-- Rocket: Pushes gas down, gas pushes rocket up
-- Jumping: You push down, ground pushes you up
+**On Moon:**
+- Mass: 60 kg (unchanged!)
+- Weight: W = 60 × 1.6 = 96 N
+- Feels 6× lighter, can jump 6× higher
 
-## Page 5: Practice Problems
+**On Jupiter:**
+- Mass: 60 kg (still unchanged!)
+- Weight: W = 60 × 24.8 = 1,488 N
+- Feels 2.5× heavier, very difficult to move
 
-**Problem 1:** A 10 kg box is pushed with 50 N force. Friction is 20 N. What's the acceleration?
-**Answer:** Net force = 50 - 20 = 30 N. a = F/m = 30/10 = 3 m/s²
+**In Space (far from any planet):**
+- Mass: 60 kg (never changes!)
+- Weight: ~0 N (no significant gravity)
+- Weightless, but still has inertia!
 
-**Problem 2:** What force is needed to accelerate a 1000 kg car at 2 m/s²?
-**Answer:** F = ma = 1000 × 2 = 2000 N`,
+**Weightlessness vs Masslessness:**
+Astronauts in orbit are weightless (no sensation of weight) but NOT massless. They still have inertia - it's still hard to accelerate them. They're in free fall, so they don't feel gravity's pull.
+
+**Common Misconceptions:**
+❌ "I weigh 60 kg" → ✅ "My mass is 60 kg" or "I weigh 588 N"
+❌ "Astronauts are weightless because there's no gravity in space" → ✅ There IS gravity; they're in free fall
+❌ "Weight and mass are the same" → ✅ Completely different concepts!
+
+## Page 4: Newton's Third Law - Action and Reaction
+
+**Statement:** For every action force, there is an equal and opposite reaction force. Forces always come in pairs.
+
+**Formula:** F_AB = -F_BA
+If object A exerts force F on object B, then object B exerts force -F on object A.
+
+**Critical Understanding:**
+1. **Equal magnitude:** Forces have same size
+2. **Opposite direction:** Forces point opposite ways
+3. **Different objects:** Forces act on DIFFERENT objects (this is crucial!)
+4. **Same type:** Both forces are same type (both gravitational, both contact, etc.)
+5. **Simultaneous:** Forces exist at the same time
+
+**Why Don't They Cancel?**
+Action-reaction pairs act on DIFFERENT objects, so they don't cancel. For forces to cancel, they must act on the SAME object.
+
+**Detailed Examples:**
+
+**Example 1: Walking**
+- Action: Your foot pushes backward on ground
+- Reaction: Ground pushes forward on your foot
+- Result: You accelerate forward
+- On ice (low friction), ground can't push back effectively, so you slip
+
+**Example 2: Swimming**
+- Action: You push water backward with your hands
+- Reaction: Water pushes you forward
+- Result: You move forward through water
+- Stronger push = faster swimming
+
+**Example 3: Rocket Propulsion**
+- Action: Rocket pushes gas molecules downward/backward at high speed
+- Reaction: Gas molecules push rocket upward/forward
+- Result: Rocket accelerates upward
+- Works in space (no air needed!) because it's pushing against the gas, not air
+
+**Example 4: Jumping**
+- Action: Your legs push down on ground
+- Reaction: Ground pushes up on you
+- Result: You accelerate upward
+- On Moon (lower gravity), same push gives higher jump
+
+**Example 5: Book on Table**
+- Action: Book pushes down on table (weight)
+- Reaction: Table pushes up on book (normal force)
+- Result: Book stays stationary (forces on book balance)
+- Note: Weight and normal force are NOT action-reaction pairs! They act on same object (book)
+
+**Example 6: Earth and Moon**
+- Action: Earth pulls Moon with gravitational force
+- Reaction: Moon pulls Earth with equal gravitational force
+- Result: Both orbit around common center of mass
+- Earth is much more massive, so it moves much less
+
+**Example 7: Gun Recoil**
+- Action: Gun pushes bullet forward with force F
+- Reaction: Bullet pushes gun backward with force F
+- Result: Bullet accelerates forward (small mass, large acceleration)
+- Gun recoils backward (large mass, small acceleration)
+- Same force, different accelerations (F = ma!)
+
+**Identifying Action-Reaction Pairs:**
+Ask: "What two objects are interacting?" The forces they exert on each other are action-reaction pairs.
+
+**Example:** Person pushing wall
+- Action: Person pushes wall to the right
+- Reaction: Wall pushes person to the left
+- NOT action-reaction: Weight of person and normal force from ground (both act on person)
+
+## Page 5: Applications and Problem Solving
+
+**Problem 1: The Elevator**
+A 70 kg person stands in an elevator. Find the normal force from the floor when:
+a) Elevator at rest
+b) Elevator accelerating upward at 2 m/s²
+c) Elevator accelerating downward at 2 m/s²
+
+**Solution:**
+a) At rest: a = 0
+   Net force = 0
+   N - mg = 0
+   N = mg = 70 × 9.8 = 686 N
+   (Person feels normal weight)
+
+b) Accelerating up: a = 2 m/s² upward
+   Net force = ma upward
+   N - mg = ma
+   N = mg + ma = m(g + a) = 70(9.8 + 2) = 826 N
+   (Person feels heavier!)
+
+c) Accelerating down: a = 2 m/s² downward
+   Net force = ma downward
+   mg - N = ma
+   N = mg - ma = m(g - a) = 70(9.8 - 2) = 546 N
+   (Person feels lighter!)
+
+**Problem 2: Pushing Boxes**
+Two boxes on frictionless surface:
+- Box A: 10 kg
+- Box B: 20 kg (behind A)
+- Push B with 60 N force to the right
+
+Find:
+a) Acceleration of system
+b) Force A exerts on B
+c) Force B exerts on A
+
+**Solution:**
+a) Total mass = 10 + 20 = 30 kg
+   a = F/m = 60/30 = 2 m/s²
+
+b) For box A alone:
+   F_BA = ma = 10 × 2 = 20 N
+   (B must push A with 20 N to accelerate it at 2 m/s²)
+
+c) By Newton's 3rd Law:
+   F_AB = -F_BA = 20 N to the left
+   (A pushes back on B with 20 N)
+
+**Problem 3: Friction and Motion**
+A 50 kg box is pushed with 200 N force. Friction is 80 N. Find:
+a) Net force
+b) Acceleration
+c) Velocity after 5 seconds (starting from rest)
+
+**Solution:**
+a) Net force = 200 - 80 = 120 N
+
+b) a = F/m = 120/50 = 2.4 m/s²
+
+c) v = u + at = 0 + 2.4(5) = 12 m/s
+
+**Real-World Applications:**
+
+**1. Vehicle Safety:**
+- Airbags: Increase time of collision, reducing force (F = ma)
+- Crumple zones: Increase stopping distance, reducing acceleration
+- Seatbelts: Provide force to decelerate passengers with car
+
+**2. Sports:**
+- Baseball: Bat exerts force on ball, ball exerts equal force on bat (you feel the impact)
+- Football: Tackling involves action-reaction forces
+- Gymnastics: Push hard on ground to jump high
+
+**3. Space Exploration:**
+- Rockets: Expel gas to generate thrust
+- Spacewalks: Astronauts must push off carefully (equal and opposite reaction)
+- Satellite maneuvering: Small thrusters change orientation
+
+**4. Engineering:**
+- Bridges: Must support weight (action) with equal upward force (reaction)
+- Buildings: Foundation pushes up to balance weight pushing down
+- Machines: Every moving part experiences action-reaction forces
+
+**Common Mistakes:**
+❌ Confusing mass and weight
+❌ Forgetting to find net force before using F = ma
+❌ Thinking action-reaction forces cancel (they act on different objects!)
+❌ Using wrong units (mass in grams instead of kg)`,
 
   'Energy': `## ENERGY - The Ability to Do Work
 
