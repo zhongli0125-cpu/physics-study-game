@@ -9,7 +9,16 @@ document.addEventListener("keydown", e => { keys[e.key] = true; if (gameOver && 
 document.addEventListener("keyup", e => keys[e.key] = false);
 let platforms = [], lavaZones = [], waterZones = [], greenZones = [], collectibles = [];
 let doors = { fire: null, water: null }, questionGate = null, isAnswering = false;
+let gameDifficulty = 'easy';
+
+function setDifficulty(diff) {
+  gameDifficulty = diff;
+  document.querySelectorAll('.difficulty-btn').forEach(btn => btn.classList.remove('active'));
+  event.target.classList.add('active');
+}
+
 function startGame() { gameStarted = true; const btn = document.getElementById('startButton'); if (btn) btn.style.display = 'none'; initLevel(1); }
+
 function initLevel(lvl) {
   platforms = []; lavaZones = []; waterZones = []; greenZones = []; collectibles = [];
   gameOver = false; levelComplete = false; timer = 0;
@@ -25,7 +34,8 @@ function initLevel(lvl) {
     doors.water = { x: 740, y: 380, w: 30, h: 50 };
     collectibles.push({ x: 220, y: 370, type: 'fire', collected: false });
     collectibles.push({ x: 370, y: 310, type: 'water', collected: false });
-    const randomQ1 = questionPool[Math.floor(Math.random() * questionPool.length)];
+    const filteredQuestions = questionPool.filter(q => q.diff === gameDifficulty);
+    const randomQ1 = filteredQuestions[Math.floor(Math.random() * filteredQuestions.length)];
     questionGate = { x: 500, y: 200, w: 60, h: 80, question: randomQ1.q, options: randomQ1.opts, answer: randomQ1.ans, passed: false };
   } else {
     for (let i = 0; i < 6; i++) platforms.push({ x: 100 + i * 120, y: 380 + (Math.random() > 0.5 ? -60 : 60), w: 80, h: 20, type: 'platform' });
@@ -34,7 +44,8 @@ function initLevel(lvl) {
     greenZones.push({ x: 50, y: 440, w: 80, h: 20 });
     doors.fire = { x: 700, y: 360, w: 30, h: 50 };
     doors.water = { x: 750, y: 360, w: 30, h: 50 };
-    const randomQ2 = questionPool[Math.floor(Math.random() * questionPool.length)];
+    const filteredQuestions = questionPool.filter(q => q.diff === gameDifficulty);
+    const randomQ2 = filteredQuestions[Math.floor(Math.random() * filteredQuestions.length)];
     questionGate = { x: 400, y: 200, w: 60, h: 80, question: randomQ2.q, options: randomQ2.opts, answer: randomQ2.ans, passed: false };
   }
   fireboy.x = 50; fireboy.y = 300; fireboy.vx = 0; fireboy.vy = 0; fireboy.alive = true; fireboy.inDoor = false;
