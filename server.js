@@ -224,19 +224,14 @@ Answer: Gravity accelerates all objects equally at 9.8 m/s². Mass doesn't matte
 ## References & Further Reading
 
 Textbooks:
-- Halliday, Resnick & Walker - "Fundamentals of Physics"
-- Serway & Jewett - "Physics for Scientists and Engineers"
-- Giancoli - "Physics: Principles with Applications"
+- Knight, R. D. - "Physics for Scientists and Engineers: A Strategic Approach"
+- Young & Freedman - "University Physics"
 
 Online Resources:
-- Khan Academy Physics (https://www.khanacademy.org/science/physics)
-- The Physics Classroom (https://www.physicsclassroom.com)
-- HyperPhysics (http://hyperphysics.phy-astr.gsu.edu)
+- Khan Academy: Kinematics (https://www.khanacademy.org/science/physics/one-dimensional-motion)
+- The Physics Classroom: 1D Kinematics (https://www.physicsclassroom.com/class/1DKin)
 
-Interactive Simulations:
-- PhET Interactive Simulations (https://phet.colorado.edu)
-
-Note: Content adapted from standard high school physics curricula.`,
+Note: Content based on classical mechanics principles from Galileo and Newton.`,
 
   'Newton Laws': `## NEWTON'S LAWS OF MOTION
 
@@ -332,20 +327,18 @@ Real-World:
 
 ## References & Further Reading
 
+Primary Source:
+- Newton, Isaac - "Philosophiæ Naturalis Principia Mathematica" (1687)
+
 Textbooks:
 - Halliday, Resnick & Walker - "Fundamentals of Physics"
-- Serway & Jewett - "Physics for Scientists and Engineers"
-- Giancoli - "Physics: Principles with Applications"
+- Kleppner & Kolenkow - "An Introduction to Mechanics"
 
 Online Resources:
-- Khan Academy Physics (https://www.khanacademy.org/science/physics)
-- The Physics Classroom (https://www.physicsclassroom.com)
-- HyperPhysics (http://hyperphysics.phy-astr.gsu.edu)
+- Khan Academy: Forces and Newton's Laws (https://www.khanacademy.org/science/physics/forces-newtons-laws)
+- The Physics Classroom: Newton's Laws (https://www.physicsclassroom.com/class/newtlaws)
 
-Interactive Simulations:
-- PhET Interactive Simulations (https://phet.colorado.edu)
-
-Note: Content adapted from standard high school physics curricula.`,
+Note: Newton's laws form the foundation of classical mechanics.`,
 
   'Energy': `## ENERGY - The Ability to Do Work
 
@@ -451,19 +444,17 @@ Key Takeaway: Energy is never lost, just transformed into different forms!
 ## References & Further Reading
 
 Textbooks:
-- Halliday, Resnick & Walker - "Fundamentals of Physics"
 - Serway & Jewett - "Physics for Scientists and Engineers"
-- Giancoli - "Physics: Principles with Applications"
+- Tipler & Mosca - "Physics for Scientists and Engineers"
 
 Online Resources:
-- Khan Academy Physics (https://www.khanacademy.org/science/physics)
-- The Physics Classroom (https://www.physicsclassroom.com)
-- HyperPhysics (http://hyperphysics.phy-astr.gsu.edu)
+- Khan Academy: Work and Energy (https://www.khanacademy.org/science/physics/work-and-energy)
+- HyperPhysics: Energy Concepts (http://hyperphysics.phy-astr.gsu.edu/hbase/energy.html)
 
-Interactive Simulations:
-- PhET Interactive Simulations (https://phet.colorado.edu)
+Historical Note:
+- Law of Conservation of Energy developed by Julius von Mayer, James Joule, and Hermann von Helmholtz (1840s)
 
-Note: Content adapted from standard high school physics curricula.`,
+Note: Energy conservation is one of the most fundamental principles in physics.`,
 
   'Electricity': `## ELECTRICITY - Flow of Electric Charge
 
@@ -591,19 +582,19 @@ Answer: Higher voltage = lower current for same power. Lower current = less powe
 ## References & Further Reading
 
 Textbooks:
-- Halliday, Resnick & Walker - "Fundamentals of Physics"
-- Serway & Jewett - "Physics for Scientists and Engineers"
-- Giancoli - "Physics: Principles with Applications"
+- Purcell & Morin - "Electricity and Magnetism"
+- Griffiths, D. J. - "Introduction to Electrodynamics"
 
 Online Resources:
-- Khan Academy Physics (https://www.khanacademy.org/science/physics)
-- The Physics Classroom (https://www.physicsclassroom.com)
-- HyperPhysics (http://hyperphysics.phy-astr.gsu.edu)
+- Khan Academy: Circuits (https://www.khanacademy.org/science/physics/circuits-topic)
+- All About Circuits (https://www.allaboutcircuits.com)
+- HyperPhysics: Electricity (http://hyperphysics.phy-astr.gsu.edu/hbase/electric/elecon.html)
 
-Interactive Simulations:
-- PhET Interactive Simulations (https://phet.colorado.edu)
+Historical Note:
+- Ohm's Law discovered by Georg Ohm (1827)
+- Electric power systems developed by Thomas Edison and Nikola Tesla (1880s)
 
-Note: Content adapted from standard high school physics curricula.`,
+Note: Modern civilization depends on electrical power distribution.`,
 
   'Waves': `## WAVES - Energy Transfer
 
@@ -738,19 +729,19 @@ Answer: f = c/λ = (3 × 10⁸)/(600 × 10⁻⁹) = 5 × 10¹⁴ Hz
 ## References & Further Reading
 
 Textbooks:
-- Halliday, Resnick & Walker - "Fundamentals of Physics"
-- Serway & Jewett - "Physics for Scientists and Engineers"
-- Giancoli - "Physics: Principles with Applications"
+- French, A. P. - "Vibrations and Waves"
+- Pain, H. J. - "The Physics of Vibrations and Waves"
 
 Online Resources:
-- Khan Academy Physics (https://www.khanacademy.org/science/physics)
-- The Physics Classroom (https://www.physicsclassroom.com)
-- HyperPhysics (http://hyperphysics.phy-astr.gsu.edu)
+- Khan Academy: Waves (https://www.khanacademy.org/science/physics/mechanical-waves-and-sound)
+- The Physics Classroom: Sound Waves (https://www.physicsclassroom.com/class/sound)
+- HyperPhysics: Wave Motion (http://hyperphysics.phy-astr.gsu.edu/hbase/wave.html)
 
-Interactive Simulations:
-- PhET Interactive Simulations (https://phet.colorado.edu)
+Historical Note:
+- Wave equation developed by Jean le Rond d'Alembert (1747)
+- Electromagnetic waves predicted by James Clerk Maxwell (1865)
 
-Note: Content adapted from standard high school physics curricula.`,
+Note: Wave phenomena appear throughout physics from sound to light to quantum mechanics.`,
 
   'Modern Physics': `## MODERN PHYSICS - The Extreme Universe
 
@@ -991,9 +982,6 @@ Online Resources:
 - The Physics Classroom (https://www.physicsclassroom.com)
 - HyperPhysics (http://hyperphysics.phy-astr.gsu.edu)
 - MIT OpenCourseWare Physics (https://ocw.mit.edu)
-
-Interactive Simulations:
-- PhET Interactive Simulations (https://phet.colorado.edu)
 
 Note: Content adapted from standard high school and introductory college physics curricula.`
       }
