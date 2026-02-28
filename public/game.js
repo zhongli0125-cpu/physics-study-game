@@ -10,8 +10,6 @@ document.addEventListener("keyup", e => keys[e.key] = false);
 let platforms = [], lavaZones = [], waterZones = [], greenZones = [], collectibles = [];
 let doors = { fire: null, water: null }, questionGate = null;
 
-
-
 function startGame() { 
   gameStarted = true; 
   const btn = document.getElementById('startButton'); 
@@ -38,7 +36,7 @@ function initLevel(lvl) {
     questionGate = { x: 500, y: 200, w: 60, h: 80, question: "What is Newton's First Law?", options: ["F=ma", "Objects stay in motion unless acted upon", "E=mc²"], answer: 1, passed: false };
   } else {
     for (let i = 0; i < 6; i++) platforms.push({ x: 100 + i * 120, y: 380 + (Math.random() > 0.5 ? -60 : 60), w: 80, h: 20, type: 'platform' });
- lavaZones.push({ x: 200, y: 440, w: 100, h: 20 });
+    lavaZones.push({ x: 200, y: 440, w: 100, h: 20 });
     waterZones.push({ x: 400, y: 440, w: 100, h: 20 });
     greenZones.push({ x: 600, y: 440, w: 80, h: 20 });
     doors.fire = { x: 700, y: 360, w: 30, h: 50 };
@@ -49,22 +47,26 @@ function initLevel(lvl) {
   fireboy.x = 50; fireboy.y = 300; fireboy.vx = 0; fireboy.vy = 0; fireboy.alive = true; fireboy.inDoor = false;
   watergirl.x = 100; watergirl.y = 300; watergirl.vx = 0; watergirl.vy = 0; watergirl.alive = true; watergirl.inDoor = false;
 }
+
 function checkCollision(a, b) { return a.x < b.x + b.w && a.x + a.w > b.x && a.y < b.y + b.h && a.y + a.h > b.y; }
 
 function updatePlayer(player, leftKey, rightKey, jumpKey) {
   if (!player.alive) return;
- 
+  
+
+
+
+
   player.onGround = false;
   platforms.forEach(plat => {
-
     if (checkCollision(player, plat) && player.vy >= 0 && player.y + player.h - player.vy <= plat.y) {
       player.y = plat.y - player.h;
       player.vy = 0;
       player.onGround = true;
     }
   });
-
-if (keys[leftKey]) player.vx = -player.speed;
+  
+  if (keys[leftKey]) player.vx = -player.speed;
   else if (keys[rightKey]) player.vx = player.speed;
   else player.vx = 0;
   
@@ -85,9 +87,9 @@ if (keys[leftKey]) player.vx = -player.speed;
   collectibles.forEach(item => {
     if (!item.collected && checkCollision(player, item)) {
       if ((item.type === 'fire' && player === fireboy) || (item.type === 'water' && player === watergirl)) {
-
         item.collected = true;
         score += 10;
+
       }
     }
   });
@@ -103,6 +105,9 @@ function update() {
   timer++;
   updatePlayer(fireboy, 'a', 'd', 'w');
   updatePlayer(watergirl, 'ArrowLeft', 'ArrowRight', 'ArrowUp');
+  
+  if (fireboy.inDoor && watergirl.inDoor && questionGate.passed) {
+    levelComplete = true;
     setTimeout(() => { level++; initLevel(level); levelComplete = false; }, 2000);
   }
 }
@@ -110,12 +115,54 @@ function update() {
 function draw() {
   ctx.fillStyle = "#1a1a2e";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   if (!gameStarted) {
     ctx.fillStyle = "#00ffcc";
     ctx.font = '16px Arial';
     ctx.textAlign = 'center';
     ctx.fillText('Click START GAME button below!', canvas.width/2, canvas.height/2);
     return;
+
+
+
+
+
+
+
+
+
+
+
+
+
   }
   
   platforms.forEach(plat => {
@@ -145,6 +192,23 @@ function draw() {
     ctx.font = '20px Arial';
     ctx.fillText('?', questionGate.x + 22, questionGate.y + 45);
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   collectibles.forEach(item => {
     if (!item.collected) {
       ctx.fillStyle = item.type === 'fire' ? '#ff4500' : '#1e90ff';
@@ -183,6 +247,18 @@ function draw() {
     statusEl.className = 'game-status game-over';
   } else {
     statusEl.textContent = '';
+
+
+
+
+
+
+
+
+
+
+
+
   }
   
   document.getElementById('levelDisplay').textContent = level;
@@ -195,6 +271,8 @@ function gameLoop() {
   requestAnimationFrame(gameLoop);
 }
 
+
+
 function askQuestion() {
   const answer = prompt(questionGate.question + "\n\n" + questionGate.options.map((opt, i) => (i + 1) + ". " + opt).join("\n"));
   const answerIndex = parseInt(answer) - 1;
@@ -203,6 +281,7 @@ function askQuestion() {
     alert("✅ Correct! Gate opened!");
     questionGate.passed = true;
     score += 50;
+
   } else {
     alert("❌ Wrong answer! Try again.");
 
