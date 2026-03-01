@@ -530,3 +530,43 @@ input[type="file"] {
   border-color: #00ffcc;
   box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
 }
+
+
+.difficulty-selector, .topic-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0;
+  flex-wrap: wrap;
+}
+
+.difficulty-selector label, .topic-selector label {
+  color: #00ffcc;
+  font-size: 11px;
+  margin-right: 5px;
+}
+
+.difficulty-btn, .topic-select-btn {
+  background: linear-gradient(135deg, #001f1f 0%, #003333 100%);
+  border: 2px solid #00ffcc;
+  color: #00ffcc;
+  padding: 8px 14px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 9px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.difficulty-btn:hover, .topic-select-btn:hover {
+  background: rgba(0, 255, 204, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 255, 204, 0.3);
+}
+
+.difficulty-btn.active, .topic-select-btn.active {
+  background: #00ffcc;
+  color: #000;
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.8);
+}
