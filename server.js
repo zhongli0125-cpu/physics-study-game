@@ -223,13 +223,11 @@ Answer: Gravity accelerates all objects equally at 9.8 m/s². Mass doesn't matte
 
 ## References & Further Reading
 
-Textbooks:
-- Knight, R. D. - "Physics for Scientists and Engineers: A Strategic Approach"
-- Young & Freedman - "University Physics"
-
-Online Resources:
-- Khan Academy: Kinematics (https://www.khanacademy.org/science/physics/one-dimensional-motion)
-- The Physics Classroom: 1D Kinematics (https://www.physicsclassroom.com/class/1DKin)
+Educational Resources:
+- Khan Academy: One-Dimensional Motion (https://www.khanacademy.org/science/physics/one-dimensional-motion)
+- The Physics Classroom: Kinematics (https://www.physicsclassroom.com/class/1DKin)
+- HyperPhysics: Motion Concepts (http://hyperphysics.phy-astr.gsu.edu/hbase/mot.html)
+- Physics LibreTexts: Kinematics (https://phys.libretexts.org)
 
 Note: Content based on classical mechanics principles from Galileo and Newton.`,
 
@@ -330,13 +328,11 @@ Real-World:
 Primary Source:
 - Newton, Isaac - "Philosophiæ Naturalis Principia Mathematica" (1687)
 
-Textbooks:
-- Halliday, Resnick & Walker - "Fundamentals of Physics"
-- Kleppner & Kolenkow - "An Introduction to Mechanics"
-
-Online Resources:
+Educational Resources:
 - Khan Academy: Forces and Newton's Laws (https://www.khanacademy.org/science/physics/forces-newtons-laws)
 - The Physics Classroom: Newton's Laws (https://www.physicsclassroom.com/class/newtlaws)
+- HyperPhysics: Newton's Laws (http://hyperphysics.phy-astr.gsu.edu/hbase/Newt.html)
+- NASA: Newton's Laws of Motion (https://www.grc.nasa.gov/www/k-12/airplane/newton.html)
 
 Note: Newton's laws form the foundation of classical mechanics.`,
 
@@ -443,13 +439,11 @@ Key Takeaway: Energy is never lost, just transformed into different forms!
 
 ## References & Further Reading
 
-Textbooks:
-- Serway & Jewett - "Physics for Scientists and Engineers"
-- Tipler & Mosca - "Physics for Scientists and Engineers"
-
-Online Resources:
+Educational Resources:
 - Khan Academy: Work and Energy (https://www.khanacademy.org/science/physics/work-and-energy)
+- The Physics Classroom: Energy (https://www.physicsclassroom.com/class/energy)
 - HyperPhysics: Energy Concepts (http://hyperphysics.phy-astr.gsu.edu/hbase/energy.html)
+- Physics LibreTexts: Work and Energy (https://phys.libretexts.org)
 
 Historical Note:
 - Law of Conservation of Energy developed by Julius von Mayer, James Joule, and Hermann von Helmholtz (1840s)
@@ -581,14 +575,12 @@ Answer: Higher voltage = lower current for same power. Lower current = less powe
 
 ## References & Further Reading
 
-Textbooks:
-- Purcell & Morin - "Electricity and Magnetism"
-- Griffiths, D. J. - "Introduction to Electrodynamics"
-
-Online Resources:
+Educational Resources:
 - Khan Academy: Circuits (https://www.khanacademy.org/science/physics/circuits-topic)
+- The Physics Classroom: Electric Circuits (https://www.physicsclassroom.com/class/circuits)
 - All About Circuits (https://www.allaboutcircuits.com)
-- HyperPhysics: Electricity (http://hyperphysics.phy-astr.gsu.edu/hbase/electric/elecon.html)
+- HyperPhysics: Electricity and Magnetism (http://hyperphysics.phy-astr.gsu.edu/hbase/electric/elecon.html)
+- Electronics Tutorials: Basic Electronics (https://www.electronics-tutorials.ws)
 
 Historical Note:
 - Ohm's Law discovered by Georg Ohm (1827)
@@ -728,14 +720,11 @@ Answer: f = c/λ = (3 × 10⁸)/(600 × 10⁻⁹) = 5 × 10¹⁴ Hz
 
 ## References & Further Reading
 
-Textbooks:
-- French, A. P. - "Vibrations and Waves"
-- Pain, H. J. - "The Physics of Vibrations and Waves"
-
-Online Resources:
-- Khan Academy: Waves (https://www.khanacademy.org/science/physics/mechanical-waves-and-sound)
+Educational Resources:
+- Khan Academy: Waves and Sound (https://www.khanacademy.org/science/physics/mechanical-waves-and-sound)
 - The Physics Classroom: Sound Waves (https://www.physicsclassroom.com/class/sound)
 - HyperPhysics: Wave Motion (http://hyperphysics.phy-astr.gsu.edu/hbase/wave.html)
+- Physics LibreTexts: Waves (https://phys.libretexts.org)
 
 Historical Note:
 - Wave equation developed by Jean le Rond d'Alembert (1747)
@@ -972,16 +961,17 @@ Key Takeaways:
 
 ## References & Further Reading
 
-Textbooks:
-- Halliday, Resnick & Walker - "Fundamentals of Physics" (Standard physics textbook)
-- Serway & Jewett - "Physics for Scientists and Engineers"
-- Giancoli - "Physics: Principles with Applications"
+Educational Resources:
+- Khan Academy: Special Relativity (https://www.khanacademy.org/science/physics/special-relativity)
+- Khan Academy: Quantum Physics (https://www.khanacademy.org/science/physics/quantum-physics)
+- The Physics Classroom: Modern Physics (https://www.physicsclassroom.com)
+- HyperPhysics: Relativity (http://hyperphysics.phy-astr.gsu.edu/hbase/Relativ/relcon.html)
+- HyperPhysics: Quantum Physics (http://hyperphysics.phy-astr.gsu.edu/hbase/quacon.html)
+- MIT OpenCourseWare: Modern Physics (https://ocw.mit.edu)
 
-Online Resources:
-- Khan Academy Physics (https://www.khanacademy.org/science/physics)
-- The Physics Classroom (https://www.physicsclassroom.com)
-- HyperPhysics (http://hyperphysics.phy-astr.gsu.edu)
-- MIT OpenCourseWare Physics (https://ocw.mit.edu)
+Historical Context:
+- Einstein's Special Relativity (1905) and General Relativity (1915)
+- Quantum mechanics developed by Planck, Bohr, Heisenberg, Schrödinger (1900-1930s)
 
 Note: Content adapted from standard high school and introductory college physics curricula.`
       }
@@ -1185,4 +1175,5 @@ app.listen(port, '0.0.0.0', () => {
   console.log(`💡 To find your IP: Run "ipconfig" (Windows) or "ifconfig" (Mac/Linux)`);
   if (!openai) console.log('⚠️  No OpenAI API key found. Using fallback content.');
 });
+
 
