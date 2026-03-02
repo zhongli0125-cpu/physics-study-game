@@ -20,6 +20,15 @@ function startGame() {
   initLevel(1); 
 }
 
+function showInstructions() {
+  document.getElementById('instructionsModal').style.display = 'flex';
+}
+
+function closeInstructionsAndStart() {
+  document.getElementById('instructionsModal').style.display = 'none';
+  startGame();
+}
+
 function setDifficulty(diff) {
   gameDifficulty = diff;
   document.querySelectorAll('.difficulty-btn').forEach(btn => btn.classList.remove('active'));
