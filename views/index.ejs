@@ -21,7 +21,55 @@
 
   <canvas id="gameCanvas" width="800" height="500"></canvas>
 
-  <button id="startButton" class="start-game-btn" onclick="startGame()">🎮 START GAME</button>
+  <button id="startButton" class="start-game-btn" onclick="showInstructions()">🎮 START GAME</button>
+  
+  <div id="instructionsModal" class="modal">
+    <div class="modal-content">
+      <h2>🎮 How to Play</h2>
+      
+      <div class="instructions-section">
+        <h3>🎯 Game Objective</h3>
+        <p>Help Fireboy and Watergirl reach their doors by solving physics questions!</p>
+      </div>
+      
+      <div class="instructions-section">
+        <h3>🕹️ Controls</h3>
+        <p><span class="fire-icon">🔥 Fireboy:</span> WASD keys (W=Jump, A=Left, D=Right)</p>
+        <p><span class="water-icon">💧 Watergirl:</span> Arrow keys (↑=Jump, ←=Left, →=Right)</p>
+      </div>
+      
+      <div class="instructions-section">
+        <h3>⚠️ Hazards</h3>
+        <p>🔥 <strong>Red Lava:</strong> Deadly to Watergirl only</p>
+        <p>💧 <strong>Blue Water:</strong> Deadly to Fireboy only</p>
+        <p>🟢 <strong>Green Poison:</strong> Deadly to BOTH characters</p>
+      </div>
+      
+      <div class="instructions-section">
+        <h3>❓ Question Gate</h3>
+        <p>When you touch the <strong>golden gate with "?"</strong>, a physics question appears.</p>
+        <p><strong>How to answer:</strong> Type the number (1, 2, 3, 4, or 5) of your chosen answer.</p>
+        <p>Example: If the correct answer is the 2nd option, type <strong>2</strong> and press Enter.</p>
+        <p>✅ Correct answer = Gate opens!</p>
+        <p>❌ Wrong answer = Try again (gate stays closed)</p>
+      </div>
+      
+      <div class="instructions-section">
+        <h3>🏆 Winning</h3>
+        <p>Both characters must reach their colored doors AFTER the gate is opened!</p>
+        <p>🔥 Fireboy → Red door | 💧 Watergirl → Blue door</p>
+      </div>
+      
+      <div class="instructions-section">
+        <h3>⚙️ Difficulty Levels</h3>
+        <p><strong>Easy:</strong> 3 answer choices</p>
+        <p><strong>Medium:</strong> 4 answer choices</p>
+        <p><strong>Hard:</strong> 5 choices with calculations</p>
+      </div>
+      
+      <button class="start-game-btn" onclick="closeInstructionsAndStart()">Got it! Let's Play 🚀</button>
+    </div>
+  </div>
 
   <div class="difficulty-selector">
     <label>Difficulty:</label>
