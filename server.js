@@ -1043,11 +1043,29 @@ app.post('/ask-question', async (req, res) => {
   try {
     const { topic, question } = req.body;
     if (!topic || !question) return res.status(400).json({ error: 'Topic and question required' });
-    const answer = `Great question about ${topic}! Try asking about specific concepts like formulas, examples, or how things work.`;
+    
+    // Get the lesson content for context
+    const lessonContent = fallbacks[topic] || `This is about ${topic} in physics.`;
+    
+    const prompt = `You are a physics tutor. A student is studying "${topic}" and has asked: "${question}"
+
+Context from the lesson:
+${lessonContent.substring(0, 1000)}
+
+Provide a clear, concise answer to their question. Keep it educational and easy to understand.`;
+
+    const completion = await openai.chat.completions.create({
+      model: "gpt-4o-mini",
+      messages: [{ role: "user", content: prompt }],
+      max_tokens: 300,
+      temperature: 0.7
+    });
+
+    const answer = completion.choices[0].message.content.trim();
     res.json({ answer });
   } catch (error) {
     console.error('Q&A error:', error);
-    res.status(500).json({ error: 'Failed to answer question' });
+    res.status(500).json({ error: 'Failed to answer question', details: error.message });
   }
 });
 
@@ -1175,5 +1193,6 @@ app.listen(port, '0.0.0.0', () => {
   console.log(`💡 To find your IP: Run "ipconfig" (Windows) or "ifconfig" (Mac/Linux)`);
   if (!openai) console.log('⚠️  No OpenAI API key found. Using fallback content.');
 });
+
 
 
