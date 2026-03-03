@@ -1041,18 +1041,24 @@ app.post('/generate-flashcards', async (req, res) => {
 // Q&A endpoint
 app.post('/ask-question', async (req, res) => {
   try {
+    console.log('Ask question endpoint hit');
     const { topic, question } = req.body;
-    if (!topic || !question) return res.status(400).json({ error: 'Topic and question required' });
+    console.log('Topic:', topic, 'Question:', question);
     
-    // Get the lesson content for context
-    const lessonContent = fallbacks[topic] || `This is about ${topic} in physics.`;
+    if (!topic || !question) {
+      console.log('Missing topic or question');
+      return res.status(400).json({ error: 'Topic and question required' });
+    }
     
+    if (!openai) {
+      console.log('No OpenAI configured, returning fallback message');
+      return res.json({ answer: `Great question about ${topic}! To get AI-powered answers, please add your OpenAI API key to the .env file. For now, try selecting a topic above to read the lesson content.` });
+    }
+    
+    console.log('Calling OpenAI...');
     const prompt = `You are a physics tutor. A student is studying "${topic}" and has asked: "${question}"
 
-Context from the lesson:
-${lessonContent.substring(0, 1000)}
-
-Provide a clear, concise answer to their question. Keep it educational and easy to understand.`;
+Provide a clear, concise answer to their question about ${topic}. Keep it educational and easy to understand. Include examples if helpful.`;
 
     const completion = await openai.chat.completions.create({
       model: "gpt-4o-mini",
@@ -1062,10 +1068,16 @@ Provide a clear, concise answer to their question. Keep it educational and easy 
     });
 
     const answer = completion.choices[0].message.content.trim();
+    console.log('Answer generated successfully');
     res.json({ answer });
   } catch (error) {
     console.error('Q&A error:', error);
-    res.status(500).json({ error: 'Failed to answer question', details: error.message });
+    console.error('Error details:', error.message);
+    res.status(500).json({ 
+      error: 'Failed to answer question', 
+      details: error.message,
+      hint: 'Check if your OpenAI API key is valid and has credits'
+    });
   }
 });
 
